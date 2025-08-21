@@ -1,0 +1,538 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-hero {
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.dashboard-content {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Row Layout */
+.dashboard-main-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Profile Section */
+.profile-section {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  max-width: 350px;
+  height: fit-content;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 40px;
+  color: #ccc;
+  border: 3px solid #e0e0e0;
+}
+
+.profile-info h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.resume-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.resume-icon {
+  font-size: 20px;
+}
+
+.resume-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resume-label {
+  font-size: 14px;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+.resume-status {
+  font-size: 12px;
+  color: #666;
+}
+
+.resume-link {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.profile-details h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.edit-profile-btn,
+.job-post-btn {
+  width: 100%;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.edit-profile-btn:hover,
+.job-post-btn:hover {
+  background: #555;
+}
+
+.job-post-btn {
+  background: #e91e63;
+  margin-top: 10px;
+}
+
+.job-post-btn:hover {
+  background: #d81b60;
+}
+
+/* Dashboard Cards Section */
+.dashboard-cards-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background: #e91e63;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-content {
+  padding: 20px;
+  min-height: 200px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  color: #333;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.empty-state {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.remove-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #ff3838;
+}
+
+.alert-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.alert-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Different card colors for variety */
+.saved-jobs-card .card-header {
+  background: #e91e63;
+}
+
+.job-applications-card .card-header {
+  background: #e91e63;
+}
+
+.favourite-searches-card .card-header {
+  background: #e91e63;
+}
+
+/* Bottom Row */
+.dashboard-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-main-row {
+    flex-direction: column;
+  }
+  
+  .dashboard-cards-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .profile-section {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .dashboard-content {
+    padding: 40px 15px;
+  }
+  
+  .dashboard-main-row {
+    gap: 20px;
+  }
+  
+  .dashboard-cards-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .profile-section {
+    padding: 20px;
+  }
+  
+  .card-content {
+    padding: 15px;
+    min-height: 150px;
+  }
+  
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-hero {
+    height: 200px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-content {
+    padding: 30px 10px;
+  }
+  
+  .profile-section {
+    padding: 15px;
+  }
+  
+  .card-content {
+    padding: 12px;
+  }
+  
+  .table-header, .table-row {
+    font-size: 12px;
+  }
+  
+  .card-header h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Admin Jobs Management Styling */
+.admin-jobs-card {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.admin-jobs-table {
+  width: 100%;
+}
+
+.admin-jobs-table .table-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
+  gap: 1rem;
+  padding: 10px 0;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.admin-jobs-table .table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  color: #333;
+}
+
+.admin-jobs-table .table-row:last-child {
+  border-bottom: none;
+}
+
+.admin-jobs-table .job-title-admin {
+  font-weight: 500;
+  color: #e91e63;
+}
+
+.admin-jobs-table .job-location,
+.admin-jobs-table .job-industry,
+.admin-jobs-table .job-date {
+  color: #666;
+}
+
+.admin-jobs-table .action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border: 1px solid;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.edit-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive design for admin jobs table */
+@media (max-width: 1024px) {
+  .admin-jobs-table .table-header,
+  .admin-jobs-table .table-row {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-jobs-table .table-header,
+  .admin-jobs-table .table-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .admin-jobs-table .table-header {
+    display: none;
+  }
+  
+  .admin-jobs-table .table-row {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-bottom: none;
+  }
+  
+  .admin-jobs-table .table-row > span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .admin-jobs-table .table-row > span:before {
+    content: attr(data-label) ': ';
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .admin-jobs-table .action-buttons {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+

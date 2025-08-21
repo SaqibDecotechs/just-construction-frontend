@@ -1,0 +1,35 @@
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from '../pages/home/Home'
+import Register from '../pages/register/Register'
+import Login from '../pages/login/Login'
+import Dashboard from '../pages/dashboard/Dashboard'
+import MeetTheTeam from '../pages/meetTheTeam/MeetTheTeam'
+import ForgetPassword from '../pages/forgetPassword/ForgetPassword'
+import AllJobs from '../pages/allJobs/AllJobs'
+import JobApplication from '../pages/jobApplication/JobApplication'
+
+function Router() {
+  return (
+  <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/meet-the-team" element={<MeetTheTeam />} />
+            <Route path="/forgot-password" element={<ForgetPassword />} />
+            <Route path="/all-jobs" element={<AllJobs />} />
+            <Route path="/job/:jobId/apply" element={<JobApplication />} />
+         
+          {/* <Route element={<PublicWrapper />}>
+            <Route path="*" element={<Login />} />
+          </Route> */} 
+        
+      
+        </Routes>
+      </BrowserRouter>
+  )
+}
+
+export default Router

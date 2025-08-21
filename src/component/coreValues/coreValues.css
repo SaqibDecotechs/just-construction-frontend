@@ -1,0 +1,167 @@
+.core-values {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.value-card {
+  background: #e8e8e8;
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  position: relative;
+}
+
+.value-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background:transparent;
+  /* border: 3px solid #e91e63; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* .value-card:hover .icon-circle {
+  background: #e91e63;
+  transform: scale(1.1);
+} */
+
+.value-svg {
+  width: 32px;
+  height: 32px;
+  color: #e91e63;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-svg {
+  color: white;
+}
+
+.value-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Eurostile', Arial, sans-serif;
+}
+
+.value-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .core-values {
+    padding: 60px 0;
+  }
+  
+  .values-container {
+    padding: 0 20px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .value-card {
+    padding: 35px 25px;
+    min-height: 280px;
+  }
+  
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .value-svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .value-title {
+    font-size: 1.2rem;
+  }
+  
+  .value-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .core-values {
+    padding: 50px 0;
+  }
+  
+  .values-container {
+    padding: 0 15px;
+  }
+  
+  .value-card {
+    padding: 30px 20px;
+    min-height: 260px;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .value-svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .value-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .value-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}

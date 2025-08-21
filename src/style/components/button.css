@@ -1,0 +1,22 @@
+.tbBtn1 {
+    background-color: var(--color_1) !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+    border-color: var(--color_1) !important;
+    color: #fff;
+    border: none;
+    width: 200px !important;
+    height: 45px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tbBtn1:hover {
+    transform: translateY(-2px);
+    background-color: white !important;
+    color: var(--color_1);
+    background-image: none !important;
+}
