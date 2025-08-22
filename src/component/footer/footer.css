@@ -1,6 +1,6 @@
 .footer {
-  background-color: #f8f9fa;
-  border-top: 3px solid #e91e63;
+  background-color: var(--bg-light);
+  border-top: 3px solid var(--primary);
   padding: 60px 0 0 0;
 }
 
@@ -37,16 +37,16 @@
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .logo-construction {
-  color: #e91e63;
+  color: var(--primary);
 }
 
 .logo-specialists {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -60,13 +60,13 @@
 .contact-section h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 5px 0;
 }
 
 .contact-section p {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
   line-height: 1.4;
 }
@@ -75,7 +75,7 @@
 .footer-center h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
   letter-spacing: 1px;
   font-family: 'Eurostile', Arial, sans-serif;
@@ -91,14 +91,14 @@
 }
 
 .quick-links li a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .quick-links li a:hover {
-  color: #e91e63;
+  color: var(--primary);
 }
 
 /* Right Section - Jobs */
@@ -110,7 +110,7 @@
 .footer-right h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
   letter-spacing: 1px;
   font-family: 'Eurostile', Arial, sans-serif;
@@ -126,14 +126,14 @@
 }
 
 .job-links li a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .job-links li a:hover {
-  color: #e91e63;
+  color: var(--primary);
 }
 
 /* Social Media */
@@ -144,7 +144,7 @@
 .social-section h4 {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 15px 0;
   letter-spacing: 0.5px;
 }
@@ -168,7 +168,7 @@
 
 .social-icon:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 /* Bottom Bar */
@@ -192,31 +192,31 @@
 }
 
 .legal-links a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.8rem;
   transition: color 0.3s ease;
 }
 
 .legal-links a:hover {
-  color: #e91e63;
+  color: var(--primary);
 }
 
 .legal-links span {
-  color: #ccc;
+  color: var(--text-light);
   font-size: 0.8rem;
 }
 
 .powered-by {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
 .heart {
-  color: #e91e63;
+  color: var(--primary);
 }
 
 /* Tablet Responsive */
@@ -233,6 +233,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
+    padding:20px 10px ;
   }
   
   .footer-left {
@@ -276,6 +277,9 @@
   
   .footer-main {
     gap: 30px;
+  }
+  .footer-logo img{
+    width: 200px !important;
   }
   
   .logo-text {

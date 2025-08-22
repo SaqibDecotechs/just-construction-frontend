@@ -13,5 +13,66 @@ code {
 }
 
 :root{
-  --color_1:#e5007e;
+  /* Primary Colors */
+  --color_1: #2563eb;     /* Blue primary */
+  --primary: #3b82f6;         /* Blue */
+  --primary-dark: #1d4ed8;       /* Darker blue */
+  --primary-darker: #1e40af;        /* Darkest blue */
+  
+  /* Text Colors */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --text-white: #fff;
+  
+  /* Background Colors */
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-gray: #f1f5f9;
+  --bg-light-gray: #e2e8f0;
+  --bg-muted: #f9fafb;
+  --bg-dark: #1e293b;
+  --bg-darker: #0f172a;
+  --bg-darkest: #020617;
+  
+  /* Border Colors */
+  --border-light: #e2e8f0;
+  --border-gray: #cbd5e1;
+  --border-muted: #d1d5db;
+  --border-dark: #9ca3af;
+  --border-focus: #e5e7eb;
+  
+  /* Status Colors */
+  --success: #10b981;
+  --success-light: #ecfdf5;
+  --success-border: #bbf7d0;
+  --info: #3b82f6;
+  --info-light: #eff6ff;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+  --danger-light: #f87171;
+  
+  /* Social Media Colors */
+  --linkedin: #0077B5;
+  --linkedin-dark: #005885;
+  --google: #4285f4;
+  
+  /* Utility Colors */
+  --shadow: rgba(0, 0, 0, 0.15);
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-dark: rgba(0, 0, 0, 0.9);
+  --backdrop: rgba(0, 0, 0, 0.4);
+  
+  /* Gray Scale */
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
 }

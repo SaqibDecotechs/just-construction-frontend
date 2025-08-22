@@ -34,13 +34,13 @@
 .why-work-content {
   /* max-width: 800px; */
   text-align: left;
-  color: white;
+  color: var(--text-white);
 }
 
 .why-work-subtitle {
   font-size: 1rem;
   font-weight: 600;
-  color: white;
+  color: var(--text-white);
   margin-bottom: 30px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 .why-work-title {
   font-size: 3.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-white);
   line-height: 1.2;
   margin: 0 0 20px 0;
   font-family: 'Eurostile', Arial, sans-serif;
@@ -60,7 +60,7 @@
 .why-work-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: white;
+  color: var(--text-white);
   margin: 0;
   opacity: 0.95;
   font-weight: 400;

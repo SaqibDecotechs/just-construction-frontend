@@ -7,13 +7,13 @@
 /* Hero Section - Similar to AllJobs */
 .job-application-hero {
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(var(--backdrop), var(--backdrop)),
               url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: white;
+  color: var(--text-white);
   text-align: center;
 }
 
@@ -28,8 +28,8 @@
   font-size: 4rem;
   font-weight: 700;
   margin: 0 0 2rem 0;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--text-white);
+  text-shadow: 2px 2px 4px var(--shadow);
 }
 
 .hero-arrow {
@@ -59,7 +59,7 @@
 }
 
 .application-form-wrapper {
-  background: #e8e8e8;
+  background: var(--bg-light-gray);
   border-radius: 0;
   padding: 40px;
   max-width: 500px;
@@ -74,7 +74,7 @@
 .welcome-message h1 {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #e91e63;
+  color: var(--primary);
   margin: 0;
   line-height: 1.3;
 }
@@ -82,7 +82,7 @@
 .register-section h2 {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
 }
 
@@ -106,7 +106,7 @@
 .form-group-apply label {
   font-size: 0.85rem;
   font-weight: 400;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 3px;
 }
 
@@ -114,11 +114,11 @@
 .form-group-apply input[type="email"],
 .form-group-apply input[type="tel"] {
   padding: 8px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-gray);
   border-radius: 3px;
   font-size: 0.85rem;
-  color: #333;
-  background: white;
+  color: var(--text-primary);
+  background: var(--bg-white);
   transition: border-color 0.3s ease;
   font-family: Arial, sans-serif;
 }
@@ -127,11 +127,11 @@
 .form-group-apply input[type="email"]:focus,
 .form-group-apply input[type="tel"]:focus {
   outline: none;
-  border-color: #999;
+  border-color: var(--text-muted);
 }
 
 .form-group-apply input::placeholder {
-  color: #aaa;
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
@@ -152,7 +152,7 @@
   align-items: center;
   cursor: pointer;
   font-size: 0.85rem;
-  color: #333;
+  color: var(--text-primary);
   white-space: nowrap;
 }
 
@@ -160,7 +160,7 @@
   margin-right: 6px;
   width: 14px;
   height: 14px;
-  accent-color: #e91e63;
+  accent-color: var(--primary);
   opacity: 1;
   position: relative;
 }
@@ -187,22 +187,22 @@
 .file-button {
   display: inline-block;
   padding: 4px 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-gray);
   border-radius: 3px;
-  background: #f8f8f8;
+  background: var(--bg-light);
   cursor: pointer;
   font-size: 0.8rem;
-  color: #333;
+  color: var(--text-primary);
   font-family: Arial, sans-serif;
 }
 
 .file-button:hover {
-  background: #f0f0f0;
+  background: var(--border-focus);
 }
 
 .file-status {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
@@ -213,32 +213,32 @@
   gap: 8px;
   margin-top: 8px;
   padding: 8px 12px;
-  background: #f0f8ff;
-  border: 1px solid #d1e7dd;
+  background: var(--bg-light-blue);
+  border: 1px solid var(--success-border);
   border-radius: 4px;
 }
 
 .existing-file-text {
   font-size: 0.8rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 500;
 }
 
 .existing-file-link {
   font-size: 0.8rem;
-  color: #e91e63;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }
 
 .existing-file-link:hover {
   text-decoration: underline;
-  color: #d81b60;
+  color: var(--primary-dark);
 }
 
 .no-existing-file {
   font-size: 0.8rem;
-  color: #d32f2f;
+  color: var(--danger);
   font-style: italic;
 }
 
@@ -246,39 +246,39 @@
   display: block;
   margin-top: 5px;
   font-size: 0.75rem;
-  color: #28a745;
+  color: var(--success);
   text-decoration: none;
   font-weight: 500;
 }
 
 .uploaded-file-link:hover {
   text-decoration: underline;
-  color: #218838;
+  color: var(--success-dark);
 }
 
 .file-button:disabled {
-  background: #e0e0e0;
-  color: #999;
+  background: var(--border-light);
+  color: var(--text-muted);
   cursor: not-allowed;
 }
 
 .file-input:disabled + .file-button {
-  background: #e0e0e0;
-  color: #999;
+  background: var(--border-light);
+  color: var(--text-muted);
   cursor: not-allowed;
 }
 
 .file-status {
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .file-status.success {
-  color: #28a745;
+  color: var(--success);
   font-weight: 500;
 }
 
 .file-status.loading {
-  color: #e91e63;
+  color: var(--primary);
   font-style: italic;
 }
 
@@ -289,12 +289,12 @@
 
 .privacy-section p {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .privacy-section a {
-  color: #e91e63;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -304,8 +304,8 @@
 
 /* Apply Button */
 .apply-button {
-  background: #e91e63;
-  color: white;
+  background: var(--primary);
+  color: var(--text-white);
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
@@ -321,7 +321,7 @@
 }
 
 .apply-button:hover {
-  background: #d81b60;
+  background: var(--primary-dark);
   transform: translateY(-1px);
 }
 
@@ -330,14 +330,14 @@
 }
 
 .apply-button:disabled {
-  background: #ccc;
-  color: #666;
+  background: var(--text-light);
+  color: var(--text-secondary);
   cursor: not-allowed;
   transform: none;
 }
 
 .apply-button:disabled:hover {
-  background: #ccc;
+  background: var(--text-light);
   transform: none;
 }
 

@@ -5,13 +5,13 @@
     right: 0;
     z-index: 1000;
     transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--backdrop);
     backdrop-filter: blur(2px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--overlay-light);
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--overlay-dark);
     backdrop-filter: blur(20px);
 }
 
@@ -51,7 +51,7 @@ width: 300px
 }
 
 .nav-link {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -81,7 +81,7 @@ width: 300px
 }
 
 .country-selector:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
 }
 
 .flag-icon {
@@ -113,7 +113,7 @@ width: 300px
 }
 
 .country-option:hover {
-    background: rgba(233, 30, 99, 0.1);
+    background: var(--primary);
 }
 
 .country-option img {
@@ -123,7 +123,7 @@ width: 300px
 }
 
 .auth-buttons {
-    background: #e91e63;
+    background: var(--primary);
     border-radius: 25px;
     padding: 8px 20px;
     display: flex;
@@ -132,7 +132,7 @@ width: 300px
 }
 
 .auth-btn {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 11px;
     font-weight: 600;
@@ -147,7 +147,7 @@ width: 300px
 }
 
 .auth-divider {
-    color: white;
+    color: var(--text-white);
     font-weight: 300;
     font-size: 11px;
 }
@@ -168,25 +168,25 @@ width: 300px
 }
 
 .btn-primary {
-    background: #e91e63;
-    color: white;
+    background: var(--primary);
+    color: var(--text-white);
     text-transform: uppercase;
 }
 
 .btn-primary:hover {
-    background: #d81b60;
+    background: var(--primary-dark);
     transform: translateY(-1px);
 }
 
 .btn-outline {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
 }
 
 .btn-outline:hover {
-    background: white;
-    color: #333;
+    background: var(--bg-white);
+    color: var(--text-primary);
     transform: translateY(-2px);
 }
 
@@ -194,7 +194,7 @@ width: 300px
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-white);
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -253,9 +253,9 @@ width: 300px
         width: 220px;
     }
 
-    .nav-menu {
+    /* .nav-menu {
         display: none;
-    }
+    } */
 
     /* .nav-actions {
         position: absolute;
@@ -298,7 +298,7 @@ width: 300px
         left: -120%;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
+        background: var(--overlay-dark);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -356,7 +356,7 @@ width: 300px
     }
 
     .country-selector {
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--overlay-light);
         padding: 10px;
         border-radius: 50%;
         display: flex;
@@ -377,7 +377,7 @@ width: 300px
         margin-top: 0;
         display: flex;
         gap: 10px;
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--overlay-light);
         backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 10px;
@@ -385,7 +385,7 @@ width: 300px
 
     .country-option {
         padding: 8px;
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--overlay-light);
         border-radius: 50%;
     }
 
@@ -434,7 +434,7 @@ width: 300px
 }
 
 .user-dropdown {
-    background: #e91e63;
+    background: var(--primary);
     border-radius: 25px;
     padding: 8px 20px;
     display: flex;
@@ -446,16 +446,16 @@ width: 300px
 }
 
 .user-dropdown:hover {
-    background: #d81b60;
+    background: var(--primary-dark);
 }
 
 .user-icon {
-    color: white;
+    color: var(--text-white);
     font-size: 14px;
 }
 
 .user-name {
-    color: white;
+    color: var(--text-white);
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -470,11 +470,11 @@ width: 300px
     position: absolute;
     top: 100%;
     right: 0;
-    background: white;
+    background: var(--bg-white);
     border-radius: 8px;
     padding: 8px 0;
     min-width: 120px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--shadow);
     z-index: 1001;
     margin-top: 8px;
 }
@@ -484,11 +484,11 @@ width: 300px
     position: absolute;
     top: 20px;
     left: 0;
-    background: #e91e63;
+    background: var(--primary);
     border-radius: 8px;
     padding: 0;
     min-width: 180px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--shadow);
     z-index: 1001;
     margin-top: 8px;
     overflow: hidden;
@@ -498,12 +498,12 @@ width: 300px
     display: block;
     /* width: 100%; */
     padding: 12px 20px;
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--overlay-light);
 }
 
 .dropdown-item:last-child {
@@ -511,18 +511,18 @@ width: 300px
 }
 
 .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
     padding-left: 25px;
 }
 
 .dropdown-item.active {
-    background: white;
-    color: #e91e63;
+    background: var(--bg-white);
+    color: var(--primary);
 }
 
 .dropdown-item.active:hover {
-    background: white;
-    color: #e91e63;
+    background: var(--bg-white);
+    color: var(--primary);
 }
 
 .dropdown-menu-item {
@@ -533,12 +533,12 @@ width: 300px
     text-align: left;
     cursor: pointer;
     font-size: 14px;
-    color: #333;
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: 8px;
     transition: background 0.2s ease;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-focus);
 }
 
 .dropdown-menu-item:last-child {
@@ -546,12 +546,12 @@ width: 300px
 }
 
 .dropdown-menu-item:hover {
-    background: #f5f5f5;
+    background: var(--bg-gray);
 }
 
 .dropdown-menu-item svg {
     font-size: 12px;
-    color: #e91e63;
+    color: var(--primary);
 }
 
 /* Responsive styles for user dropdown */
@@ -598,11 +598,11 @@ width: 300px
     position: absolute;
     top: 20px;
     left: 0;
-    background: #e91e63;
+    background: var(--primary);
     border-radius: 8px;
     padding: 0;
     min-width: 220px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--shadow);
     z-index: 1001;
     margin-top: 8px;
     /* overflow: hidden; */
@@ -615,15 +615,15 @@ width: 300px
     align-items: center;
     cursor: pointer;
     padding: 12px 20px;
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--overlay-light);
 }
 
 .jobs-dropdown-menu .jobs-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
     padding-left: 25px;
 }
 
@@ -652,11 +652,11 @@ width: 300px
     position: absolute;
     top: 0;
     left:97%;
-    background: #e91e63;
+    background: var(--primary);
     border-radius: 8px;
     padding: 0;
     min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--shadow);
     z-index: 1002;
     margin-left: 5px;
     overflow: hidden;
@@ -670,12 +670,12 @@ width: 300px
     display: block;
     /* width: 100%; */
     padding: 12px 20px;
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--overlay-light);
 }
 
 .nested-jobs-dropdown .dropdown-item:last-child {
@@ -683,27 +683,27 @@ width: 300px
 }
 
 .nested-jobs-dropdown .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
     padding-left: 25px;
 }
 
 .nested-jobs-dropdown .dropdown-item.active {
-    background: white;
-    color: #e91e63;
+    background: var(--bg-white);
+    color: var(--primary);
 }
 
 .nested-jobs-dropdown .dropdown-item.active:hover {
-    background: white;
-    color: #e91e63;
+    background: var(--bg-white);
+    color: var(--primary);
 }
 
 .jobs-main {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
     font-weight: 600;
 }
 
 .jobs-main:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--overlay-light);
 }
 
 /* Responsive design for jobs dropdown */

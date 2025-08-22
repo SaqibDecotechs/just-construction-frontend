@@ -3,7 +3,7 @@
 }
 
 .salary-guide-container {
-  background-color: #e8e8e8;
+  background-color: var(--bg-light-gray);
   max-width: 1200px;
   margin: 0 auto;
   padding: 90px 0px;
@@ -18,7 +18,7 @@
 .salary-guide-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: black;
+  color: var(--text-primary);
   margin: 0 0 30px 0;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -28,7 +28,7 @@
 .salary-guide-description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0 0 50px 0;
   /* max-width: 600px; */
   margin-left: auto;
@@ -47,13 +47,13 @@
   width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px var(--shadow);
   transition: all 0.3s ease;
 }
 
 .salary-guide-image:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 40px var(--shadow);
 }
 
 .salary-guide-button-container {
@@ -61,8 +61,8 @@
 }
 
 .download-salary-btn {
-  background: #e91e63;
-  color: white;
+  background: var(--primary);
+  color: var(--text-white);
   border: none;
   padding: 18px 40px;
   border-radius: 30px;
@@ -72,13 +72,13 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+  box-shadow: 0 6px 20px var(--primary);
 }
 
 .download-salary-btn:hover {
-  background: #d81b60;
+  background: var(--primary-dark);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+  box-shadow: 0 8px 25px var(--primary);
 }
 
 .download-salary-btn:active {

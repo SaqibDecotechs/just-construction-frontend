@@ -5,18 +5,21 @@
 }
 
 .dashboard-hero {
-  height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
+  height: 400px;
+  background: linear-gradient(var(--overlay-light), var(--overlay-light)),
+    url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.hero-overlay {
+.dashboard-hero .hero-overlay {
   text-align: center;
-  color: white;
+  color: var(--text-white);
+  margin-top: 139px;
+  z-index: 2;
+  background: transparent;
 }
 
 .hero-title {
@@ -24,7 +27,7 @@
   font-weight: 700;
   margin: 0;
   margin-bottom: 20px;
-  color: white;
+  color: var(--text-white);
 }
 
 .hero-arrow {
@@ -32,12 +35,19 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -45,7 +55,7 @@
 
 .dashboard-content {
   flex: 1;
-  background-color: #f5f5f5;
+  background-color: var(--bg-gray);
   padding: 60px 20px;
 }
 
@@ -63,10 +73,10 @@
 
 /* Profile Section */
 .profile-section {
-  background: white;
+  background: var(--bg-white);
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--shadow);
   min-width: 280px;
   max-width: 350px;
   height: fit-content;
@@ -81,20 +91,20 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #f0f0f0;
+  background: var(--bg-light);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   font-size: 40px;
-  color: #ccc;
-  border: 3px solid #e0e0e0;
+  color: var(--text-muted);
+  border: 3px solid var(--border-light);
 }
 
 .profile-info h3 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -105,7 +115,7 @@
   gap: 10px;
   margin-bottom: 20px;
   padding: 15px;
-  background: #fafafa;
+  background: var(--bg-muted);
   border-radius: 8px;
 }
 
@@ -121,29 +131,29 @@
 
 .resume-label {
   font-size: 14px;
-  color: #e91e63;
+  color: var(--primary);
   font-weight: 600;
 }
 
 .resume-status {
   font-size: 12px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .resume-link {
   font-size: 12px;
-  color: #007bff;
+  color: var(--blue);
   text-decoration: none;
   font-weight: 500;
 }
 
 .resume-link:hover {
   text-decoration: underline;
-  color: #0056b3;
+  color: var(--blue-dark);
 }
 
 .profile-details h4 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 15px;
   font-weight: 600;
@@ -157,21 +167,21 @@
 
 .detail-label {
   font-size: 13px;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 2px;
 }
 
 .detail-value {
   font-size: 14px;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 500;
 }
 
 .edit-profile-btn,
 .job-post-btn {
   width: 100%;
-  background: #333;
-  color: white;
+  background: var(--text-primary);
+  color: var(--text-white);
   border: none;
   padding: 12px;
   border-radius: 5px;
@@ -183,16 +193,16 @@
 
 .edit-profile-btn:hover,
 .job-post-btn:hover {
-  background: #555;
+  background: var(--gray-600);
 }
 
 .job-post-btn {
-  background: #e91e63;
+  background: var(--primary);
   margin-top: 10px;
 }
 
 .job-post-btn:hover {
-  background: #d81b60;
+  background: var(--primary-dark);
 }
 
 /* Dashboard Cards Section */
@@ -204,15 +214,15 @@
 }
 
 .dashboard-card {
-  background: white;
+  background: var(--bg-white);
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--shadow);
   overflow: hidden;
 }
 
 .card-header {
-  background: #e91e63;
-  color: white;
+  background: var(--primary);
+  color: var(--text-white);
   padding: 15px 20px;
   text-align: center;
 }
@@ -236,10 +246,10 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-light);
   margin-bottom: 15px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   font-size: 14px;
 }
 
@@ -253,9 +263,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border-light);
   font-size: 13px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .table-row:last-child {
@@ -264,7 +274,7 @@
 
 .empty-state {
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
   padding: 40px 20px;
   font-size: 14px;
@@ -276,8 +286,8 @@
 }
 
 .remove-btn {
-  background: #ff4757;
-  color: white;
+  background: var(--danger);
+  color: var(--text-white);
   border: none;
   padding: 5px 8px;
   border-radius: 3px;
@@ -287,7 +297,7 @@
 }
 
 .remove-btn:hover {
-  background: #ff3838;
+  background: var(--danger-dark);
 }
 
 .alert-toggle {
@@ -303,15 +313,15 @@
 
 /* Different card colors for variety */
 .saved-jobs-card .card-header {
-  background: #e91e63;
+  background: var(--primary);
 }
 
 .job-applications-card .card-header {
-  background: #e91e63;
+  background: var(--primary);
 }
 
 .favourite-searches-card .card-header {
-  background: #e91e63;
+  background: var(--primary);
 }
 
 /* Bottom Row */
@@ -326,11 +336,11 @@
   .dashboard-main-row {
     flex-direction: column;
   }
-  
+
   .dashboard-cards-section {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .profile-section {
     max-width: none;
   }
@@ -340,29 +350,29 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .dashboard-content {
     padding: 40px 15px;
   }
-  
+
   .dashboard-main-row {
     gap: 20px;
   }
-  
+
   .dashboard-cards-section {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .profile-section {
     padding: 20px;
   }
-  
+
   .card-content {
     padding: 15px;
     min-height: 150px;
   }
-  
+
   .avatar-placeholder {
     width: 100px;
     height: 100px;
@@ -374,27 +384,28 @@
   .dashboard-hero {
     height: 200px;
   }
-  
+
   .hero-title {
     font-size: 1.8rem;
   }
-  
+
   .dashboard-content {
     padding: 30px 10px;
   }
-  
+
   .profile-section {
     padding: 15px;
   }
-  
+
   .card-content {
     padding: 12px;
   }
-  
-  .table-header, .table-row {
+
+  .table-header,
+  .table-row {
     font-size: 12px;
   }
-  
+
   .card-header h3 {
     font-size: 0.9rem;
   }
@@ -415,10 +426,10 @@
   grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
   gap: 1rem;
   padding: 10px 0;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid var(--border-light);
   margin-bottom: 15px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   font-size: 14px;
 }
 
@@ -428,9 +439,9 @@
   gap: 1rem;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border-light);
   font-size: 13px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .admin-jobs-table .table-row:last-child {
@@ -439,13 +450,13 @@
 
 .admin-jobs-table .job-title-admin {
   font-weight: 500;
-  color: #e91e63;
+  color: var(--primary);
 }
 
 .admin-jobs-table .job-location,
 .admin-jobs-table .job-industry,
 .admin-jobs-table .job-date {
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .admin-jobs-table .action-buttons {
@@ -469,27 +480,28 @@
 }
 
 .edit-btn {
-  color: #007bff;
-  border-color: #007bff;
+  color: var(--blue);
+  border-color: var(--blue);
 }
 
 .edit-btn:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--blue);
+  color: var(--text-white);
 }
 
 .delete-btn {
-  color: #dc3545;
-  border-color: #dc3545;
+  color: var(--danger);
+  border-color: var(--danger);
 }
 
 .delete-btn:hover {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--danger);
+  color: var(--text-white);
 }
 
 /* Responsive design for admin jobs table */
 @media (max-width: 1024px) {
+
   .admin-jobs-table .table-header,
   .admin-jobs-table .table-row {
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -498,41 +510,41 @@
 }
 
 @media (max-width: 768px) {
+
   .admin-jobs-table .table-header,
   .admin-jobs-table .table-row {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
-  
+
   .admin-jobs-table .table-header {
     display: none;
   }
-  
+
   .admin-jobs-table .table-row {
     display: flex;
     flex-direction: column;
     padding: 15px;
     margin-bottom: 10px;
-    background: #fafafa;
+    background: var(--bg-muted);
     border-radius: 8px;
     border-bottom: none;
   }
-  
-  .admin-jobs-table .table-row > span {
+
+  .admin-jobs-table .table-row>span {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
   }
-  
-  .admin-jobs-table .table-row > span:before {
+
+  .admin-jobs-table .table-row>span:before {
     content: attr(data-label) ': ';
     font-weight: 600;
-    color: #333;
+    color: var(--text-primary);
   }
-  
+
   .admin-jobs-table .action-buttons {
     margin-top: 10px;
     justify-content: center;
   }
 }
-

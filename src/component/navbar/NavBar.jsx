@@ -153,14 +153,14 @@ const NavbarHero = () => {
               </li>
             )}
             <li className="nav-item">
-              {/* <a href="#employers" className="nav-link">
-                Employers <MdOutlineKeyboardArrowDown size={16} />
-              </a> */}
+              <a href="#employers" className="nav-link">
+                {/* Employers <MdOutlineKeyboardArrowDown size={16} /> */}
+              </a>
             </li>
             <li className="nav-item">
-              {/* <a href="#markets" className="nav-link">
-                Markets <MdOutlineKeyboardArrowDown size={16} />
-              </a> */}
+              <a href="#markets" className="nav-link">
+                {/* Markets <MdOutlineKeyboardArrowDown size={16} /> */}
+              </a>
             </li>
             <li className="nav-item">
               {/* <a href="#news" className="nav-link">News</a> */}
@@ -212,9 +212,9 @@ const NavbarHero = () => {
                   <div className="country-option">
                     <img src="https://flagcdn.com/w20/gb.png" alt="UK" />
                   </div>
-                  <div className="country-option">
+                  {/* <div className="country-option">
                     <img src="https://flagcdn.com/w20/ca.png" alt="Canada" />
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
