@@ -101,11 +101,14 @@ const NavbarHero = () => {
         <div className="navbar-container">
           <Link to="/" className="logo">
             <div className="logo-text">
-              <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" />
+              {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" /> */}
             </div>
           </Link>
 
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+            <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
+              <Link to="/" className={`dropdown-item ${isActivePage('/') ? 'active' : ''}`}>Home</Link>
+             </li>
             <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
               <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link>
               {/* <a href="#about" className="nav-link">

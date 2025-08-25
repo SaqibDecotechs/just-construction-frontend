@@ -40,7 +40,7 @@ const Footer = () => {
                 <span className="logo-construction">CONSTRUCTION</span><br />
                 <span className="logo-specialists">SPECIALISTS</span>
               </h2> */}
-              <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC_Logo-540w.png" width={120} alt="" />
+              {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC_Logo-540w.png" width={120} alt="" /> */}
 
             </div>
 
