@@ -1,0 +1,19 @@
+/* CSR Page Styles */
+.csr-page {
+  min-height: 100vh;
+  background-color: var(--bg-primary, #ffffff);
+}
+
+.csr-content {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .csr-content {
+    padding: 1rem;
+  }
+}
