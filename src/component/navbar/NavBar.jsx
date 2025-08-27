@@ -99,28 +99,25 @@ const NavbarHero = () => {
       {/* Navigation Bar */}
       <nav className={`navbar ${isScrolled ? '' : ''}`}>
         <div className="navbar-container">
-          <Link to="/" className="logo">
+           {/* <Link to="/" className="logo">
             <div className="logo-text">
-              {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" /> */}
+              <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" />
             </div>
-          </Link>
+          </Link>  */}
 
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
             <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
-              <Link to="/" className={`dropdown-item ${isActivePage('/') ? 'active' : ''}`}>Home</Link>
-             </li>
-            <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
-              <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link>
-              {/* <a href="#about" className="nav-link">
+              {/* <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link> */}
+              <a href="#about" className="nav-link">
                 About Us <MdOutlineKeyboardArrowDown size={16} />
-              </a> */}
-              {/* {showAboutDropdown && (
+              </a>
+              {showAboutDropdown && (
                 <div className="about-dropdown-menu">
                   <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link>
-                  <a href="#diversity-csr" className="dropdown-item">Diversity and CSR</a>
+                  <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>Diversity and CSR</Link>
                   <a href="#join-us" className="dropdown-item">Join Us</a>
                 </div>
-              )} */}
+              )}
             </li>
             {user?.role !== 'admin' && (
               <li className="nav-item" onMouseEnter={handleJobsHover} onMouseLeave={handleJobsLeave}>
