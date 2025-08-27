@@ -1,0 +1,152 @@
+.candidate-commitment-details {
+  min-height: 60vh;
+  background-image: url('../../assest/candidatedetailsbg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.candidate-commitment-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(233, 30, 99, 0.8); */
+  z-index: 1;
+}
+
+.candidate-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.candidate-details-content {
+  text-align: left;
+  color: white;
+}
+
+.candidate-details-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Eurostile', Arial, sans-serif;
+}
+
+.candidate-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.candidate-details-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.candidate-details-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 25px;
+  padding-left: 25px;
+  position: relative;
+  font-weight: 400;
+}
+
+.candidate-details-list li::before {
+  content: '•';
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .candidate-details-container {
+    padding: 0 40px;
+  }
+  
+  .candidate-details-grid {
+    gap: 60px;
+  }
+  
+  .candidate-details-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidate-commitment-details {
+    min-height: auto;
+    padding: 60px 0;
+    background-attachment: scroll; /* Fixed backgrounds don't work well on mobile */
+  }
+  
+  .candidate-details-container {
+    padding: 0 30px;
+  }
+  
+  .candidate-details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .candidate-details-title {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  
+  .candidate-details-list li {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .candidate-commitment-details {
+    padding: 50px 0;
+  }
+  
+  .candidate-details-container {
+    padding: 0 20px;
+  }
+  
+  .candidate-details-title {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+  }
+  
+  .candidate-details-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+}

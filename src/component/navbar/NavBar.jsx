@@ -122,13 +122,13 @@ const NavbarHero = () => {
             </li>
             {user?.role !== 'admin' && (
               <li className="nav-item" onMouseEnter={handleJobsHover} onMouseLeave={handleJobsLeave}>
-                <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link>
-                {/* <a href="#services" className="nav-link">
+                {/* <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link> */}
+                <a href="#services" className="nav-link">
                   Job Seekers <MdOutlineKeyboardArrowDown  size={16} />
-                </a> */}
-                {/* {showJobsDropdown && (
+                </a>
+                {showJobsDropdown && (
                   <div className="jobs-dropdown-menu">
-                    <a href="#candidate-commitment" className={`dropdown-item ${location.hash === '#candidate-commitment' ? 'active' : ''}`}>Candidate Commitment</a>
+                    <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>Candidate Commitment</Link>
                     <a href="#submit-cv" className={`dropdown-item ${location.hash === '#submit-cv' ? 'active' : ''}`}>Submit Your CV</a>
                     <a href="#job-alerts" className={`dropdown-item ${location.hash === '#job-alerts' ? 'active' : ''}`}>Job Alerts</a>
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>Download a CV Template</a>
@@ -150,7 +150,7 @@ const NavbarHero = () => {
                       )}
                     </div>
                   </div>
-                )} */}
+                )}
               </li>
             )}
             <li className="nav-item">

@@ -116,7 +116,7 @@
 .stat-percentage {
   font-size: 3rem;
   font-weight: bold;
-  color: #e91e63;
+  color: var(--color_1);
   margin-bottom: 5px;
 }
 
@@ -197,7 +197,7 @@
 
 .diversity-goal-item:before {
   content: '•';
-  color: #e91e63;
+  color: var(--color_1);
   font-size: 1.5rem;
   position: absolute;
   left: 0;
@@ -279,7 +279,7 @@
 
 .achieve-goal-item:before {
   content: '•';
-  color: #e91e63;
+  color: var(--color_1);
   font-size: 1.5rem;
   position: absolute;
   left: 0;
@@ -291,7 +291,7 @@
 }
 
 .diversity-policy-btn {
-  background-color: #e91e63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   padding: 15px 30px;
