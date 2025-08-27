@@ -101,6 +101,7 @@ const NavbarHero = () => {
         <div className="navbar-container">
           <Link to="/" className="logo">
             <div className="logo-text">
+            <h4 style={{color:"white",margin:"0px"}}>Fazil Construction</h4>
               {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" /> */}
             </div>
           </Link>
