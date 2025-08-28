@@ -129,7 +129,7 @@ const NavbarHero = () => {
                 {showJobsDropdown && (
                   <div className="jobs-dropdown-menu">
                     <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>Candidate Commitment</Link>
-                    <a href="#submit-cv" className={`dropdown-item ${location.hash === '#submit-cv' ? 'active' : ''}`}>Submit Your CV</a>
+                    <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
                     <a href="#job-alerts" className={`dropdown-item ${location.hash === '#job-alerts' ? 'active' : ''}`}>Job Alerts</a>
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>Download a CV Template</a>
                     <div className="dropdown-item jobs-item" 
