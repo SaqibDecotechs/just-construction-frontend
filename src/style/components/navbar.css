@@ -74,21 +74,90 @@ width: 300px
 
 .country-selector {
     position: relative;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 5px;
     border-radius: 4px;
     transition: background 0.3s ease;
 }
 
-.country-selector:hover {
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select {
+    background: var(--overlay-light);
+    border: 1px solid var(--overlay-light);
+    border-radius: 6px;
+    color: var(--text-white);
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+.custom-select:hover {
+    background: var(--overlay-dark);
+    border-color: var(--primary);
+}
+
+.selected-flag {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.select-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.custom-select.active .select-arrow {
+    transform: rotate(180deg);
+}
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--overlay-dark);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    margin-top: 2px;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: var(--text-white);
+    font-size: 14px;
+}
+
+.custom-option:hover {
     background: var(--overlay-light);
 }
 
-.flag-icon {
-    width: 24px;
+.custom-option img {
+    width: 20px;
     height: auto;
     border-radius: 2px;
-    display: block;
 }
 
 .country-dropdown {
@@ -117,9 +186,9 @@ width: 300px
 }
 
 .country-option img {
-    width: 24px;
+    width: 100px;
     height: auto;
-    border-radius: 2px;
+    border-radius: 100%;
 }
 
 .auth-buttons {
@@ -237,8 +306,18 @@ width: 300px
         font-size: 10px;
     }
 
-    .flag-icon {
-        width: 22px;
+    .custom-select {
+        font-size: 13px;
+        padding: 5px 8px;
+        min-width: 75px;
+    }
+    
+    .selected-flag {
+        width: 18px;
+    }
+    
+    .custom-option img {
+        width: 18px;
     }
 }
 
@@ -276,8 +355,18 @@ width: 300px
         font-size: 11px;
     }
 
-    .flag-icon {
-        width: 24px;
+    .custom-select {
+        font-size: 14px;
+        padding: 6px 10px;
+        min-width: 80px;
+    }
+    
+    .selected-flag {
+        width: 20px;
+    }
+    
+    .custom-option img {
+        width: 20px;
     }
 }
 
@@ -357,15 +446,26 @@ width: 300px
 
     .country-selector {
         background: var(--overlay-light);
-        padding: 10px;
-        border-radius: 50%;
+        padding: 8px;
+        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .flag-icon {
-        width: 30px;
+    .custom-select {
+        font-size: 16px;
+        padding: 8px 12px;
+        min-width: 90px;
+        background: var(--overlay-dark);
+    }
+    
+    .selected-flag {
+        width: 22px;
+    }
+    
+    .custom-option img {
+        width: 22px;
     }
 
     .country-dropdown {
@@ -415,8 +515,18 @@ width: 300px
         font-size: 12px;
     }
 
-    .flag-icon {
-        width: 28px;
+    .custom-select {
+        font-size: 14px;
+        padding: 6px 10px;
+        min-width: 85px;
+    }
+    
+    .selected-flag {
+        width: 20px;
+    }
+    
+    .custom-option img {
+        width: 20px;
     }
 
     .country-option img {

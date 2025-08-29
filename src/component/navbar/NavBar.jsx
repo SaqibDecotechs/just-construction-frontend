@@ -8,6 +8,8 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { getUser } from '../../store/slices/authSlice';
 import { logout } from '../../store/services/auth';
 import { IoIosArrowForward } from "react-icons/io";
+import { selectCountry, selectSelectedCountry, selectSelectedLocale } from '../../store/slices/countrySlice';
+import { getCountryFlagUrl, getLocalizedText } from '../../utils/localization';
 import '../../style/components/navbar.css'
 
 const NavbarHero = () => {
@@ -15,6 +17,8 @@ const NavbarHero = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const user = useSelector(getUser);
+  const selectedCountry = useSelector(selectSelectedCountry);
+  const selectedLocale = useSelector(selectSelectedLocale);
   console.log("🚀 ~ NavbarHero ~ user:", user)
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,8 +42,9 @@ const NavbarHero = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleCountryDropdown = () => {
-    setShowCountryDropdown(!showCountryDropdown);
+  const handleCountryChange = (country) => {
+    dispatch(selectCountry(country));
+    setShowCountryDropdown(false);
   };
 
   const toggleUserDropdown = () => {
@@ -110,13 +115,17 @@ const NavbarHero = () => {
             <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
               {/* <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link> */}
               <a href="#about" className="nav-link">
-                About Us <MdOutlineKeyboardArrowDown size={16} />
+                {getLocalizedText('aboutUs', selectedLocale)} <MdOutlineKeyboardArrowDown size={16} />
               </a>
               {showAboutDropdown && (
                 <div className="about-dropdown-menu">
                   <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link>
-                  <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>Diversity and CSR</Link>
-                  <a href="#join-us" className="dropdown-item">Join Us</a>
+                  <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>
+                    Diversity and CSR - We {getLocalizedText('organize', selectedLocale)} our efforts
+                  </Link>
+                  <a href="#join-us" className="dropdown-item">
+                    Join Us - Your {getLocalizedText('favorite', selectedLocale)} construction team
+                  </a>
                 </div>
               )}
             </li>
@@ -124,14 +133,20 @@ const NavbarHero = () => {
               <li className="nav-item" onMouseEnter={handleJobsHover} onMouseLeave={handleJobsLeave}>
                 {/* <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link> */}
                 <a href="#services" className="nav-link">
-                  Job Seekers <MdOutlineKeyboardArrowDown  size={16} />
+                  {getLocalizedText('jobSeekers', selectedLocale)} <MdOutlineKeyboardArrowDown  size={16} />
                 </a>
                 {showJobsDropdown && (
                   <div className="jobs-dropdown-menu">
-                    <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>Candidate Commitment</Link>
+                    <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>
+                      Candidate Commitment - We {getLocalizedText('realize', selectedLocale)} your potential
+                    </Link>
                     <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
-                    <a href="#job-alerts" className={`dropdown-item ${location.hash === '#job-alerts' ? 'active' : ''}`}>Job Alerts</a>
-                    <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>Download a CV Template</a>
+                    <a href="#job-alerts" className={`dropdown-item ${location.hash === '#job-alerts' ? 'active' : ''}`}>
+                      Job Alerts - Get {getLocalizedText('organized', selectedLocale)} updates
+                    </a>
+                    <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
+                      Download a CV Template - Our {getLocalizedText('specializations', selectedLocale)}
+                    </a>
                     <div className="dropdown-item jobs-item" 
                          onMouseEnter={handleNestedJobsHover} 
                          onMouseLeave={handleNestedJobsLeave}>
@@ -141,9 +156,15 @@ const NavbarHero = () => {
                         <div className="nested-jobs-dropdown"
                              onMouseEnter={handleNestedJobsHover}
                              onMouseLeave={handleNestedJobsLeave}>
-                          <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link>
-                          <a href="#me-building" className={`dropdown-item ${location.hash === '#me-building' ? 'active' : ''}`}>M&E & Building Services Jobs</a>
-                          <a href="#building-envelopes" className={`dropdown-item ${location.hash === '#building-envelopes' ? 'active' : ''}`}>Building Envelopes Jobs</a>
+                          <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>
+                            View All Jobs - Well {getLocalizedText('organized', selectedLocale)} opportunities
+                          </Link>
+                          <a href="#me-building" className={`dropdown-item ${location.hash === '#me-building' ? 'active' : ''}`}>
+                            M&E & Building Services - Our {getLocalizedText('center', selectedLocale)} of excellence
+                          </a>
+                          <a href="#building-envelopes" className={`dropdown-item ${location.hash === '#building-envelopes' ? 'active' : ''}`}>
+                            Building Envelopes - Quality {getLocalizedText('specializations', selectedLocale)}
+                          </a>
                           <a href="#construction" className={`dropdown-item ${location.hash === '#construction' ? 'active' : ''}`}>Construction Jobs</a>
                           <a href="#interiors" className={`dropdown-item ${location.hash === '#interiors' ? 'active' : ''}`}>Interiors Jobs</a>
                         </div>
@@ -199,25 +220,38 @@ const NavbarHero = () => {
                 <Link to="/register" className="auth-btn">REGISTER</Link>
               </div>
             )}
-            <div className="country-selector" onClick={toggleCountryDropdown}>
-              <img
-                src="https://flagcdn.com/w20/us.png"
-                alt="US Flag"
-                className="flag-icon"
-              />
-              {showCountryDropdown && (
-                <div className="country-dropdown">
-                  <div className="country-option">
-                    <img src="https://flagcdn.com/w20/us.png" alt="US" />
-                  </div>
-                  <div className="country-option">
-                    <img src="https://flagcdn.com/w20/gb.png" alt="UK" />
-                  </div>
-                  {/* <div className="country-option">
-                    <img src="https://flagcdn.com/w20/ca.png" alt="Canada" />
-                  </div> */}
+            <div className="country-selector">
+              <div className="custom-select-wrapper">
+                <div 
+                  className="custom-select" 
+                  onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                >
+                  <img 
+                    src={getCountryFlagUrl(selectedCountry || 'US', 20)} 
+                    alt={selectedCountry || 'US'} 
+                    className="selected-flag"
+                  />
+                  <svg className="select-arrow" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </div>
-              )}
+                {showCountryDropdown && (
+                  <div className="custom-options">
+                    <div 
+                      className="custom-option" 
+                      onClick={() => handleCountryChange('US')}
+                    >
+                      <img src="https://flagcdn.com/w20/us.png" alt="US" />
+                    </div>
+                    <div 
+                      className="custom-option" 
+                      onClick={() => handleCountryChange('UK')}
+                    >
+                      <img src="https://flagcdn.com/w20/gb.png" alt="UK" />
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
