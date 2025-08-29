@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e8a7e322.css",
+    "main.js": "/static/js/main.008d17b9.js",
+    "static/js/453.785845de.chunk.js": "/static/js/453.785845de.chunk.js",
+    "static/media/candidatebg.webp": "/static/media/candidatebg.b998e0e8d260c1d08a21.webp",
+    "static/media/diversitybg.webp": "/static/media/diversitybg.3ab4845a2dd9e638fc12.webp",
+    "static/media/submitcsvbannerbg.webp": "/static/media/submitcsvbannerbg.37b59f1734336c98fd6a.webp",
+    "static/media/goalsbg.webp": "/static/media/goalsbg.9b5ca4bc9a13650814b2.webp",
+    "static/media/achievegoalsbg.webp": "/static/media/achievegoalsbg.059a8c08ace20a7fcd19.webp",
+    "static/media/candidatedetailsbg.webp": "/static/media/candidatedetailsbg.9aee8ea7e7a89f6cd02b.webp",
+    "index.html": "/index.html",
+    "main.e8a7e322.css.map": "/static/css/main.e8a7e322.css.map",
+    "main.008d17b9.js.map": "/static/js/main.008d17b9.js.map",
+    "453.785845de.chunk.js.map": "/static/js/453.785845de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8a7e322.css",
+    "static/js/main.008d17b9.js"
+  ]
+}
