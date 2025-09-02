@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavbarHero from '../../component/navbar/NavBar';
+import Footer from '../../component/footer/Footer';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
@@ -215,6 +216,8 @@ const JobAlerts = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
