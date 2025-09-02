@@ -141,9 +141,9 @@ const NavbarHero = () => {
                       Candidate Commitment - We {getLocalizedText('realize', selectedLocale)} your potential
                     </Link>
                     <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
-                    <a href="#job-alerts" className={`dropdown-item ${location.hash === '#job-alerts' ? 'active' : ''}`}>
+                    <Link to="/job-alerts" className={`dropdown-item ${isActivePage('/job-alerts') ? 'active' : ''}`}>
                       Job Alerts - Get {getLocalizedText('organized', selectedLocale)} updates
-                    </a>
+                    </Link>
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
                       Download a CV Template - Our {getLocalizedText('specializations', selectedLocale)}
                     </a>
