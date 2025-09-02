@@ -11,6 +11,7 @@ import JobApplication from '../pages/jobApplication/JobApplication'
 import CSR from '../pages/csr/CSR'
 import CandidateCommitment from '../pages/candidateCommitment/CandidateCommitment'
 import SubmitCV from '../pages/submitCV/SubmitCV'
+import OurServices from '../pages/ourServices/OurServices'
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
             <Route path="/diversity-csr" element={<CSR />} />
             <Route path="/candidate-commitment" element={<CandidateCommitment />} />
             <Route path="/submit-cv" element={<SubmitCV />} />
+            <Route path="/our-services" element={<OurServices />} />
          
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
