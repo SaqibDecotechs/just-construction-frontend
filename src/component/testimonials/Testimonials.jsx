@@ -6,32 +6,39 @@ import './testimonials.css';
 const Testimonials = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
-  const testimonials = [
-    {
-      id: 1,
-      quote: "One of the best, most personable & knowledgeable client I've ever dealt with in my working career. They understand candidates in tough times of hunger & need with couldn't recommend highly enough. Guy by far shines as his mori than allegiance.hey understand candidates in tough times of hunger & need with couldn't recommend highly enough. Guy by far shines as his mori than allegiance."
-    },
-    {
-      id: 2,
-      quote: "Having been both a candidate and Client I can highly recommend Darren, very straight talking and honest - unlike most in this field."
-    },
-    {
-      id: 3,
-      quote: "Athy was polite and helpful. He followed up without pressure and assisted with interview prep."
-    },
-    {
-      id: 4,
-      quote: "Professional service from start to finish. The team really understood our requirements and delivered excellent candidates."
-    },
-    {
-      id: 5,
-      quote: "Outstanding communication throughout the recruitment process. Made the whole experience smooth and stress-free."
-    },
-    {
-      id: 6,
-      quote: "Excellent industry knowledge and genuine care for both clients and candidates. Highly recommended."
-    }
-  ];
+const testimonials = [
+  {
+    id: 1,
+    quote:
+      "By far one of the most professional and personable teams I’ve worked with. They truly understand candidates’ needs during challenging times and always go above and beyond. Highly recommended."
+  },
+  {
+    id: 2,
+    quote:
+      "Having experienced them as both a candidate and a client, I can say with confidence that they are refreshingly honest and straightforward – a rare quality in this industry."
+  },
+  {
+    id: 3,
+    quote:
+      "Athy was polite, supportive, and helpful throughout the process. His guidance with interview preparation made a real difference."
+  },
+  {
+    id: 4,
+    quote:
+      "A highly professional service from start to finish. The team took the time to understand our requirements and delivered excellent candidates."
+  },
+  {
+    id: 5,
+    quote:
+      "Outstanding communication at every stage of the recruitment process. They made the whole experience smooth and stress-free."
+  },
+  {
+    id: 6,
+    quote:
+      "Their industry knowledge is second to none. It’s clear they genuinely care about both clients and candidates. I wouldn’t hesitate to recommend them."
+  }
+];
+
 
   // Update items per slide based on screen size
   useEffect(() => {
@@ -61,9 +68,10 @@ const Testimonials = () => {
     <section className="testimonials">
       <div className="testimonials-container">
         <div className="testimonials-header">
-          <h2 className="testimonials-title">
-            Here is what some of our client's & candidates have to say about their experience working with us
-          </h2>
+         <h2 className="testimonials-title">
+What our clients and candidates say about working with us
+</h2>
+
         </div>
         
         <div className="testimonials-carousel-wrapper">

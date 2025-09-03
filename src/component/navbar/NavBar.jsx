@@ -148,7 +148,7 @@ const NavbarHero = () => {
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
                       Download a CV Template
                     </a>
-                    <div className="dropdown-item jobs-item" 
+                    {/* <div className="dropdown-item jobs-item" 
                          onMouseEnter={handleNestedJobsHover} 
                          onMouseLeave={handleNestedJobsLeave}>
                       <span>Jobs</span>
@@ -170,15 +170,15 @@ const NavbarHero = () => {
                           <a href="#interiors" className={`dropdown-item ${location.hash === '#interiors' ? 'active' : ''}`}>Interiors Jobs</a>
                         </div>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 )}
               </li>
             )}
             <li className="nav-item">
-              <a href="#employers" className="nav-link">
+              <Link to="/all-jobs" className="nav-link">
                 View Jobs
-              </a>
+              </Link>
             </li>
             <li className="nav-item" onMouseEnter={() => setShowEmployersDropdown(true)} onMouseLeave={() => setShowEmployersDropdown(false)}>
               <a href="#employers" className="nav-link">

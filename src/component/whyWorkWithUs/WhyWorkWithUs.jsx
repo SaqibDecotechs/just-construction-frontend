@@ -8,19 +8,17 @@ const WhyWorkWithUs = () => {
 
         <div className="why-work-container">
           <div className="why-work-content">
-            <h2 className="why-work-subtitle">WHY WORK WITH US</h2>
+            <h2 className="why-work-subtitle">Why Partner With Us</h2>
 
             <h1 className="why-work-title">
-              We have the expertise to help you execute projects, expand teams and accelerate business growth.
+              Delivering the expertise to drive projects forward, strengthen teams, and accelerate growth.
             </h1>
 
             <p className="why-work-description">
-              As construction specialists, we have an extensive network of qualified candidates, from university graduates to board
-              members, and a range of talent solutions to ensure you receive a tailored service. Whether you need a single employee
-              or an entire project team, we have people who can make a difference from day one. Our teams of expert recruiters are
-              eager to find you the perfect placement in both the UK and US markets.
+              As specialists in the construction industry, we connect you with an extensive network of skilled professionals—from recent graduates to senior executives. Our tailored talent solutions ensure you get the right people, whether you need a single specialist or an entire project team. With dedicated recruiters and a proven presence in both the UK and US, we’re ready to make an impact from day one.
             </p>
           </div>
+
         </div>
       </div>
     </section>

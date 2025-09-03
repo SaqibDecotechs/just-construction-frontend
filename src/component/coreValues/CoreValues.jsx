@@ -2,26 +2,30 @@ import React from 'react';
 import './coreValues.css';
 
 const CoreValues = () => {
-  const values = [
-    {
-      id: 1,
-      title: 'HONESTY',
-      description: 'To start a lasting relationship, honesty is an essential first step; so we will always offer you our honest advice and opinions, even if they are not commercially beneficial to us.',
-      icon: '💪' // Will be replaced with proper icon styling
-    },
-    {
-      id: 2,
-      title: 'INTEGRITY',
-      description: 'We believe in doing things the right way. So naturally, in being honest, your moral compass should be pointing in the right direction.',
-      icon: '🤝' // Will be replaced with proper icon styling
-    },
-    {
-      id: 3,
-      title: 'TRANSPARENCY',
-      description: 'Taking our clients and candidates on the journey with us has always been key to our success. We believe in a fully transparent service with no hidden agenda.',
-      icon: '🔍' // Will be replaced with proper icon styling
-    }
-  ];
+const values = [
+  {
+    id: 1,
+    title: 'Trust',
+    description:
+      'Strong partnerships begin with trust. We provide open and straightforward advice, always putting your best interests first.',
+    icon: '💡' // Replace with proper icon
+  },
+  {
+    id: 2,
+    title: 'Integrity',
+    description:
+      'We uphold the highest ethical standards, ensuring that every decision and action is guided by fairness and respect.',
+    icon: '⚖️' // Replace with proper icon
+  },
+  {
+    id: 3,
+    title: 'Clarity',
+    description:
+      'We believe in complete transparency, keeping our clients and candidates fully informed at every stage of the process.',
+    icon: '🌐' // Replace with proper icon
+  }
+];
+
 
   return (
     <section className="core-values">

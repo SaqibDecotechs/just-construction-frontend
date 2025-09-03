@@ -68,8 +68,8 @@ const MarketSectors = () => {
     <section className="market-sectors">
       <div className="market-container">
         <div className="market-sectors__header">
-          <h2 className="market-sectors__title">MARKET SECTORS</h2>
-          <p className="market-sectors__subtitle">Our dedicated teams are specialists in the following markets within the construction sector:</p>
+          <h2 className="market-sectors__title">INDUSTRY SECTORS</h2>
+          <p className="market-sectors__subtitle">Our specialist teams provide dedicated expertise across the following areas of the construction industry:</p>
         </div>
         <div className={`market-sectors__grid ${sectors.length === 4 ? 'grid-4' : 'grid-6'}`}>
           {sectors.map((sector) => (
