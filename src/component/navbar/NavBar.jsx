@@ -123,9 +123,9 @@ const NavbarHero = () => {
                   <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>
                     Diversity and CSR - We {getLocalizedText('organize', selectedLocale)} our efforts
                   </Link>
-                  <a href="#join-us" className="dropdown-item">
+                  <Link to="/join-us" className="dropdown-item">
                     Join Us - Your {getLocalizedText('favorite', selectedLocale)} construction team
-                  </a>
+                  </Link>
                 </div>
               )}
             </li>

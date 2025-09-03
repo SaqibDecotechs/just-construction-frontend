@@ -11,7 +11,11 @@ import JobApplication from '../pages/jobApplication/JobApplication'
 import CSR from '../pages/csr/CSR'
 import CandidateCommitment from '../pages/candidateCommitment/CandidateCommitment'
 import SubmitCV from '../pages/submitCV/SubmitCV'
+<<<<<<< HEAD
 import JobAlerts from '../pages/jobAlerts/JobAlerts'
+=======
+import JoinUs from '../pages/joinUs/JoinUs'
+>>>>>>> origin/dev-usama
 
 function Router() {
   return (
@@ -19,6 +23,7 @@ function Router() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/join-us" element={<JoinUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/meet-the-team" element={<MeetTheTeam />} />
