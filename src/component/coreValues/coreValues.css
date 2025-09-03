@@ -54,6 +54,12 @@
   transition: all 0.3s ease;
 }
 
+.icon-circle img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(86%) saturate(1814%) hue-rotate(215deg) brightness(103%) contrast(94%);
+  width: 100px;
+  height: auto;
+}
+
 /* .value-card:hover .icon-circle {
   background: #e91e63;
   transform: scale(1.1);

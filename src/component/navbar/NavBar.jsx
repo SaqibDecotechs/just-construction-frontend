@@ -28,6 +28,7 @@ const NavbarHero = () => {
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   const [showJobsDropdown, setShowJobsDropdown] = useState(false);
   const [showNestedJobsDropdown, setShowNestedJobsDropdown] = useState(false);
+  const [showEmployersDropdown, setShowEmployersDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -119,12 +120,12 @@ const NavbarHero = () => {
               </a>
               {showAboutDropdown && (
                 <div className="about-dropdown-menu">
-                  <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link>
+                  {/* <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link> */}
                   <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>
-                    Diversity and CSR - We {getLocalizedText('organize', selectedLocale)} our efforts
+                    Diversity and CSR
                   </Link>
                   <Link to="/join-us" className="dropdown-item">
-                    Join Us - Your {getLocalizedText('favorite', selectedLocale)} construction team
+                    Join Us
                   </Link>
                 </div>
               )}
@@ -138,14 +139,14 @@ const NavbarHero = () => {
                 {showJobsDropdown && (
                   <div className="jobs-dropdown-menu">
                     <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>
-                      Candidate Commitment - We {getLocalizedText('realize', selectedLocale)} your potential
+                      Candidate Commitment
                     </Link>
                     <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
                     <Link to="/job-alerts" className={`dropdown-item ${isActivePage('/job-alerts') ? 'active' : ''}`}>
-                      Job Alerts - Get {getLocalizedText('organized', selectedLocale)} updates
+                      Job Alerts 
                     </Link>
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
-                      Download a CV Template - Our {getLocalizedText('specializations', selectedLocale)}
+                      Download a CV Template
                     </a>
                     <div className="dropdown-item jobs-item" 
                          onMouseEnter={handleNestedJobsHover} 
@@ -176,12 +177,27 @@ const NavbarHero = () => {
             )}
             <li className="nav-item">
               <a href="#employers" className="nav-link">
-                {/* Employers <MdOutlineKeyboardArrowDown size={16} /> */}
+                View Jobs
               </a>
+            </li>
+            <li className="nav-item" onMouseEnter={() => setShowEmployersDropdown(true)} onMouseLeave={() => setShowEmployersDropdown(false)}>
+              <a href="#employers" className="nav-link">
+                Employers <MdOutlineKeyboardArrowDown size={16} />
+              </a>
+              {showEmployersDropdown && (
+                <div className="about-dropdown-menu">
+                  <Link to="/our-services" className={`dropdown-item ${isActivePage('/our-services') ? 'active' : ''}`}>
+                    Our Services
+                  </Link>
+                  <Link to="/case-studies" className={`dropdown-item ${isActivePage('/case-studies') ? 'active' : ''}`}>
+                    Case Studies
+                  </Link>
+                </div>
+              )}
             </li>
             <li className="nav-item">
               <a href="#markets" className="nav-link">
-                {/* Markets <MdOutlineKeyboardArrowDown size={16} /> */}
+                Contact Us
               </a>
             </li>
             <li className="nav-item">
@@ -227,8 +243,8 @@ const NavbarHero = () => {
                   onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                 >
                   <img 
-                    src={getCountryFlagUrl(selectedCountry || 'US', 20)} 
-                    alt={selectedCountry || 'US'} 
+                    src={getCountryFlagUrl(selectedCountry || 'UK', 20)} 
+                    alt={selectedCountry || 'UK'} 
                     className="selected-flag"
                   />
                   <svg className="select-arrow" viewBox="0 0 20 20" fill="currentColor">

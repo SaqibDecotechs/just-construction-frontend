@@ -1,6 +1,6 @@
 .why-work-with-us {
   min-height: 60vh;
-  background-image: url('https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/the-just-group-why-work-with-us-2880w.jpg');
+  background-image: url('https://img.freepik.com/free-photo/authentic-small-youthful-marketing-agency_23-2150167458.jpg?semt=ais_hybrid&w=740');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,6 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* opacity: 0.1; */
+}
+
+.bg-color{
+  background-color: #3b82f6b3!important;
+  /* opacity: 0.7; */
+  width: 100%;
+  
 }
 
 .why-work-with-us::before {
@@ -35,6 +43,7 @@
   /* max-width: 800px; */
   text-align: left;
   color: var(--text-white);
+  /* opacity: 1; */
 }
 
 .why-work-subtitle {

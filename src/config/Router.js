@@ -11,11 +11,8 @@ import JobApplication from '../pages/jobApplication/JobApplication'
 import CSR from '../pages/csr/CSR'
 import CandidateCommitment from '../pages/candidateCommitment/CandidateCommitment'
 import SubmitCV from '../pages/submitCV/SubmitCV'
-<<<<<<< HEAD
 import JobAlerts from '../pages/jobAlerts/JobAlerts'
-=======
 import JoinUs from '../pages/joinUs/JoinUs'
->>>>>>> origin/dev-usama
 
 function Router() {
   return (

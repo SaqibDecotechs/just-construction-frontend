@@ -21,9 +21,9 @@ const Home = () => {
         <WhyWorkWithUs />
         <CoreValues />
         <Testimonials />
-        <MeetTheTeam />
-        <SalaryGuide />
-        <IndustryNews />
+        {/* <MeetTheTeam /> */}
+        {/* <SalaryGuide /> */}
+        {/* <IndustryNews /> */}
         <Footer />
     </div>
   )

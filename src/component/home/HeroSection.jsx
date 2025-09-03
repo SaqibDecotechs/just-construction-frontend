@@ -1,33 +1,35 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { selectSelectedCountry } from '../../store/slices/countrySlice'
 import "../../style/components/heroSection.css"
 import SocialIcon from '../socialIcon'
 import Button from '../button'
 
 const HeroSection = () => {
+    const selectedCountry = useSelector(selectSelectedCountry);
+    
+    const getBackgroundImage = () => {
+        if (selectedCountry === 'UK') {
+            return require('../../assest/uk.jpg');
+        } else if (selectedCountry === 'US') {
+            return require('../../assest/usa.webp');
+        }
+        return require('../../assest/uk.jpg'); // Default to UK
+    };
+
     return (<>
-        <section className="hero">
-            <video
-                className="hero-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-            >
-                <source src="https://vid.cdn-website.com/2cce4485/videos/mgFkzVx4RAOWqnkO9PKb_EIdIjUS3S7KfyVokn7Vc_shutterstock_1014163070%2B%281%29-v-v.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div className="hero-overlay"></div>
+        <section className={`hero ${selectedCountry === 'UK' ? 'uk-background' : 'usa-background'}`} style={{backgroundImage: `url(${getBackgroundImage()})`}}>
+            <div className={`hero-overlay ${selectedCountry === 'UK' ? 'hero-overlay-dark' : ''}`}></div>
 
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Supplying Leading Talent
+                    Providing Top Talent
                 </h1>
                 <h2 className="hero-subtitle">
-                    to the Construction Sector
+                    for the Construction Industry
                 </h2>
                 <p className="hero-description">
-                    Specialist recruitment to the Construction Industry across the UK.
-                    Connect with top professionals and build your future in construction.
+                    Specialized hiring solutions for the UK construction sector. Partner with skilled professionals to build your success.
                 </p>
                 <div className="hero-actions">
 

@@ -49,12 +49,19 @@
 
 .market-sectors__grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 3px;
   /* max-width: 900px; */
   margin: 0;
   height: 446px;
+}
+
+.market-sectors__grid.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.market-sectors__grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .market-sector__card {
