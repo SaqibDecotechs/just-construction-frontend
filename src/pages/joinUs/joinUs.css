@@ -127,7 +127,7 @@
 }
 
 .join-btn {
-  background: #e6007e;
+  background: var(--primary);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -142,8 +142,8 @@
 
 .join-btn:hover {
   background-color: #fff;
-  color: #e6007e;
-  border: 2px solid #e6007e;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 /* ---------------- LATEST OPPORTUNITIES ---------------- */
