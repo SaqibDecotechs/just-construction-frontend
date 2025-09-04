@@ -19,7 +19,7 @@ const SubmitCV = () => {
     {
       id: 2,
       location: "Greater London",
-      country: "United Kingdom", 
+      country: "United Kingdom",
       title: "Project Manager",
       category: "Interiors",
       salary: "£ 65,000 - 70,000 GBP"
@@ -69,18 +69,20 @@ const SubmitCV = () => {
   return (
     <>
       <NavbarHero />
-      
+
       <div className="submit-cv-hero">
         <div className="submit-cv-hero-container">
           <div className="submit-cv-hero-content">
-            <h1 className="submit-cv-hero-title">Submit your CV</h1>
-            <h2 className="submit-cv-hero-subtitle">We often have new vacancies that match your search criteria but haven’t yet been posted on our website</h2>
+            <h1 className="submit-cv-hero-title">Submit Your CV</h1>
+            <h2 className="submit-cv-hero-subtitle">
+              We frequently have new vacancies that may suit your skills but are not yet listed on our website.
+            </h2>
             <p className="submit-cv-hero-description">
-              Upload your CV and one of our consultants will be in touch to discuss roles that best match your profile
+              Upload your CV and a consultant will reach out to discuss opportunities that best match your profile.
             </p>
           </div>
         </div>
-        
+
         <div className="submit-cv-hero-arrow">
           <MdKeyboardArrowDown />
         </div>
@@ -90,24 +92,24 @@ const SubmitCV = () => {
         <div className="submit-cv-form-container">
           <div className="submit-cv-form-card">
             <h2 className="submit-cv-form-title">SUBMIT YOUR CV</h2>
-            
+
             <form className="submit-cv-form">
               <div className="form-group">
                 <input type="text" id="name" name="name" placeholder="Name:" required />
               </div>
-              
+
               <div className="form-group">
                 <input type="email" id="email" name="email" placeholder="Email:" required />
               </div>
-              
+
               <div className="form-group">
                 <input type="tel" id="phone" name="phone" placeholder="Phone:" />
               </div>
-              
+
               <div className="form-group">
                 <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title (Required):" required />
               </div>
-              
+
               <div className="form-group">
                 <select id="county" name="county" required>
                   <option value="">County (Required):</option>
@@ -120,37 +122,37 @@ const SubmitCV = () => {
                   <option value="other">Other</option>
                 </select>
               </div>
-              
+
               <div className="form-group">
                 <input type="text" id="address" name="address" placeholder="Address" />
               </div>
-              
+
               <div className="form-group">
                 <input type="text" id="postcode" name="postcode" placeholder="Postcode (Required):" required />
               </div>
-              
+
               <div className="form-group">
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows="4" 
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
                   placeholder="Message:"
                 ></textarea>
               </div>
-              
+
               <div className="form-group file-upload-group">
                 <label className="file-upload-label">Choose File</label>
                 <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
                 <span className="file-upload-text">Upload File</span>
               </div>
-              
+
               <div className="checkbox-group">
                 <input type="checkbox" id="terms" name="terms" required />
                 <label htmlFor="terms">
                   I agree to <a href="#" className="terms-link">Privacy Policy</a> & <a href="#" className="terms-link">Terms & Conditions (Required)</a>
                 </label>
               </div>
-              
+
               <button type="submit" className="submit-cv-button">
                 Submit CV
               </button>
@@ -163,9 +165,9 @@ const SubmitCV = () => {
       <div className="submit-cv-jobs-section">
         <div className="jobs-slider-container">
           <div className="jobs-slider-wrapper">
-            <div 
+            <div
               className="jobs-slider"
-              style={{ 
+              style={{
                 transform: `translateX(-${currentSlide * 100}%)`,
                 transition: 'transform 0.3s ease-in-out'
               }}
@@ -192,7 +194,7 @@ const SubmitCV = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Navigation Dots */}
           <div className="jobs-slider-dots">
             {Array.from({ length: totalSlides }).map((_, index) => (
@@ -203,7 +205,7 @@ const SubmitCV = () => {
               />
             ))}
           </div>
-          
+
           {/* See All Jobs Button */}
           <div className="see-all-jobs-container">
             <button className="see-all-jobs-btn">
@@ -212,7 +214,7 @@ const SubmitCV = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );

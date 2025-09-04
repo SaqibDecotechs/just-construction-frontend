@@ -15,6 +15,8 @@ import JobAlerts from '../pages/jobAlerts/JobAlerts'
 import JoinUs from '../pages/joinUs/JoinUs'
 import OurServices from '../pages/ourServices/OurServices'
 import ContactUs from '../pages/Contact/Contact'
+import CaseStudies from '../pages/CaseStudies/CaseStudies'
+import GdprCompliance from '../pages/gdpr/GdprCompliance'
 
 function Router() {
   return (
@@ -35,7 +37,9 @@ function Router() {
             <Route path="/job-alerts" element={<JobAlerts />} />
             <Route path="/our-services" element={<OurServices />} />
             <Route path="/contact" element={<ContactUs />} />
-         
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/gdpr-compliance" element={<GdprCompliance />} />
+
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
           </Route> */} 

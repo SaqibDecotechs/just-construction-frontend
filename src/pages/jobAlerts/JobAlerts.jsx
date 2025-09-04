@@ -26,41 +26,42 @@ const JobAlerts = () => {
   return (
     <div className="job-alerts-page">
       <NavbarHero />
-      
+
       <section className="job-alerts-hero">
         <div className="job-alerts-hero-content">
           <div className="hero-text">
             <h1 className="hero-title">Job Alerts</h1>
-            <h2 className="hero-subtitle">'The early bird catches the worm'</h2>
+            <h2 className="hero-subtitle">"The early bird catches the worm"</h2>
             <p className="hero-description">
-              A very true statement when it comes to the levels of competition seen for vacancies in the current market.
+              This couldn’t be more true given today’s highly competitive job market.
               <br />
-              Why not let the jobs come to you? Sign up below to job alerts you want to see as soon as we receive them.
+              Instead of searching endlessly, why not let the jobs come to you? Sign up below to receive tailored job alerts the moment new opportunities arrive.
             </p>
+
           </div>
         </div>
-        
+
         <div className="job-alerts-hero-arrow">
           <MdKeyboardArrowDown />
         </div>
       </section>
-      
-      
+
+
       <section className="job-alerts-form-section">
         <div className="form-container">
           <div className="form-wrapper">
-            
+
             {/* Login Section */}
             <div className="login-section">
               <p className="login-message">
-                If you already have an account - Welcome back! Please login to manage your job alerts and keep track of your saved jobs.
+                Already have an account? Welcome back! Log in to manage your job alerts and keep track of your saved jobs.
               </p>
-              
+
               <button className="google-signin-btn">
                 <FcGoogle className="google-icon" />
                 Sign in with Google
               </button>
-              
+
               <div className="or-divider">
                 <button className="login-link-btn">or you can log-in here</button>
               </div>
@@ -69,7 +70,7 @@ const JobAlerts = () => {
             {/* Registration Form */}
             <div className="registration-section">
               <h2 className="form-title">Create Job Alerts & Register</h2>
-              
+
               <form className="job-alert-form">
                 <div className="form-row">
                   <div className="form-group">
@@ -81,7 +82,7 @@ const JobAlerts = () => {
                     <input type="text" id="lastName" name="lastName" />
                   </div>
                 </div>
-                
+
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="email">Email:</label>
@@ -90,10 +91,10 @@ const JobAlerts = () => {
                   <div className="form-group">
                     <label htmlFor="password">Password:</label>
                     <div className="password-input-wrapper">
-                      <input 
-                        type={showPassword ? "text" : "password"} 
-                        id="password" 
-                        name="password" 
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        id="password"
+                        name="password"
                       />
                       <button
                         type="button"
@@ -108,12 +109,12 @@ const JobAlerts = () => {
 
                 {/* Alert Details Section */}
                 <h3 className="section-title">Alert Details</h3>
-                
+
                 <div className="form-group full-width">
                   <label htmlFor="alertName">Alert Name:</label>
                   <input type="text" id="alertName" name="alertName" />
                 </div>
-                
+
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="keywords">Alert Keywords:</label>
@@ -130,7 +131,7 @@ const JobAlerts = () => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div className="form-row location-row">
                   <div className="form-group location-input">
                     <label htmlFor="location">Location:</label>
@@ -155,7 +156,7 @@ const JobAlerts = () => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div className="form-group full-width">
                   <label htmlFor="profession">Profession:</label>
                   <select id="profession" name="profession">
@@ -168,16 +169,16 @@ const JobAlerts = () => {
                     <option value="interiors">Interiors</option>
                   </select>
                 </div>
-                
+
                 <div className="form-group full-width">
                   <label htmlFor="salary">Salary:</label>
                   <div className="salary-slider-wrapper">
-                    <input 
-                      type="range" 
-                      id="salary" 
-                      name="salary" 
-                      min="20000" 
-                      max="1000000" 
+                    <input
+                      type="range"
+                      id="salary"
+                      name="salary"
+                      min="20000"
+                      max="1000000"
                       step="1000"
                       value={salaryValue}
                       onChange={handleSalaryChange}
@@ -188,12 +189,12 @@ const JobAlerts = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="terms-section">
                   <div className="checkbox-container">
-                    <input 
-                      type="checkbox" 
-                      id="agreeToTerms" 
+                    <input
+                      type="checkbox"
+                      id="agreeToTerms"
                       name="agreeToTerms"
                       checked={agreeToTerms}
                       onChange={handleTermsChange}
@@ -207,7 +208,7 @@ const JobAlerts = () => {
                     <a href="#" className="privacy-link">Read our Privacy Policy</a>
                   </div>
                 </div>
-                
+
                 <div className="button-section">
                   <button type="submit" className="register-btn">Register and Save</button>
                 </div>
@@ -216,7 +217,7 @@ const JobAlerts = () => {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

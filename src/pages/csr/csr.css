@@ -32,6 +32,8 @@
 .placement-stats {
   display: flex;
   margin-top: 40px;
+  gap: 40px;
+  
   justify-content: space-between;
 }
 

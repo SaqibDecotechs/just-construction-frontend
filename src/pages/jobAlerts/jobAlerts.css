@@ -7,7 +7,7 @@
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: url('../../assest/job-alerts-bg.webp');
+  background-image: url('https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@
 }
 
 .login-link-btn {
-  background: linear-gradient(135deg, #e91e63, #ad1457);
+  background: var(--primary);
   color: white;
   border: none;
   padding: 8px 20px;
@@ -172,7 +172,7 @@
 }
 
 .form-title {
-  color: #e91e63;
+  color: var(--primary);
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -367,7 +367,7 @@
   height: 16px;
   margin: 0;
   cursor: pointer;
-  accent-color: #e91e63;
+  accent-color: var(--color_1);
 }
 
 .agreement-label {
@@ -377,6 +377,7 @@
   margin: 0;
   white-space: nowrap;
   display: inline-block;
+  
 }
 
 .privacy-policy-link {
@@ -385,14 +386,14 @@
 }
 
 .privacy-link {
-  color: #e91e63;
+  color: var(--primary);
   text-decoration: underline;
   font-size: 14px;
   font-weight: 500;
 }
 
 .privacy-link:hover {
-  color: #c2185b;
+  color: var(--hover);
 }
 
 /* Button Section */
@@ -402,7 +403,7 @@
 }
 
 .register-btn {
-  background: linear-gradient(135deg, #e91e63, #ad1457);
+  background: var(--primary);
   color: white;
   border: none;
   padding: 15px 40px;

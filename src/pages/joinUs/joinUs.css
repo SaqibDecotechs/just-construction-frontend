@@ -19,7 +19,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/public/join-us-bg.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* black overlay */
+    url("https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg") 
+    no-repeat center center/cover;
   z-index: -1;
 }
 

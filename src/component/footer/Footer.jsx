@@ -1,24 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
-  const quickLinks = [
-    'Sectors',
-    'Markets',
-    'About Us',
-    'Join Us',
-    'News',
-    'Contact'
+  const navLinks = [
+    { name: 'About Us', path: '/diversity-csr' },
+    { name: 'Join Us', path: '/join-us' },
+    { name: 'Job Seekers', path: '/candidate-commitment' },
+    { name: 'View Jobs', path: '/all-jobs' },
+    { name: 'Employers', path: '/our-services' },
+    { name: 'Contact', path: '/contact' },
   ];
 
-  const jobCategories = [
-    'View All Jobs',
-    'Drywall Jobs',
-    'Carpentry Jobs',
-    'Mechanical & HVAC Jobs',
-    'General Contracting Jobs',
-    'Roofing Jobs',
-    'Electrical Jobs'
+  const jobLinks = [
+    { name: 'Candidate Commitment', path: '/candidate-commitment' },
+    { name: 'Submit Your CV', path: '/submit-cv' },
+    { name: 'Job Alerts', path: '/job-alerts' },
+    { name: 'Download a CV Template', path: '/#download-cv' },
   ];
 
   const socialIcons = [
@@ -35,13 +33,9 @@ const Footer = () => {
           {/* Left Section - Logo and Contact */}
           <div className="footer-left">
             <div className="footer-logo">
-              {/* <h2 className="logo-text">
-                JUST<br />
-                <span className="logo-construction">CONSTRUCTION</span><br />
-                <span className="logo-specialists">SPECIALISTS</span>
-              </h2> */}
-              {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC_Logo-540w.png" width={120} alt="" /> */}
-
+              <h2 className="logo-text">
+                Fazil Construction
+              </h2>
             </div>
 
             <div className="footer-contact">
@@ -49,12 +43,10 @@ const Footer = () => {
                 <h4>Austin Office:</h4>
                 <p>324 E 7th Street, Suite 200, Austin TX, 78702</p>
               </div>
-
               <div className="contact-section">
                 <h4>Call Us:</h4>
                 <p>512 358 1435</p>
               </div>
-
               <div className="contact-section">
                 <h4>Email Us:</h4>
                 <p>austin@just-constructionlnc.com</p>
@@ -62,13 +54,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Center Section - Quick Links */}
+          {/* Center Section - Navigation Links */}
           <div className="footer-center">
             <h3>QUICK LINKS</h3>
             <ul className="quick-links">
-              {quickLinks.map((link, index) => (
+              {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={`/${link.toLowerCase().replace(' ', '-')}`}>{link}</a>
+                  <Link to={link.path}>{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -78,11 +70,9 @@ const Footer = () => {
           <div className="footer-right">
             <h3>JOBS</h3>
             <ul className="job-links">
-              {jobCategories.map((job, index) => (
+              {jobLinks.map((job, index) => (
                 <li key={index}>
-                  <a href={`/jobs/${job.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>
-                    {job}
-                  </a>
+                  <Link to={job.path}>{job.name}</Link>
                 </li>
               ))}
             </ul>

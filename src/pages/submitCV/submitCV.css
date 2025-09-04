@@ -8,7 +8,7 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url('https://images.squarespace-cdn.com/content/v1/5cd3633011f78468c29fd5e7/1558411686808-YMRA591EF38LFCZIVYEQ/Banner_Submit+Resume.png?format=2500w') center/cover no-repeat;
+    url('https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg') center/cover no-repeat;
 }
 
 .submit-cv-hero::before {

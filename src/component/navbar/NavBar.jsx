@@ -124,7 +124,7 @@ const NavbarHero = () => {
                   <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>
                     Diversity and CSR
                   </Link>
-                  <Link to="/join-us" className="dropdown-item">
+                  <Link to="/join-us" className={`dropdown-item ${isActivePage('/join-us') ? 'active' : ''}`}>
                     Join Us
                   </Link>
                 </div>
@@ -145,9 +145,9 @@ const NavbarHero = () => {
                     <Link to="/job-alerts" className={`dropdown-item ${isActivePage('/job-alerts') ? 'active' : ''}`}>
                       Job Alerts
                     </Link>
-                    <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
+                    {/* <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
                       Download a CV Template
-                    </a>
+                    </a> */}
                     {/* <div className="dropdown-item jobs-item" 
                          onMouseEnter={handleNestedJobsHover} 
                          onMouseLeave={handleNestedJobsLeave}>
