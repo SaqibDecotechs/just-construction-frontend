@@ -143,7 +143,7 @@ const NavbarHero = () => {
                     </Link>
                     <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
                     <Link to="/job-alerts" className={`dropdown-item ${isActivePage('/job-alerts') ? 'active' : ''}`}>
-                      Job Alerts 
+                      Job Alerts
                     </Link>
                     <a href="#download-cv" className={`dropdown-item ${location.hash === '#download-cv' ? 'active' : ''}`}>
                       Download a CV Template
@@ -196,9 +196,9 @@ const NavbarHero = () => {
               )}
             </li>
             <li className="nav-item">
-              <a href="#markets" className="nav-link">
-                Contact Us
-              </a>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
             </li>
             <li className="nav-item">
               {/* <a href="#news" className="nav-link">News</a> */}
@@ -242,9 +242,9 @@ const NavbarHero = () => {
                   className="custom-select"
                   onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                 >
-                  <img 
-                    src={getCountryFlagUrl(selectedCountry || 'UK', 20)} 
-                    alt={selectedCountry || 'UK'} 
+                  <img
+                    src={getCountryFlagUrl(selectedCountry || 'UK', 20)}
+                    alt={selectedCountry || 'UK'}
                     className="selected-flag"
                   />
                   <svg className="select-arrow" viewBox="0 0 20 20" fill="currentColor">
