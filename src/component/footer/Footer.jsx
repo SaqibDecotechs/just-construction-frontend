@@ -103,11 +103,11 @@ const Footer = () => {
             <span>|</span>
             <a href="/privacy-policy">Privacy Policy</a>
             <span>|</span>
-            <a href="/terms-conditions">Terms & Conditions</a>
+            <a href="/terms-and-conditions">Terms & Conditions</a>
             <span>|</span>
             <a href="/complaints-policy">Complaints Policy</a>
             <span>|</span>
-            <a href="/accessibility">Accessibility & Cookies</a>
+            <a href="/accessibility-and-cookies">Accessibility & Cookies</a>
           </div>
           <div className="powered-by">
             Powered with <span className="heart">❤️</span> by Shaarame

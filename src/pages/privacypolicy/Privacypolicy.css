@@ -1,0 +1,62 @@
+/* Hero Section */
+.privacy-hero {
+  height: 400px;
+  background: linear-gradient(var(--backdrop), var(--backdrop)),
+    url("https://images.pexels.com/photos/288477/pexels-photo-288477.jpeg") 
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.privacy-overlay-content {
+  text-align: center;
+  z-index: 1;
+  background: transparent;
+}
+
+.privacy-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+/* Content Section */
+.privacy-content {
+  padding: 3rem 1rem;
+  background: #fff;
+  color: #333;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.privacy-container h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-container h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-container p,
+.privacy-container li {
+  font-size: 1rem;
+  color: #444;
+}
+
+.privacy-container ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}

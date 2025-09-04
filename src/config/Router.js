@@ -17,6 +17,11 @@ import OurServices from '../pages/ourServices/OurServices'
 import ContactUs from '../pages/Contact/Contact'
 import CaseStudies from '../pages/CaseStudies/CaseStudies'
 import GdprCompliance from '../pages/gdpr/GdprCompliance'
+import PrivacyPolicy from '../pages/privacypolicy/Privacypolicy'
+import TermsAndConditions from '../pages/termsandconditions/Terms'
+import ComplaintsPolicy from '../pages/complainypolicy/ComplaintsPolicy'
+import AccessibilityCookies from '../pages/accessibilityandcookie/Accessibility'
+
 
 function Router() {
   return (
@@ -39,6 +44,10 @@ function Router() {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/gdpr-compliance" element={<GdprCompliance />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/complaints-policy" element={<ComplaintsPolicy />} />
+            <Route path="/accessibility-and-cookies" element={<AccessibilityCookies />} />
 
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
