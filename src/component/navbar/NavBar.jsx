@@ -105,12 +105,12 @@ const NavbarHero = () => {
       {/* Navigation Bar */}
       <nav className={`navbar ${isScrolled ? '' : ''}`}>
         <div className="navbar-container">
-            <Link to="/" className="logo">
+          <Link to="/" className="logo">
             <div className="logo-text">
-            <h4 style={{color:"white",margin:"0px"}}>Fazil Construction</h4>
+              <h4 style={{ color: "white", margin: "0px" }}>Fazil Construction</h4>
               {/* <img src="https://lirp.cdn-website.com/2cce4485/dms3rep/multi/opt/JC-Logo-White-Pink-1920w.png" alt="" /> */}
             </div>
-          </Link>  
+          </Link>
 
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
             <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
@@ -134,7 +134,7 @@ const NavbarHero = () => {
               <li className="nav-item" onMouseEnter={handleJobsHover} onMouseLeave={handleJobsLeave}>
                 {/* <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link> */}
                 <a href="#services" className="nav-link">
-                  {getLocalizedText('jobSeekers', selectedLocale)} <MdOutlineKeyboardArrowDown  size={16} />
+                  {getLocalizedText('jobSeekers', selectedLocale)} <MdOutlineKeyboardArrowDown size={16} />
                 </a>
                 {showJobsDropdown && (
                   <div className="jobs-dropdown-menu">
@@ -152,11 +152,11 @@ const NavbarHero = () => {
                          onMouseEnter={handleNestedJobsHover} 
                          onMouseLeave={handleNestedJobsLeave}>
                       <span>Jobs</span>
-                      <IoIosArrowForward  className="jobs-arrow" />
+                      <IoIosArrowForward className="jobs-arrow" />
                       {showNestedJobsDropdown && (
                         <div className="nested-jobs-dropdown"
-                             onMouseEnter={handleNestedJobsHover}
-                             onMouseLeave={handleNestedJobsLeave}>
+                          onMouseEnter={handleNestedJobsHover}
+                          onMouseLeave={handleNestedJobsLeave}>
                           <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>
                             View All Jobs - Well {getLocalizedText('organized', selectedLocale)} opportunities
                           </Link>
@@ -238,8 +238,8 @@ const NavbarHero = () => {
             )}
             <div className="country-selector">
               <div className="custom-select-wrapper">
-                <div 
-                  className="custom-select" 
+                <div
+                  className="custom-select"
                   onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                 >
                   <img 
@@ -253,14 +253,14 @@ const NavbarHero = () => {
                 </div>
                 {showCountryDropdown && (
                   <div className="custom-options">
-                    <div 
-                      className="custom-option" 
+                    <div
+                      className="custom-option"
                       onClick={() => handleCountryChange('US')}
                     >
                       <img src="https://flagcdn.com/w20/us.png" alt="US" />
                     </div>
-                    <div 
-                      className="custom-option" 
+                    <div
+                      className="custom-option"
                       onClick={() => handleCountryChange('UK')}
                     >
                       <img src="https://flagcdn.com/w20/gb.png" alt="UK" />

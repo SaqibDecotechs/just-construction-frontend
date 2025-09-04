@@ -13,6 +13,7 @@ import CandidateCommitment from '../pages/candidateCommitment/CandidateCommitmen
 import SubmitCV from '../pages/submitCV/SubmitCV'
 import JobAlerts from '../pages/jobAlerts/JobAlerts'
 import JoinUs from '../pages/joinUs/JoinUs'
+import OurServices from '../pages/ourServices/OurServices'
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
             <Route path="/candidate-commitment" element={<CandidateCommitment />} />
             <Route path="/submit-cv" element={<SubmitCV />} />
             <Route path="/job-alerts" element={<JobAlerts />} />
+            <Route path="/our-services" element={<OurServices />} />
          
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
