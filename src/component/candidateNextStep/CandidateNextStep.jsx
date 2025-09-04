@@ -30,10 +30,9 @@ const CandidateNextStep = () => {
       <div className="candidate-next-step-container">
         <div className="candidate-next-step-content">
           <div className="candidate-next-step-left">
-            <h2 className="candidate-next-step-title">Take the next step</h2>
+            <h2 className="candidate-next-step-title">Move Forward with Us</h2>
             <p className="candidate-next-step-description">
-              If you are a business looking to for your next hire, a candidate looking for a new 
-              opportunity or just want industry information, get in touch.
+             Whether you’re a business searching for your next hire, a candidate seeking a new opportunity, or simply looking for industry insights — we’d love to hear from you.
             </p>
           </div>
           

@@ -1,19 +1,11 @@
 import React from 'react';
 import './csrHeroSection.css';
-import csrImage from '../../assest/diversitybg.webp';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const CSRHeroSection = () => {
   return (
     <section className="csr-hero">
-      <div className="csr-hero-image-container">
-        <img 
-          src={csrImage} 
-          alt="Corporate Social Responsibility" 
-          className="csr-hero-image"
-        />
-        <div className="csr-hero-overlay"></div>
-      </div>
+      <div className="csr-hero-overlay"></div>
       
       <div className="csr-hero-content">
         <div className="csr-hero-text">
@@ -21,9 +13,7 @@ const CSRHeroSection = () => {
             Diversity and CSR
           </h1>
           <p className="csr-hero-description">
-            We have always strived to create a fully inclusive and diverse working environment. Our workforce carries a 
-            clear representation that at The Just Group we recognise the importance that diversity provides an 
-            unparalleled community factor that we are proud of in our office.
+            We have always aimed to build a workplace that is both inclusive and diverse. At The Just Group, our workforce stands as a testament to the value of diversity, creating a unique sense of community that we greatly cherish.
           </p>
         </div>
       </div>

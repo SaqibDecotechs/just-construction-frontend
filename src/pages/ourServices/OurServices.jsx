@@ -5,6 +5,8 @@ import OurServiceCard from '../../component/ourServices/OurServicesCard';
 import './OurServices.css';
 import download from '../../assest/download.webp';
 import CaseStudiesSlider from '../../component/caseStudies/CaseStudiesSlider';
+import MarketSectors from '../../component/marketSectors/MarketSectors';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const OurServicesPage = () => {
   return (
@@ -15,40 +17,38 @@ const OurServicesPage = () => {
         <div className="hero-overlay hero-overlay-content">
           <h1 className="hero-title">Our Services</h1>
           <p className="hero-subtitle">
-            We partner with companies in UK, Europe and The US to provide a full range of talent solutions for all Construction markets.
+            We collaborate with companies across the UK, Europe, and the US to deliver comprehensive talent solutions for every sector of the construction industry.
           </p>
           <div className="hero-arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M12 16l-6-6h12l-6 6z" />
-            </svg>
+            <MdKeyboardArrowDown />
           </div>
         </div>
       </div>
 
       <div className="ourservices-content container">
-        <h1>Whether you need a single employee or an entire project team, we have the skills and expertise to deliver.</h1>
+        <h1>We provide the skills and experience you need, whether you’re looking for one employee or an entire project team</h1>
 
         <h1 className="service-cards-heading">Our Services</h1>
         <div className="service-cards-row">
           <OurServiceCard
-            title="CONTINGENT"
-            text="Contingent means that you will only ever pay us a fee when we successfully find you the candidate for the role. The fee is contingent on our success."
-            onLearnMore={() => alert('Permanent Staffing')}
+            title="JUST RECRUIT+"
+            text="By choosing a monthly subscription, you streamline your recruitment spending and benefit from improved search precision, stronger resources, and better cost efficiency."
+            onLearnMore={() => alert('Executive Search')}
           />
           <OurServiceCard
             title="RETAINED"
-            text="Determine the amount of additional resources dedicated to your search with two tiers of service, based on a percentage of the upfront cost."
+            text="With two tiered options, you decide how much extra resource is committed to your search, determined by a percentage of the initial cost"
             onLearnMore={() => alert('Contract Staffing')}
           />
           <OurServiceCard
-            title="JUST RECRUIT+"
-            text="A monthly subscription allows you to budget your recruitment spending better and significantly improves search focus, resources and value for money."
-            onLearnMore={() => alert('Executive Search')}
+            title="CONTINGENT"
+            text="With a contingent model, you’re only charged when we deliver — the fee applies only if we successfully fill your vacancy."
+            onLearnMore={() => alert('Permanent Staffing')}
           />
         </div>
       </div>
 
-      <div className="download container">
+      {/* <div className="download container">
         <h2 className='download-heading'>DOWNLOAD</h2>
         <div className="download-content">
           <a href="/download-center">
@@ -59,10 +59,14 @@ const OurServicesPage = () => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
       <div className="case-studies-section">
         <CaseStudiesSlider />
+      </div>
+
+      <div style={{ marginBottom: '60px' }}>
+        <MarketSectors />
       </div>
 
       <Footer />

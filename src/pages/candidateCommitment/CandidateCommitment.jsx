@@ -16,10 +16,9 @@ const CandidateCommitment = () => {
         <div className="candidate-commitment-hero-container">
           <div className="candidate-hero-content">
             <h1 className="candidate-hero-title">Candidate commitment</h1>
-            <h2 className="candidate-hero-subtitle">It is our job to always look out for your interests</h2>
+            <h2 className="candidate-hero-subtitle">Our priority is to always protect and serve your best interests</h2>
             <p className="candidate-hero-description">
-              OUR RECRUITMENT TEAM WORKS DILIGENTLY TO FIND YOU THAT PERFECT ROLE. WE BELIEVE IN 
-              HONESTY AND INTEGRITY WHEN HELPING YOU TO FIND THAT MAGIC YOU CRAVE.
+              Our recruitment team works tirelessly to connect you with the perfect role. We believe in honesty and integrity, guiding you toward the opportunity you’ve been searching for.
             </p>
           </div>
         </div>
@@ -32,12 +31,10 @@ const CandidateCommitment = () => {
       <div className="candidate-second-section">
         <div className="candidate-second-container">
           <h2 className="candidate-second-title">
-            As construction specialists, we truly understand the challenges 
-            that can present themselves along the way.
+            As specialists in construction, we have a deep understanding of the challenges that can arise throughout the process
           </h2>
           <p className="candidate-second-description">
-            We will work with you to map out the career path you intend to take, helping you to find the right job 
-            role with the right organisation.
+            We’ll partner with you to plan your career journey, guiding you toward the right role with the right organisation
           </p>
         </div>
       </div>

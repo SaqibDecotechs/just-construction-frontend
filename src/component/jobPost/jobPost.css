@@ -121,12 +121,12 @@
 }
 
 .save-btn {
-  background-color: #e91e63;
+  background-color: var(--color_1);
   color: white;
 }
 
 .save-btn:hover:not(:disabled) {
-  background-color: #d81b60;
+  background-color: var(--primary-dark);
 }
 
 .save-btn:disabled {
@@ -145,7 +145,7 @@
 
 /* Dashboard Job Post Button */
 .job-post-btn {
-  background-color: #e91e63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -159,7 +159,7 @@
 }
 
 .job-post-btn:hover {
-  background-color: #d81b60;
+  background-color: var(--primary-dark);
   transform: translateY(-1px);
 }
 
@@ -210,7 +210,7 @@
 }
 
 .editor-container .w-md-editor-focus {
-  border-color: #e91e63 !important;
+  border-color: var(--color_1) !important;
   box-shadow: 0 0 0 2px var(--primary) !important;
 }
 

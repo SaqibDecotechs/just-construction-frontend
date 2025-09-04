@@ -7,10 +7,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: url('../../assest/submitcsvbannerbg.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(var(--backdrop), var(--backdrop)),
+    url('https://images.squarespace-cdn.com/content/v1/5cd3633011f78468c29fd5e7/1558411686808-YMRA591EF38LFCZIVYEQ/Banner_Submit+Resume.png?format=2500w') center/cover no-repeat;
 }
 
 .submit-cv-hero::before {
@@ -20,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -118,7 +116,7 @@
 .submit-cv-form-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--color_1);
   margin-bottom: 30px;
   text-align: left;
   letter-spacing: 1px;
@@ -137,13 +135,14 @@
 .form-group textarea {
   width: 100%;
   padding: 15px 20px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 0;
   font-size: 0.95rem;
   background-color: #f0f0f0;
   color: #666;
   font-family: inherit;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .form-group input::placeholder,
@@ -157,6 +156,7 @@
 .form-group textarea:focus {
   outline: none;
   background-color: #e8e8e8;
+  border-color: var(--color_1);
 }
 
 .form-group select {
@@ -195,8 +195,8 @@
 .file-upload-label {
   display: inline-block;
   padding: 15px 20px;
-  /* background-color: #E91E63;bs */
-  color: white;
+  background-color: transparent;
+  color: #666;
   cursor: pointer;
   font-weight: normal;
   font-size: 0.95rem;
@@ -206,7 +206,8 @@
 }
 
 .file-upload-label:hover {
-  background-color: #c2185b;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--color_1);
 }
 
 .file-upload-text {
@@ -231,7 +232,7 @@
   width: auto;
   height: auto;
   margin: 0;
-  accent-color: #E91E63;
+  accent-color: var(--color_1);
   flex-shrink: 0;
 }
 
@@ -246,7 +247,7 @@
 }
 
 .terms-link {
-  color: #E91E63;
+  color: var(--color_1);
   text-decoration: none;
 }
 
@@ -258,7 +259,7 @@
 .submit-cv-button {
   width: 100%;
   padding: 15px 30px;
-  background-color: #E91E63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   border-radius: 25px;
@@ -272,7 +273,7 @@
 }
 
 .submit-cv-button:hover {
-  background-color: #c2185b;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
 }
@@ -434,7 +435,7 @@
 
 .job-slider-card {
   background: white;
-  border: 2px solid #E91E63;
+  border: 2px solid var(--color_1);
   border-radius: 15px;
   padding: 30px 25px;
   width: 300px;
@@ -455,7 +456,7 @@
 }
 
 .job-location-pink {
-  color: #E91E63;
+  color: var(--color_1);
   font-size: 1rem;
   font-weight: 500;
   margin: 0 0 5px 0;
@@ -476,7 +477,7 @@
 }
 
 .job-slider-category {
-  color: #E91E63;
+  color: var(--color_1);
   font-size: 0.95rem;
   margin: 0 0 10px 0;
   font-weight: 500;
@@ -490,7 +491,7 @@
 }
 
 .job-learn-more-btn {
-  background-color: #E91E63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   border-radius: 25px;
@@ -504,7 +505,7 @@
 }
 
 .job-learn-more-btn:hover {
-  background-color: #c2185b;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
 }
 
@@ -520,18 +521,18 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #E91E63;
+  border: 2px solid var(--color_1);
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .slider-dot.active {
-  background-color: #E91E63;
+  background-color: var(--color_1);
 }
 
 .slider-dot:hover {
-  background-color: #E91E63;
+  background-color: var(--color_1);
 }
 
 /* See All Jobs Button */
@@ -542,7 +543,7 @@
 }
 
 .see-all-jobs-btn {
-  background-color: #E91E63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   border-radius: 25px;
@@ -555,7 +556,7 @@
 }
 
 .see-all-jobs-btn:hover {
-  background-color: #c2185b;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
 }

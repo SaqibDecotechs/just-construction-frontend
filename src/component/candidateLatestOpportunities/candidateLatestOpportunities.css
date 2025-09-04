@@ -17,7 +17,7 @@
 .candidate-opportunities-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--color_1);
   margin: 0;
   letter-spacing: 2px;
 }
@@ -42,7 +42,7 @@
 
 .candidate-opportunity-card {
   background: white;
-  border: 2px solid #E91E63;
+  border: 2px solid var(--color_1);
   border-radius: 15px;
   padding: 30px 25px;
   text-align: left;
@@ -58,7 +58,7 @@
 
 .candidate-opportunity-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
 .candidate-opportunity-location-tag {
@@ -66,7 +66,7 @@
 }
 
 .candidate-opportunity-location {
-  color: #E91E63;
+  color: var(--color_1);
   font-size: 1.1rem;
   font-weight: 600;
   display: block;
@@ -89,7 +89,7 @@
 }
 
 .candidate-opportunity-category {
-  color: #E91E63;
+  color: var(--color_1);
   font-size: 1rem;
   font-weight: 500;
   margin: 0 0 20px 0;
@@ -107,7 +107,7 @@
 }
 
 .candidate-opportunity-btn {
-  background-color: #E91E63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -121,7 +121,7 @@
 }
 
 .candidate-opportunity-btn:hover {
-  background-color: #AD1457;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
 }
 
@@ -136,18 +136,18 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #E91E63;
+  border: 2px solid var(--color_1);
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .candidate-indicator.active {
-  background-color: #E91E63;
+  background-color: var(--color_1);
 }
 
 .candidate-indicator:hover {
-  background-color: #E91E63;
+  background-color: var(--color_1);
 }
 
 .candidate-see-all-container {
@@ -155,7 +155,7 @@
 }
 
 .candidate-see-all-btn {
-  background-color: #E91E63;
+  background-color: var(--color_1);
   color: white;
   border: none;
   padding: 15px 40px;
@@ -167,9 +167,9 @@
 }
 
 .candidate-see-all-btn:hover {
-  background-color: #AD1457;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Responsive Design */

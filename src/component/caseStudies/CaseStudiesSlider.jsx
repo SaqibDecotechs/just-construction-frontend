@@ -4,17 +4,17 @@ import './CaseStudiesSlider.css';
 const caseStudies = [
     {
         title: "UK M&E Contractor",
-        description: "Situation A mid-sized M&E contractor was finding it hard to attract an Electrical Project manager to their...",
+        description: "Challenge: A mid-sized M&E contractor was struggling to recruit an Electrical Project Manager for their...",
         button: "READ MORE",
     },
     {
         title: "US General Contractor",
-        description: "A US-based contractor needed to scale up quickly for a new project and required skilled labor...",
+        description: "Based in the US, a contractor faced the challenge of quickly ramping up for a new project and sought skilled workers...",
         button: "READ MORE",
     },
     {
         title: "EU Civil Engineering",
-        description: "A European civil engineering firm was struggling to fill specialist roles for a bridge project...",
+        description: "A European-based civil engineering firm encountered recruitment difficulties when trying to fill specialist roles for a bridge project...",
         button: "READ MORE",
     },
 ];
@@ -29,7 +29,7 @@ const CaseStudiesSlider = () => {
         <div className="case-slider">
             <div className="case-slider-overlay">
                 <div className="case-slider-left">
-                    <h2>Working with our partners<br />to deliver value at every turn</h2>
+                    <h2>Driving value together<br />with our partners at every step</h2>
                     <button className="case-slider-btn" onClick={next}>
                         More Case Studies
                     </button>

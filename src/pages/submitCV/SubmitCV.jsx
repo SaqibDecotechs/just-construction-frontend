@@ -74,9 +74,9 @@ const SubmitCV = () => {
         <div className="submit-cv-hero-container">
           <div className="submit-cv-hero-content">
             <h1 className="submit-cv-hero-title">Submit your CV</h1>
-            <h2 className="submit-cv-hero-subtitle">We do have new vacancies that may meet your search criteria that are not yet on our website.</h2>
+            <h2 className="submit-cv-hero-subtitle">We often have new vacancies that match your search criteria but haven’t yet been posted on our website</h2>
             <p className="submit-cv-hero-description">
-              Please upload your CV and one of our consultants will contact you to discuss roles that may be suitable.
+              Upload your CV and one of our consultants will be in touch to discuss roles that best match your profile
             </p>
           </div>
         </div>

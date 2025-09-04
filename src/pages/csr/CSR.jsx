@@ -16,15 +16,13 @@ const CSR = () => {
       <div className="csr-diversity-commitment">
         <div className="csr-diversity-commitment-container">
           <div className="diversity-card">
-            <h2 className="diversity-title">OUR DIVERSITY COMMITMENT</h2>
-            <h3 className="diversity-subtitle">We are committed to building a team that represents a diversity of thought, experience and background.</h3>
+            <h2 className="diversity-title">Committed to Diversity & Inclusion</h2>
+            <h3 className="diversity-subtitle">Our commitment is to build a team that reflects diverse perspectives, experiences, and backgrounds.</h3>
             <p className="diversity-description">
-              We recently reviewed our D&I efforts and have put in place clear strategic targets to work towards.
+             We have recently assessed our D&I initiatives and set clear strategic goals to guide our progress
             </p>
             <p className="diversity-description">
-              We don't want to be just pumping out the usual platitudes. This is about making meaningful change to our business, 
-              and the businesses we work with. We have set strategic D&I goals across the business and have put a number of key 
-              initiatives in place to help us achieve them. They are:
+              We’re not here to offer the usual empty statements. Our focus is on driving meaningful change—within our business and the businesses we partner with. To achieve this, we’ve set clear D&I goals across the organisation and introduced a range of key initiatives to support them. These include:
             </p>
           </div>
         </div>
@@ -33,7 +31,7 @@ const CSR = () => {
       <div className="csr-diversity-commitment">
         <div className="csr-diversity-commitment-container">
           <div className="placement-card">
-            <h2 className="placement-title">ACROSS THE JUST GROUP OUR PLACEMENTS IN 2021 WERE MADE UP OF:</h2>
+            <h2 className="placement-title">Breakdown of our 2021 placements at The Just Group</h2>
             <div className="placement-stats">
               <div className="stats-section">
                 <div className="gender-stats">
@@ -81,22 +79,22 @@ const CSR = () => {
           <div className="diversity-goals-card">
             <div className="diversity-goals-image">
               <img 
-                src={goalsImage} 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz_0cY-ZaP0he4D2_WudLE5QsCyO0fSVQ5lw&s" 
                 alt="Diversity Goals" 
                 className="goals-image"
               />
             </div>
             <div className="diversity-goals-content">
-              <h2 className="diversity-goals-title">OUR DIVERSITY GOALS</h2>
+              <h2 className="diversity-goals-title">Shaping Tomorrow with Our Diversity Goals</h2>
               <ul className="diversity-goals-list">
                 <li className="diversity-goal-item">
-                  Our global management team to reflect the racial/ethnic diversity of our respective local communities. By 2024.
+                  By 2024, our global management team will reflect the racial and ethnic diversity of the communities we operate in.
                 </li>
                 <li className="diversity-goal-item">
-                  A 50/50 gender balance and racial/ethnic diversity across the business that is reflective of our local communities. By end of 2022
+                  By the end of 2022, we aimed to achieve a 50/50 gender balance and racial/ethnic diversity across the business that reflects our local communities
                 </li>
                 <li className="diversity-goal-item">
-                  Our candidates placed to be consistently diverse (gender) and racially/ethnically representative of our clients' local communities. Always!
+                  We ensure that every candidate we place is consistently diverse—both in gender and racial/ethnic representation—reflecting our clients’ local communities. Always.
                 </li>
               </ul>
             </div>
@@ -108,29 +106,29 @@ const CSR = () => {
         <div className="csr-diversity-commitment-container">
           <div className="achieve-goals-card">
             <div className="achieve-goals-content">
-              <h2 className="achieve-goals-title">HOW WE ACHIEVE OUR GOALS</h2>
+              <h2 className="achieve-goals-title">Our Approach to Achieving Goals</h2>
               <ul className="achieve-goals-list">
                 <li className="achieve-goal-item">
-                  Creation of a Diversity Counsel to continually measure effectiveness
+                  Establishing a Diversity Council to continuously monitor and measure effectiveness.
                 </li>
                 <li className="achieve-goal-item">
-                  Talent team targeted against ensure we have a diverse pipeline of candidates through specific resourcing and targeting
+                  Our talent team is focused on building a diverse candidate pipeline through targeted resourcing and recruitment strategies
                 </li>
                 <li className="achieve-goal-item">
-                  D&I to be more prominent in all staff engagement forums and specific targets in place across the management team Talent team tasked with hitting and coordinating
+                 We are making D&I a central focus in all staff engagement forums, with clear targets set across the management team. Our talent team is responsible for driving and coordinating these efforts
                 </li>
                 <li className="achieve-goal-item">
-                  Partnering with specialist external suppliers to ensure ongoing best practice (e.g. Growing Happy)
+                  Collaborating with specialist external partners, such as Growing Happy, to ensure we maintain best practice.
                 </li>
                 <li className="achieve-goal-item">
-                  Defaulting to no-named shortlists for all client vacancies
+                 Implementing no-name shortlists as the default for all client vacancies
                 </li>
               </ul>
               <button className="diversity-policy-btn">Diversity Policy</button>
             </div>
             <div className="achieve-goals-image">
               <img 
-                src={achieveGoalsImage} 
+                src="https://cdn.prod.website-files.com/62a6f26ea434500b4f20edb2/649c14460501283187b76493_corporate-communications.jpg" 
                 alt="How We Achieve Our Goals" 
                 className="achieve-goals-img"
               />

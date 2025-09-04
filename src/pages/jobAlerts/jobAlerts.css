@@ -254,7 +254,7 @@
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #e91e63;
+  /* border-color: #e91e63; */
   box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.1);
 }
 
