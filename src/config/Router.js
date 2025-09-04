@@ -14,6 +14,7 @@ import SubmitCV from '../pages/submitCV/SubmitCV'
 import JobAlerts from '../pages/jobAlerts/JobAlerts'
 import JoinUs from '../pages/joinUs/JoinUs'
 import OurServices from '../pages/ourServices/OurServices'
+import ContactUs from '../pages/Contact/Contact'
 
 function Router() {
   return (
@@ -33,6 +34,7 @@ function Router() {
             <Route path="/submit-cv" element={<SubmitCV />} />
             <Route path="/job-alerts" element={<JobAlerts />} />
             <Route path="/our-services" element={<OurServices />} />
+            <Route path="/contact" element={<ContactUs />} />
          
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
