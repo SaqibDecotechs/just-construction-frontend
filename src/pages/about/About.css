@@ -1,0 +1,227 @@
+.about-us-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 40px; /* mobile ke liye padding kam ki */
+    color: white;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../assest/about-bg.jpg") no-repeat center center/cover;
+    z-index: -1;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-video {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-video video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.hero-content-about{
+    text-align: left;
+    flex: 1;
+    padding: 0 !important;
+}
+
+.hero-content-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content-about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* ===================== Responsive ===================== */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column; /* row -> column */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-video {
+        flex: unset;
+        width: 100%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-us-hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Content Section */
+.ourservices-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-cards-row {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.careers-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url("../../assest/join-sl1.jpeg") center/cover no-repeat; /* apni image ka path yaha do */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.careers-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(21, 101, 192, 0.7); /* blue transparent overlay */
+  z-index: 1;
+}
+
+.careers-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.careers-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.careers-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.careers-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.careers-btn:hover {
+  background: #fff;
+  color: var(--primary);
+  /* border: 1px solid var(--primary); */
+}

@@ -4,6 +4,8 @@ import Footer from '../../component/footer/Footer';
 import CSRHeroSection from '../../component/csrHero/CSRHeroSection';
 import goalsImage from '../../assest/goalsbg.webp';
 import achieveGoalsImage from '../../assest/achievegoalsbg.webp';
+import csrgoal from '../../assest/csrgoals.jpg' 
+import csrgoals1 from '../../assest/csrgoa1ls.jpg'
 
 import './csr.css';
 
@@ -79,7 +81,7 @@ const CSR = () => {
           <div className="diversity-goals-card">
             <div className="diversity-goals-image">
               <img 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz_0cY-ZaP0he4D2_WudLE5QsCyO0fSVQ5lw&s" 
+                src={csrgoal} 
                 alt="Diversity Goals" 
                 className="goals-image"
               />
@@ -128,7 +130,7 @@ const CSR = () => {
             </div>
             <div className="achieve-goals-image">
               <img 
-                src="https://cdn.prod.website-files.com/62a6f26ea434500b4f20edb2/649c14460501283187b76493_corporate-communications.jpg" 
+                src={csrgoals1} 
                 alt="How We Achieve Our Goals" 
                 className="achieve-goals-img"
               />

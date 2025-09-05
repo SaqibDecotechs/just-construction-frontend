@@ -8,7 +8,7 @@
 .job-application-hero {
   height: 400px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-              url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
+              url('../../assest/jobapp-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

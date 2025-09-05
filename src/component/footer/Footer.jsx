@@ -16,7 +16,6 @@ const Footer = () => {
     { name: 'Candidate Commitment', path: '/candidate-commitment' },
     { name: 'Submit Your CV', path: '/submit-cv' },
     { name: 'Job Alerts', path: '/job-alerts' },
-    { name: 'Download a CV Template', path: '/#download-cv' },
   ];
 
   const socialIcons = [

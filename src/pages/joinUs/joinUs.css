@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* black overlay */
-    url("https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg") 
+    url("../../assest/join-bg.jpeg") 
     no-repeat center center/cover;
   z-index: -1;
 }

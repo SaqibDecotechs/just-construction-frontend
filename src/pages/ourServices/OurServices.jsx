@@ -5,8 +5,8 @@ import OurServiceCard from '../../component/ourServices/OurServicesCard';
 import './OurServices.css';
 import download from '../../assest/download.webp';
 import CaseStudiesSlider from '../../component/caseStudies/CaseStudiesSlider';
-import MarketSectors from '../../component/marketSectors/MarketSectors';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import MarketServices from '../../component/ourServices/Marketservices';
 
 const OurServicesPage = () => {
   return (
@@ -66,7 +66,7 @@ const OurServicesPage = () => {
       </div>
 
       <div style={{ marginBottom: '60px' }}>
-        <MarketSectors />
+        <MarketServices />
       </div>
 
       <Footer />

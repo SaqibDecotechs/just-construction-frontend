@@ -1,7 +1,7 @@
 .gdpr-hero {
   height: 500px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url("https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg")
+    url("../../assest/gdpr-bg.jpeg")
       center/cover no-repeat;
   display: flex;
   align-items: center;

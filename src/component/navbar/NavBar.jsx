@@ -113,14 +113,17 @@ const NavbarHero = () => {
           </Link>
 
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="nav-item" onMouseEnter={() => setShowAboutDropdown(true)} onMouseLeave={() => setShowAboutDropdown(false)}>
-              {/* <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link> */}
-              <a href="#about" className="nav-link">
+            <li
+              className="nav-item"
+              onMouseEnter={() => setShowAboutDropdown(true)}
+              onMouseLeave={() => setShowAboutDropdown(false)}
+            >
+              <Link to="/about" className="nav-link">
                 {getLocalizedText('aboutUs', selectedLocale)} <MdOutlineKeyboardArrowDown size={16} />
-              </a>
+              </Link>
+
               {showAboutDropdown && (
                 <div className="about-dropdown-menu">
-                  {/* <Link to="/meet-the-team" className={`dropdown-item ${isActivePage('/meet-the-team') ? 'active' : ''}`}>Meet the Team</Link> */}
                   <Link to="/diversity-csr" className={`dropdown-item ${isActivePage('/diversity-csr') ? 'active' : ''}`}>
                     Diversity and CSR
                   </Link>

@@ -2,7 +2,7 @@
 .privacy-hero {
   height: 400px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url("https://images.pexels.com/photos/288477/pexels-photo-288477.jpeg") 
+    url("../../assest/privacy-bg.jpeg") 
       center/cover no-repeat;
   display: flex;
   align-items: center;

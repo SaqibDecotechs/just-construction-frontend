@@ -8,7 +8,7 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url('https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg') center/cover no-repeat;
+    url('../../assest/submit-bg.jpeg') center/cover no-repeat;
 }
 
 .submit-cv-hero::before {

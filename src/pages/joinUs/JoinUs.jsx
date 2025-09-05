@@ -3,6 +3,18 @@ import NavBar from "../../component/navbar/NavBar";
 import Footer from "../../component/footer/Footer";
 import "./joinUs.css";
 import Career from "../../assest/career.jpeg";
+import joinsl1 from "../../assest/join-sl1.jpeg";
+import joinsl2 from "../../assest/join-sl2.jpeg";
+import joinsl3 from "../../assest/join-sl3.jpeg";
+import joinsl4 from "../../assest/join-sl4.jpeg";
+import joinsl5 from "../../assest/join-sl5.jpeg";
+import joinsl6 from "../../assest/join-sl6.jpeg";
+import g1 from "../../assest/join-g1.jpeg";
+import g2 from "../../assest/join-g2.webp";
+import g3 from "../../assest/complaints-bg.jpeg";
+import g4 from "../../assest/join-g4.webp";
+import g5 from "../../assest/join-g5.jpeg";
+import g6 from "../../assest/join-g6.webp";
 
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState("shaun");
@@ -11,12 +23,12 @@ const JoinUs = () => {
   const visibleCards = 3;
 
   const images = [
-    "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg", // Team working together
-    "https://images.pexels.com/photos/1181355/pexels-photo-1181355.jpeg", // Laptop + meeting
-    "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg", // Group discussion
-    "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg", // Presentation
-    "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg", // Brainstorming
-    "https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg", // Happy coworkers
+    joinsl1,
+    joinsl2,
+    joinsl3,
+    joinsl4,
+    joinsl5,
+    joinsl6
   ];
 
 
@@ -246,18 +258,18 @@ const JoinUs = () => {
       <section className="gallery">
         <div className="gallery-container">
           {[
-            "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/1181355/pexels-photo-1181355.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/386144/pexels-photo-386144.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3184643/pexels-photo-3184643.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=600",
+            joinsl1,
+            joinsl2,
+            joinsl3,
+            joinsl4,
+            joinsl5,
+            joinsl6,
+            g1,
+            g2,
+            g3,
+            g4,
+            g5,
+            g6,
           ].map((img, i) => (
             <div className={`gallery-item ${galleryItemClasses[i] || ""}`} key={i}>
               <img src={img} alt={`gallery-${i}`} />

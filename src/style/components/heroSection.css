@@ -51,7 +51,7 @@
  }
 
  .hero-content {
-     text-align: center;
+     text-align: center !important;
      color: var(--text-white);
      max-width: 800px;
      padding: 0 2rem;

@@ -2,7 +2,7 @@
 .ourservices-case {
     height: 500px;
     background: linear-gradient(var(--backdrop), var(--backdrop)),
-        url('https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg') center/cover no-repeat;
+        url('../../assest/case-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,6 @@
 .terms-hero {
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-  url("https://images.pexels.com/photos/8730374/pexels-photo-8730374.jpeg")
+  url("../../assest/terms-bg.jpeg")
     center/cover no-repeat;
   display: flex;
   align-items: center;

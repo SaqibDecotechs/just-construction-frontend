@@ -2,7 +2,7 @@
 .complaints-hero {
   height: 400px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg")
+    url("../../assest/complaints-bg.jpeg")
       center/cover no-repeat;
   display: flex;
   align-items: center;

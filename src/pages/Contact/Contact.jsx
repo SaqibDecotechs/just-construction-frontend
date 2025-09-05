@@ -4,9 +4,7 @@ import NavBar from '../../component/navbar/NavBar';
 import Footer from '../../component/footer/Footer';
 // import { FaSearch, FaFileAlt, FaBullhorn } from "react-icons/fa";
 import IndustryNews from '../../component/Contact/IndustryNews';
-import { PiFilesBold } from "react-icons/pi";
-import { TbSpeakerphone } from "react-icons/tb";
-import { AiOutlineFileSearch } from "react-icons/ai";
+import CandidateNextStep from '../../component/candidateNextStep/CandidateNextStep';
 // import "./NextStepSection.css";
 
 const ContactUs = () => (
@@ -78,35 +76,7 @@ const ContactUs = () => (
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
         </div>
-        <div className="nextstep-section">
-            <div className="nextstep-container">
-                {/* Left Side */}
-                <div className="nextstep-text">
-                    <h2>Take the next step</h2>
-                    <p>
-                        Whether you’re a business searching for your next hire, a candidate exploring new opportunities, or simply seeking industry insights — we’d love to hear from you.
-                    </p>
-                </div>
-
-                {/* Right Side */}
-                <div className="nextstep-links">
-                    <a href="/jobs" className="nextstep-card">
-                        <AiOutlineFileSearch className="nextstep-icon" />
-                        <span>Search Jobs</span>
-                    </a>
-
-                    <a href="/submit-cv" className="nextstep-card">
-                        <PiFilesBold className="nextstep-icon" />
-                        <span>Submit CV</span>
-                    </a>
-
-                    <a href="/job-alerts" className="nextstep-card">
-                        <TbSpeakerphone className="nextstep-icon" />
-                        <span>Job Alerts</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <CandidateNextStep />
 
         <IndustryNews />
 

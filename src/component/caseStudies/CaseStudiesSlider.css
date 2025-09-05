@@ -1,7 +1,7 @@
 .case-slider {
   position: relative;
   background: linear-gradient(rgba(21,101,192,0.7), rgba(21,101,192,0.7)),
-    url('https://images.pexels.com/photos/24851005/pexels-photo-24851005.jpeg') center/cover no-repeat;
+    url('../../assest/casesliderbg.jpeg') center/cover no-repeat;
   min-height: 350px;
   display: flex;
   align-items: center;

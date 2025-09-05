@@ -2,7 +2,7 @@
 .ac-hero {
   height: 400px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-    url("https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg")
+    url("../../assest/accessibilty-bg.jpeg")
       center/cover no-repeat;
   display: flex;
   align-items: center;

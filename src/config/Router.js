@@ -21,7 +21,7 @@ import PrivacyPolicy from '../pages/privacypolicy/Privacypolicy'
 import TermsAndConditions from '../pages/termsandconditions/Terms'
 import ComplaintsPolicy from '../pages/complainypolicy/ComplaintsPolicy'
 import AccessibilityCookies from '../pages/accessibilityandcookie/Accessibility'
-
+import About from '../pages/about/About'
 
 function Router() {
   return (
@@ -48,12 +48,11 @@ function Router() {
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/complaints-policy" element={<ComplaintsPolicy />} />
             <Route path="/accessibility-and-cookies" element={<AccessibilityCookies />} />
-
+            <Route path="/about" element={<About />} />
           {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
-          </Route> */} 
-        
-      
+          </Route> */}
+
         </Routes>
       </BrowserRouter>
   )
