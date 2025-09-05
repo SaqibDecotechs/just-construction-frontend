@@ -4,9 +4,9 @@ import './footer.css';
 
 const Footer = () => {
   const navLinks = [
-    { name: 'About Us', path: '/diversity-csr' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Diversity & CSR', path: '/diversity-csr' },
     { name: 'Join Us', path: '/join-us' },
-    { name: 'Job Seekers', path: '/candidate-commitment' },
     { name: 'View Jobs', path: '/all-jobs' },
     { name: 'Employers', path: '/our-services' },
     { name: 'Contact', path: '/contact' },

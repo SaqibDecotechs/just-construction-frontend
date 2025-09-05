@@ -1,6 +1,8 @@
 import React from 'react';
 import ActionBox from './ActionBox';
-import { FaSearch, FaFileUpload, FaBell } from 'react-icons/fa';
+import { AiOutlineFileSearch } from "react-icons/ai";
+import { PiFilesBold } from "react-icons/pi";
+import { GrAnnounce } from "react-icons/gr";
 import './candidateNextStep.css';
 
 const CandidateNextStep = () => {
@@ -8,19 +10,19 @@ const CandidateNextStep = () => {
     {
       id: 1,
       title: 'SEARCH JOBS',
-      icon: <FaSearch />,
+      icon: <AiOutlineFileSearch />,
       link: '/all-jobs'
     },
     {
       id: 2,
       title: 'SUBMIT CV',
-      icon: <FaFileUpload />,
+      icon: <PiFilesBold />,
       link: '#submit-cv'
     },
     {
       id: 3,
       title: 'JOB ALERTS',
-      icon: <FaBell />,
+      icon: <GrAnnounce />,
       link: '#job-alerts'
     }
   ];

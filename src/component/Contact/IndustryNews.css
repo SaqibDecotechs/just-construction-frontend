@@ -84,10 +84,12 @@
     font-size: 1rem;
     border-radius: 15px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
 }
 
 .see-more-btn:hover {
-    background: var(--primary);
-    color: #fff;
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary)
+
 }

@@ -35,12 +35,12 @@
   width: 100%;
 }
 
-.market-services__grid.grid-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
 .market-services__grid.grid-5 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.market-services__grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .market-services__card {

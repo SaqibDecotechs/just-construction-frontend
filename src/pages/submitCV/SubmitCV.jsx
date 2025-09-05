@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import NavbarHero from '../../component/navbar/NavBar';
 import Footer from '../../component/footer/Footer';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+// import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './submitCV.css';
+import { useSelector } from 'react-redux';
+import { selectSelectedCountry } from '../../store/slices/countrySlice';
 
 const SubmitCV = () => {
+  const selectedCountry = useSelector(selectSelectedCountry);
+
   // Job data from the image
   const jobsData = [
     {
@@ -49,6 +53,7 @@ const SubmitCV = () => {
       salary: "£ 45,000 - 55,000 GBP"
     }
   ];
+  const submitText = selectedCountry === "US" ? "Submit Your Resume" : "Submit Your CV";
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const jobsPerSlide = 3;
@@ -73,7 +78,7 @@ const SubmitCV = () => {
       <div className="submit-cv-hero">
         <div className="submit-cv-hero-container">
           <div className="submit-cv-hero-content">
-            <h1 className="submit-cv-hero-title">Submit Your CV</h1>
+            <h1 className="submit-cv-hero-title">{submitText}</h1>
             <h2 className="submit-cv-hero-subtitle">
               We frequently have new vacancies that may suit your skills but are not yet listed on our website.
             </h2>
@@ -91,7 +96,7 @@ const SubmitCV = () => {
       <div className="submit-cv-form-section">
         <div className="submit-cv-form-container">
           <div className="submit-cv-form-card">
-            <h2 className="submit-cv-form-title">SUBMIT YOUR CV</h2>
+            <h2 className="submit-cv-form-title">{submitText}</h2>
 
             <form className="submit-cv-form">
               <div className="form-group">

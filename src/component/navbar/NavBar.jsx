@@ -97,6 +97,8 @@ const NavbarHero = () => {
   const isActivePage = (path) => {
     return location.pathname === path;
   };
+  const submitText = selectedCountry === "US" ? "Submit Your Resume" : "Submit Your CV";
+
 
   return (
     <>
@@ -144,7 +146,7 @@ const NavbarHero = () => {
                     <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>
                       Candidate Commitment
                     </Link>
-                    <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>Submit Your CV</Link>
+                    <Link to="/submit-cv" className={`dropdown-item ${isActivePage('/submit-cv') ? 'active' : ''}`}>{submitText}</Link>
                     <Link to="/job-alerts" className={`dropdown-item ${isActivePage('/job-alerts') ? 'active' : ''}`}>
                       Job Alerts
                     </Link>
