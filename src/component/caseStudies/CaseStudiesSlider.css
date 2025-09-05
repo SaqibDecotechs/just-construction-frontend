@@ -17,6 +17,7 @@
   align-items: center;
   color: #fff;
   padding: 40px 0;
+  gap: 20px;
 }
 
 .case-slider-left {
@@ -39,6 +40,12 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.case-slider-btn:hover {
+  background: #1565c0;
+  color: #fff;
 }
 
 .case-slider-right-outer {
@@ -77,10 +84,11 @@
 
 .case-slider-dots {
   position: absolute;
-  bottom: 0px;
-  left: 40px;
+  bottom: -25px;
   left: 50%;
-
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 .dot {
@@ -92,11 +100,59 @@
   border-radius: 50%;
   opacity: 0.5;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .dot.active {
   opacity: 1;
   background: #fff;
   border: 1px solid #1565c0;
+  transform: scale(1.2);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 900px) {
+  .case-slider-overlay {
+    flex-direction: column; /* stack left + right vertically */
+    text-align: center;
+  }
+
+  .case-slider-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .case-slider-left h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-slider-right-outer {
+    margin-left: 0;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .case-slider-slide {
+    text-align: center;
+  }
+
+  .case-slider-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .case-slider-left h2 {
+    font-size: 1.3rem;
+  }
+
+  .case-slider-slide h3 {
+    font-size: 1rem;
+  }
+
+  .case-slider-slide p {
+    font-size: 0.9rem;
+  }
 }

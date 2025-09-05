@@ -14,7 +14,7 @@ import '../../style/components/navbar.css'
 
 const NavbarHero = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const location = useLocation();
   const user = useSelector(getUser);
   const selectedCountry = useSelector(selectSelectedCountry);
@@ -78,7 +78,7 @@ const NavbarHero = () => {
   const handleJobsLeave = (e) => {
     const relatedTarget = e.relatedTarget;
     if (!relatedTarget || !relatedTarget.closest?.('.jobs-dropdown-menu')) {
-      setShowJobsDropdown(false);
+      setShowJobsDropdown(  );
       setShowNestedJobsDropdown(false);
     }
   };

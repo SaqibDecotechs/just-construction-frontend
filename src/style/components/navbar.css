@@ -6,7 +6,8 @@
     z-index: 1000;
     transition: all 0.3s ease;
     background: var(--backdrop);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(10px);
+    /* thoda zyada blur better lagega */
     border-bottom: 1px solid var(--overlay-light);
 }
 
@@ -27,7 +28,7 @@
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color:var(--color_1);
+    color: var(--color_1);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -35,7 +36,7 @@
 }
 
 .logo-text img {
-width: 300px
+    width: 300px
 }
 
 
@@ -311,11 +312,11 @@ width: 300px
         padding: 5px 8px;
         min-width: 75px;
     }
-    
+
     .selected-flag {
         width: 18px;
     }
-    
+
     .custom-option img {
         width: 18px;
     }
@@ -360,11 +361,11 @@ width: 300px
         padding: 6px 10px;
         min-width: 80px;
     }
-    
+
     .selected-flag {
         width: 20px;
     }
-    
+
     .custom-option img {
         width: 20px;
     }
@@ -377,9 +378,28 @@ width: 300px
         position: relative;
     }
 
+    .nav-actions{
+        display: none !important;
+    }
+
     .logo-text img {
         width: 200px;
     }
+
+    /* .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -120%;
+        width: 100%;
+        height: 100vh;
+        background: var(--overlay-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+    } */
 
     .nav-menu {
         position: fixed;
@@ -392,7 +412,7 @@ width: 300px
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        transition: left 0.3s ease;
+        transition: left 0.3s ease-in-out;
         z-index: 999;
     }
 
@@ -410,7 +430,7 @@ width: 300px
         z-index: 1001;
     }
 
-    .nav-menu.active ~ .nav-actions {
+    .nav-menu.active~.nav-actions {
         position: fixed;
         bottom: 100px;
         left: 50%;
@@ -428,7 +448,7 @@ width: 300px
         z-index: 1001;
     }
 
-    .nav-menu.active ~ .mobile-menu-toggle {
+    .nav-menu.active~.mobile-menu-toggle {
         position: fixed;
         top: 1rem;
         right: 1rem;
@@ -459,11 +479,11 @@ width: 300px
         min-width: 90px;
         background: var(--overlay-dark);
     }
-    
+
     .selected-flag {
         width: 22px;
     }
-    
+
     .custom-option img {
         width: 22px;
     }
@@ -503,6 +523,12 @@ width: 300px
         width: 150px;
     }
 
+    .mobile-menu-toggle {
+        /* font-size: 1.2rem; */
+        display: block !important;
+        z-index: 1001!important;
+    }
+
     .nav-link {
         font-size: 1.1rem;
     }
@@ -520,11 +546,11 @@ width: 300px
         padding: 6px 10px;
         min-width: 85px;
     }
-    
+
     .selected-flag {
         width: 20px;
     }
-    
+
     .custom-option img {
         width: 20px;
     }
@@ -542,6 +568,8 @@ width: 300px
 .user-info {
     position: relative;
 }
+
+
 
 .user-dropdown {
     background: var(--primary);
@@ -670,7 +698,7 @@ width: 300px
         font-size: 10px;
         max-width: 120px;
     }
-    
+
     .user-dropdown {
         padding: 6px 18px;
     }
@@ -681,12 +709,12 @@ width: 300px
         padding: 12px 30px;
         font-size: 14px;
     }
-    
+
     .user-name {
         font-size: 14px;
         max-width: 200px;
     }
-    
+
     .user-icon {
         font-size: 16px;
     }
@@ -696,7 +724,7 @@ width: 300px
     .user-dropdown {
         padding: 10px 25px;
     }
-    
+
     .user-name {
         font-size: 12px;
         max-width: 150px;
@@ -761,7 +789,7 @@ width: 300px
 .nested-jobs-dropdown {
     position: absolute;
     top: 0;
-    left:97%;
+    left: 97%;
     background: var(--primary);
     border-radius: 8px;
     padding: 0;
@@ -821,7 +849,7 @@ width: 300px
     .jobs-dropdown-menu {
         min-width: 200px;
     }
-    
+
     .nested-jobs-dropdown {
         min-width: 220px;
     }
@@ -836,7 +864,7 @@ width: 300px
         min-width: 250px;
         max-width: 90vw;
     }
-    
+
     .nested-jobs-dropdown {
         position: absolute;
         top: 100%;
@@ -851,7 +879,7 @@ width: 300px
     .jobs-dropdown-menu {
         display: none;
     }
-    
+
     .nested-jobs-dropdown {
         display: none;
     }
