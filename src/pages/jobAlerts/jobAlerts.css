@@ -76,12 +76,19 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
@@ -127,10 +134,10 @@
   gap: 10px;
   background: white;
   border: 1px solid #ddd;
-  padding: 12px 30px;
-  border-radius: 5px;
+  padding: 16px 40px;
+  border-radius: 16px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 15px;
   width: fit-content;
@@ -150,21 +157,7 @@
   margin: 15px 0;
 }
 
-.login-link-btn {
-  background: var(--primary);
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
 
-.login-link-btn:hover {
-  background: linear-gradient(135deg, #c2185b, #880e4f);
-}
 
 /* Registration Section */
 .registration-section {
@@ -179,12 +172,13 @@
   text-align: left;
 }
 
-.section-title {
-  color: #e91e63;
+.section-title-alert{
+  color: var(--primary);
   font-size: 20px;
   font-weight: 600;
   margin: 30px 0 20px 0;
   border-bottom: none;
+  /* text-transform: lowercase !important; */
 }
 
 /* Form Styling */
@@ -377,7 +371,7 @@
   margin: 0;
   white-space: nowrap;
   display: inline-block;
-  
+
 }
 
 .privacy-policy-link {
@@ -425,47 +419,47 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .hero-description {
     font-size: 1rem;
   }
-  
+
   .job-alerts-hero {
     height: 70vh;
     min-height: 500px;
   }
-  
+
   /* Form responsive styles */
   .form-wrapper {
     padding: 20px;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .form-row.location-row {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .form-title {
     font-size: 20px;
   }
-  
+
   .section-title {
     font-size: 18px;
   }
-  
+
   .job-alert-form {
     gap: 15px;
   }
-  
+
   .register-btn {
     padding: 12px 30px;
     font-size: 14px;

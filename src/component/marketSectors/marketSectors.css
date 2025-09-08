@@ -146,8 +146,8 @@
   }
   
   .market-sectors__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
     gap: 2px;
     max-width: 600px;
     height: 450px;

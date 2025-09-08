@@ -5,10 +5,13 @@ import Footer from '../../component/footer/Footer'
 import OurServiceCard from '../../component/ourServices/OurServicesCard'
 import CounterSection from '../../component/aboutcounter/Aboutcounter'
 import MarketServices from '../../component/ourServices/Marketservices'
+import { useNavigate } from 'react-router-dom'
+import Button from '../../component/button'
 
 
 
 const About = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <section className="about-us-hero">
@@ -104,7 +107,7 @@ const About = () => {
                         dedicated to investing in your future, giving you the platform to
                         excel, and offering rewards that motivate you to achieve your best.
                     </p>
-                    <button className="careers-btn">Work for Us</button>
+                    <Button text="Work for Us" onClick={() => navigate("/join-us")} />
                 </div>
             </section>
 

@@ -17,13 +17,13 @@ const CandidateNextStep = () => {
       id: 2,
       title: 'SUBMIT CV',
       icon: <PiFilesBold />,
-      link: '#submit-cv'
+      link: '/submit-cv'
     },
     {
       id: 3,
       title: 'JOB ALERTS',
       icon: <GrAnnounce />,
-      link: '#job-alerts'
+      link: '/job-alerts'
     }
   ];
 

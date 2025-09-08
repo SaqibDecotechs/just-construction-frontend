@@ -6,70 +6,84 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import './submitCV.css';
 import { useSelector } from 'react-redux';
 import { selectSelectedCountry } from '../../store/slices/countrySlice';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../component/button';
+import FileUploadModal from "../../component/fileuploadmodal/FileUploadModal"
+import CandidateLatestOpportunities from '../../component/candidateLatestOpportunities/CandidateLatestOpportunities';
+
+
+
 
 const SubmitCV = () => {
+  const navigate = useNavigate();
   const selectedCountry = useSelector(selectSelectedCountry);
 
   // Job data from the image
-  const jobsData = [
-    {
-      id: 1,
-      location: "Greater London",
-      country: "United Kingdom",
-      title: "Project Manager",
-      category: "Interiors",
-      salary: "£ 65,000 - 70,000 GBP"
-    },
-    {
-      id: 2,
-      location: "Greater London",
-      country: "United Kingdom",
-      title: "Project Manager",
-      category: "Interiors",
-      salary: "£ 65,000 - 70,000 GBP"
-    },
-    {
-      id: 3,
-      location: "East Sussex",
-      country: "United Kingdom",
-      title: "Assistant QS/QS/Senior QS",
-      category: "Interiors",
-      salary: "£ 30,000 - 60,000 GBP"
-    },
-    {
-      id: 4,
-      location: "Greater London",
-      country: "United Kingdom",
-      title: "Senior Project Manager",
-      category: "Construction",
-      salary: "£ 70,000 - 85,000 GBP"
-    },
-    {
-      id: 5,
-      location: "Manchester",
-      country: "United Kingdom",
-      title: "Site Manager",
-      category: "Construction",
-      salary: "£ 45,000 - 55,000 GBP"
-    }
-  ];
+  // const jobsData = [
+  //   {
+  //     id: 1,
+  //     location: "Greater London",
+  //     country: "United Kingdom",
+  //     title: "Project Manager",
+  //     category: "Interiors",
+  //     salary: "£ 65,000 - 70,000 GBP"
+  //   },
+  //   {
+  //     id: 2,
+  //     location: "Greater London",
+  //     country: "United Kingdom",
+  //     title: "Project Manager",
+  //     category: "Interiors",
+  //     salary: "£ 65,000 - 70,000 GBP"
+  //   },
+  //   {
+  //     id: 3,
+  //     location: "East Sussex",
+  //     country: "United Kingdom",
+  //     title: "Assistant QS/QS/Senior QS",
+  //     category: "Interiors",
+  //     salary: "£ 30,000 - 60,000 GBP"
+  //   },
+  //   {
+  //     id: 4,
+  //     location: "Greater London",
+  //     country: "United Kingdom",
+  //     title: "Senior Project Manager",
+  //     category: "Construction",
+  //     salary: "£ 70,000 - 85,000 GBP"
+  //   },
+  //   {
+  //     id: 5,
+  //     location: "Manchester",
+  //     country: "United Kingdom",
+  //     title: "Site Manager",
+  //     category: "Construction",
+  //     salary: "£ 45,000 - 55,000 GBP"
+  //   }
+  // ];
+  // const handleLearnMore = (jobId) => {
+  //   navigate(`/job/${jobId}/apply`);
+  // };
   const submitText = selectedCountry === "US" ? "Submit Your Resume" : "Submit Your CV";
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const jobsPerSlide = 3;
-  const totalSlides = Math.ceil(jobsData.length / jobsPerSlide);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const jobsPerSlide = 3;
+  // const totalSlides = Math.ceil(jobsData.length / jobsPerSlide);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  // };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  // };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+  // const goToSlide = (index) => {
+  //   setCurrentSlide(index);
+  // };
+
+
 
   return (
     <>
@@ -147,14 +161,18 @@ const SubmitCV = () => {
 
               <div className="form-group file-upload-group">
                 <label className="file-upload-label">Choose File</label>
-                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
-                <span className="file-upload-text">Upload File</span>
+                <button className='upload-file' type="button" onClick={() => setIsModalOpen(true)}>Upload file</button>
+                <FileUploadModal
+                  isOpen={isModalOpen}
+                  // onFileUpload={handleFileUpload}
+                  onClose={() => setIsModalOpen(false)}
+                />
               </div>
 
               <div className="checkbox-group">
                 <input type="checkbox" id="terms" name="terms" required />
                 <label htmlFor="terms">
-                  I agree to <a href="#" className="terms-link">Privacy Policy</a> & <a href="#" className="terms-link">Terms & Conditions (Required)</a>
+                  I agree to <a href="/privacy-policy" className="terms-link">Privacy Policy</a> & <a href="/terms-and-conditions" className="terms-link">Terms & Conditions (Required)</a>
                 </label>
               </div>
 
@@ -167,7 +185,7 @@ const SubmitCV = () => {
       </div>
 
       {/* Jobs Slider Section */}
-      <div className="submit-cv-jobs-section">
+      {/* <div className="submit-cv-jobs-section">
         <div className="jobs-slider-container">
           <div className="jobs-slider-wrapper">
             <div
@@ -190,8 +208,11 @@ const SubmitCV = () => {
                         <h3 className="job-slider-title">{job.title}</h3>
                         <p className="job-slider-category">{job.category}</p>
                         <p className="job-slider-salary">{job.salary}</p>
-                        <button className="job-learn-more-btn">
-                          Learn More
+                        <button
+                          className="job-learn-more-btn"
+                          onClick={() => handleLearnMore(job.id)}
+                        >
+                          Learn More &#8250;
                         </button>
                       </div>
                     ))}
@@ -200,7 +221,7 @@ const SubmitCV = () => {
             </div>
           </div>
 
-          {/* Navigation Dots */}
+          
           <div className="jobs-slider-dots">
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
@@ -211,14 +232,14 @@ const SubmitCV = () => {
             ))}
           </div>
 
-          {/* See All Jobs Button */}
           <div className="see-all-jobs-container">
-            <button className="see-all-jobs-btn">
-              See all Jobs
-            </button>
+            <Button text="See all Jobs" onClick={() => navigate("/all-jobs")} />
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <CandidateLatestOpportunities />
+
 
       <Footer />
     </>

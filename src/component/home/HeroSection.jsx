@@ -4,8 +4,11 @@ import { selectSelectedCountry } from '../../store/slices/countrySlice'
 import "../../style/components/heroSection.css"
 import SocialIcon from '../socialIcon'
 import Button from '../button'
+import { useNavigate } from 'react-router-dom'
+    
 
 const HeroSection = () => {
+     const navigate = useNavigate();
     const selectedCountry = useSelector(selectSelectedCountry);
     
     const getBackgroundImage = () => {
@@ -33,8 +36,8 @@ const HeroSection = () => {
                 </p>
                 <div className="hero-actions">
 
-                    <Button text={"Our Services"} />
-                    <Button text={"Search Job"} />
+                    <Button text="Our Services" onClick={() => navigate("/our-services")}  />
+                    <Button text="Search Job" onClick={() => navigate("/all-jobs")} />
 
                 </div>
             </div>

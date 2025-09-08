@@ -11,37 +11,36 @@
 
 .candidate-opportunities-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .candidate-opportunities-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--color_1);
   margin: 0;
   letter-spacing: 2px;
 }
 
+/* Carousel Wrapper */
 .candidate-opportunities-carousel {
   position: relative;
-  overflow: hidden;
   margin-bottom: 40px;
 }
 
-.candidate-opportunities-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
+/* Each Slide */
 .candidate-opportunities-slide {
-  min-width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Job Card */
 .candidate-opportunity-card {
-  background: white;
+  background: #fff;
   border: 2px solid var(--color_1);
   border-radius: 15px;
   padding: 30px 25px;
@@ -54,15 +53,18 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
 }
 
 .candidate-opportunity-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+  z-index: 10;
 }
 
+/* Location & Country */
 .candidate-opportunity-location-tag {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .candidate-opportunity-location {
@@ -79,6 +81,7 @@
   display: block;
 }
 
+/* Title & Industry */
 .candidate-opportunity-title {
   font-size: 1.4rem;
   font-weight: bold;
@@ -95,6 +98,7 @@
   margin: 0 0 20px 0;
 }
 
+/* Salary */
 .candidate-opportunity-salary {
   margin: 0 0 25px 0;
   flex-grow: 1;
@@ -106,50 +110,59 @@
   font-weight: 500;
 }
 
+/* Learn More Button */
 .candidate-opportunity-btn {
   background-color: var(--color_1);
   color: white;
   border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 1rem;
+  border-radius: 16px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  height: 45px;
+  width: 130px;
   transition: all 0.3s ease;
   align-self: flex-start;
   margin-top: auto;
 }
 
 .candidate-opportunity-btn:hover {
-  background-color: var(--primary-dark);
   transform: translateY(-2px);
-}
-
-.candidate-carousel-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.candidate-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  background-color: var(--bg-white);
+  color: var(--color_1);
   border: 2px solid var(--color_1);
-  background: transparent;
+}
+
+/* Custom Carousel Arrows */
+.carousel-arrow {
+  background: var(--color_1);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
-.candidate-indicator.active {
-  background-color: var(--color_1);
+.carousel-arrow-prev {
+  left: -50px;
 }
 
-.candidate-indicator:hover {
-  background-color: var(--color_1);
+.carousel-arrow-next {
+  right: -50px;
 }
 
+.carousel-arrow:hover {
+  background: var(--bg-white);
+  color: var(--color_1);
+  border: 2px solid var(--color_1);
+}
+
+/* See All Button */
 .candidate-see-all-container {
   text-align: center;
 }
@@ -172,7 +185,38 @@
   box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
-/* Responsive Design */
+
+.carousel .control-dots .dot {
+    transition: opacity .25s ease-in;
+    opacity: .3;
+    /* filter: alpha(opacity=30); */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    background: #fff;
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 8px;
+    border: 2px solid var(--color_1) !important;
+    /* background-color: var(--color_1) !important; */
+}
+
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-color: var(--color_1) !important;
+}
+
+.control-dots {
+   bottom: -10px !important;
+}
+
+/* ------------------- */
+/* Responsive Design   */
+/* ------------------- */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .candidate-opportunities-slide {
     gap: 20px;
@@ -188,13 +232,14 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .candidate-latest-opportunities {
     padding: 60px 0;
   }
 
   .candidate-opportunities-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .candidate-opportunities-title {
@@ -218,6 +263,7 @@
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .candidate-latest-opportunities {
     padding: 50px 0;
@@ -242,12 +288,26 @@
   }
 
   .candidate-opportunity-btn {
-    padding: 10px 20px;
     font-size: 0.9rem;
+    width: 120px;
+    height: 40px;
   }
 
   .candidate-see-all-btn {
     padding: 12px 30px;
     font-size: 1rem;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .carousel-arrow-prev {
+    left: -35px;
+  }
+
+  .carousel-arrow-next {
+    right: -35px;
   }
 }

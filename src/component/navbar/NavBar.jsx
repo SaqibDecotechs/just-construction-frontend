@@ -14,7 +14,7 @@ import '../../style/components/navbar.css'
 
 const NavbarHero = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const location = useLocation();
   const user = useSelector(getUser);
   const selectedCountry = useSelector(selectSelectedCountry);
@@ -26,6 +26,7 @@ const NavbarHero = () => {
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
+  const [showjobseekersDropdown, setShowjobseekersDropdown] = useState(false);
   const [showJobsDropdown, setShowJobsDropdown] = useState(false);
   const [showNestedJobsDropdown, setShowNestedJobsDropdown] = useState(false);
   const [showEmployersDropdown, setShowEmployersDropdown] = useState(false);
@@ -63,13 +64,7 @@ const NavbarHero = () => {
     navigate('/dashboard');
   };
 
-  const toggleAboutDropdown = () => {
-    setShowAboutDropdown(!showAboutDropdown);
-  };
 
-  const toggleJobsDropdown = () => {
-    setShowJobsDropdown(!showJobsDropdown);
-  };
 
   const handleJobsHover = () => {
     setShowJobsDropdown(true);
@@ -78,7 +73,7 @@ const NavbarHero = () => {
   const handleJobsLeave = (e) => {
     const relatedTarget = e.relatedTarget;
     if (!relatedTarget || !relatedTarget.closest?.('.jobs-dropdown-menu')) {
-      setShowJobsDropdown(  );
+      setShowJobsDropdown();
       setShowNestedJobsDropdown(false);
     }
   };
@@ -135,13 +130,15 @@ const NavbarHero = () => {
                 </div>
               )}
             </li>
+
             {user?.role !== 'admin' && (
-              <li className="nav-item" onMouseEnter={handleJobsHover} onMouseLeave={handleJobsLeave}>
-                {/* <Link to="/all-jobs" className={`dropdown-item jobs-main ${isActivePage('/all-jobs') ? 'active' : ''}`}>View All Jobs</Link> */}
+              <li className="nav-item"
+                onMouseEnter={() => setShowjobseekersDropdown(true)}
+                onMouseLeave={() => setShowjobseekersDropdown(false)}>
                 <a href="#services" className="nav-link">
                   {getLocalizedText('jobSeekers', selectedLocale)} <MdOutlineKeyboardArrowDown size={16} />
                 </a>
-                {showJobsDropdown && (
+                {showjobseekersDropdown && (
                   <div className="jobs-dropdown-menu">
                     <Link to="/candidate-commitment" className={`dropdown-item ${isActivePage('/candidate-commitment') ? 'active' : ''}`}>
                       Candidate Commitment

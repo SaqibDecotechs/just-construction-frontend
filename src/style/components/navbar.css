@@ -620,7 +620,7 @@
 /* About Us Dropdown Menu */
 .about-dropdown-menu {
     position: absolute;
-    top: 20px;
+    top: 35px;
     left: 0;
     background: var(--primary);
     border-radius: 8px;
@@ -642,6 +642,7 @@
     font-weight: 500;
     transition: all 0.3s ease;
     border-bottom: 1px solid var(--overlay-light);
+    text-align: left;
 }
 
 .dropdown-item:last-child {
@@ -734,7 +735,7 @@
 /* Jobs Dropdown Menu */
 .jobs-dropdown-menu {
     position: absolute;
-    top: 20px;
+    top: 35px;
     left: 0;
     background: var(--primary);
     border-radius: 8px;

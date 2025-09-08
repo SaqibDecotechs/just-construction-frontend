@@ -5,8 +5,14 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import './jobAlerts.css';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../component/button';  
+
 
 const JobAlerts = () => {
+
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
   const [salaryValue, setSalaryValue] = useState(183700);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
@@ -63,7 +69,7 @@ const JobAlerts = () => {
               </button>
 
               <div className="or-divider">
-                <button className="login-link-btn">or you can log-in here</button>
+                <Button text={"or you can log-in here "} onClick={() => navigate('/login')}/>
               </div>
             </div>
 
@@ -108,7 +114,7 @@ const JobAlerts = () => {
                 </div>
 
                 {/* Alert Details Section */}
-                <h3 className="section-title">Alert Details</h3>
+                <h3 className="section-title-alert">Alert Details</h3>
 
                 <div className="form-group full-width">
                   <label htmlFor="alertName">Alert Name:</label>
@@ -205,12 +211,14 @@ const JobAlerts = () => {
                     </label>
                   </div>
                   <div className="privacy-policy-link">
-                    <a href="#" className="privacy-link">Read our Privacy Policy</a>
+                    <a href="/privacy-policy" className="privacy-link">Read our Privacy Policy</a>
                   </div>
                 </div>
 
                 <div className="button-section">
-                  <button type="submit" className="register-btn">Register and Save</button>
+                  <Button text="Register and Save" 
+                  // onClick={handleSubmit}
+                   />
                 </div>
               </form>
             </div>

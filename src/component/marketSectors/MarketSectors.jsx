@@ -6,6 +6,12 @@ import about1 from '../../assest/about1.jpg';
 import about2 from '../../assest/about2.jpg';
 import about3 from '../../assest/about3.jpg';
 import about4 from '../../assest/about4.jpg';
+import market1 from '../../assest/ms1.avif';
+import market2 from '../../assest/ms2.avif';
+import market3 from '../../assest/ms3.avif';
+import market4 from '../../assest/ms4.avif';
+import market5 from '../../assest/ms5.avif';
+import market6 from '../../assest/ms6.avif'; 
 
 const MarketSectors = () => {
   const selectedCountry = useSelector(selectSelectedCountry);
@@ -14,32 +20,32 @@ const MarketSectors = () => {
     {
       id: 1,
       title: 'COMMERCIAL',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market1
     },
     {
       id: 2,
       title: 'RESIDENTIAL',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market2  
     },
     {
       id: 3,
       title: 'INDUSTRIAL',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market3
     },
     {
       id: 4,
       title: 'EDUCATION',
-      image: 'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market4
     },
     {
       id: 5,
       title: 'INFRASTRUCTURE',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market5
     },
     {
       id: 6,
       title: 'HEALTHCARE',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      image: market6
     },
   ];
   const ukSectors = [

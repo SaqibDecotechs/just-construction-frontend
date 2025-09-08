@@ -3,6 +3,8 @@ import "./IndustryNews.css";
 import ind1 from '../../assest/ind1.jpeg';
 import ind2 from '../../assest/ind2.jpeg';
 import ind3 from '../../assest/ind3.jpeg';
+import { useNavigate } from "react-router-dom";
+import Button from "../button";
 
 const blogData = [
   {
@@ -28,7 +30,10 @@ const blogData = [
   },
 ];
 
+
 const IndustryNews = () => {
+const navigate = useNavigate();
+
   return (
     <div className="industry-section">
       <h2 className="section-title">Industry news & insights</h2>
@@ -46,7 +51,7 @@ const IndustryNews = () => {
         ))}
       </div>
       <div className="see-more">
-        <button className="see-more-btn">See More Blogs</button>
+        <Button text="See More Blogs" onClick={() => navigate("/contact")} />
       </div>
     </div>
   );

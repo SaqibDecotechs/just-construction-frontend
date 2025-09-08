@@ -15,8 +15,11 @@ import g3 from "../../assest/complaints-bg.jpeg";
 import g4 from "../../assest/join-g4.webp";
 import g5 from "../../assest/join-g5.jpeg";
 import g6 from "../../assest/join-g6.webp";
+import { useNavigate } from "react-router-dom";
+import Button from "../../component/button";
 
 const JoinUs = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("shaun");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -106,8 +109,10 @@ const JoinUs = () => {
             Passionate about delivering exceptional service to both clients and candidates, we foster a fun, ambitious, and supportive environment where you can thrive. So, what are you waiting for? Join us today!
           </p>
 
-          <button className="join-btn">Join Us</button>
-        </div>
+          <div style={{ textAlign: "center" }}>
+            <Button text="Join Us" onClick={() => navigate("/join-us")} />
+            </div>  
+          </div>
       </section>
 
       {/* Latest Opportunities Section */}

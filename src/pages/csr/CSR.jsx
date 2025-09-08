@@ -2,14 +2,15 @@ import React from 'react';
 import NavbarHero from '../../component/navbar/NavBar';
 import Footer from '../../component/footer/Footer';
 import CSRHeroSection from '../../component/csrHero/CSRHeroSection';
-import goalsImage from '../../assest/goalsbg.webp';
-import achieveGoalsImage from '../../assest/achievegoalsbg.webp';
 import csrgoal from '../../assest/csrgoals.jpg' 
 import csrgoals1 from '../../assest/csrgoa1ls.jpg'
+import { useNavigate } from 'react-router-dom';
+import Button from '../../component/button';
 
 import './csr.css';
 
 const CSR = () => {
+  const navigate = useNavigate();
   return (
     <>
       <NavbarHero />
@@ -126,7 +127,8 @@ const CSR = () => {
                  Implementing no-name shortlists as the default for all client vacancies
                 </li>
               </ul>
-              <button className="diversity-policy-btn">Diversity Policy</button>
+              {/* <button className="diversity-policy-btn">Diversity Policy</button> */}
+              <Button text="Diversity Policy" onClick={() => navigate("/diversity-csr")} />
             </div>
             <div className="achieve-goals-image">
               <img 

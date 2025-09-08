@@ -22,6 +22,10 @@ const caseStudies = [
 const CaseStudiesSlider = () => {
     const [current, setCurrent] = useState(0);
 
+    const navigate = () => {
+        window.location.href = '/case-studies';
+    };
+
     const goTo = (idx) => setCurrent(idx);
     const next = () => setCurrent((prev) => (prev + 1) % caseStudies.length);
 
@@ -30,7 +34,7 @@ const CaseStudiesSlider = () => {
             <div className="case-slider-overlay">
                 <div className="case-slider-left">
                     <h2>Driving value together<br />with our partners at every step</h2>
-                    <button className="case-slider-btn" onClick={next}>
+                    <button className="case-slider-btn" onClick={navigate}>
                         More Case Studies
                     </button>
                 </div>
