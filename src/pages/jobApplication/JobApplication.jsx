@@ -418,13 +418,15 @@ const JobApplication = () => {
               </div>
 
               {/* Submit Button */}
-              <button 
+              <div style={{ textAlign: 'center' }}>
+                <button 
                 type="submit" 
                 className="apply-button"
                 disabled={submittingApplication || loadingResume || loadingCoverLetter}
               >
-                {submittingApplication ? 'SUBMITTING...' : 'APPLY'}
-              </button>
+                {submittingApplication ? 'SUBMITTING...' : 'Apply'}
+              </button> 
+              </div>
             </form>
           </div>
         </div>

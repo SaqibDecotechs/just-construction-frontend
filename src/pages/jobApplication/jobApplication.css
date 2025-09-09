@@ -8,7 +8,7 @@
 .job-application-hero {
   height: 400px;
   background: linear-gradient(var(--backdrop), var(--backdrop)),
-              url('../../assest/jobapp-bg.jpg') center/cover no-repeat;
+    url('../../assest/jobapp-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,12 +37,19 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -55,7 +62,7 @@
   align-items: center;
   padding: 40px 20px;
   /* background-color: #e8e8e8; */
- 
+
 }
 
 .application-form-wrapper {
@@ -262,7 +269,7 @@
   cursor: not-allowed;
 }
 
-.file-input:disabled + .file-button {
+.file-input:disabled+.file-button {
   background: var(--border-light);
   color: var(--text-muted);
   cursor: not-allowed;
@@ -304,25 +311,28 @@
 
 /* Apply Button */
 .apply-button {
-  background: var(--primary);
+  background-color: var(--color_1) !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-radius: 16px !important;
+  -moz-border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+  border-color: var(--color_1) !important;
   color: var(--text-white);
   border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  width: 120px;
+  height: 45px !important;
+  font-weight: 600 !important;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  align-self: flex-start;
-  margin-top: 8px;
-  font-family: Arial, sans-serif;
+  font-size: 16px !important;
 }
 
 .apply-button:hover {
-  background: var(--primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  background-color: var(--bg-white) !important;
+  color: var(--color_1);
+  background-image: none !important;
 }
 
 .apply-button:active {
@@ -352,38 +362,38 @@
   .job-application-hero {
     height: 400px;
   }
-  
+
   .hero-overlay-application {
     margin-top: 80px;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .application-container {
     padding: 20px 15px;
   }
-  
+
   .application-form-wrapper {
     padding: 30px 25px;
     margin: 0;
   }
-  
+
   .welcome-message h1 {
     font-size: 1.3rem;
   }
-  
+
   .form-row-apply {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .radio-group {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .apply-button {
     width: 100%;
     align-self: stretch;
@@ -394,42 +404,42 @@
   .job-application-hero {
     height: 350px;
   }
-  
+
   .hero-overlay-application {
     margin-top: 60px;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .application-form-wrapper {
     padding: 25px 20px;
   }
-  
+
   .welcome-message h1 {
     font-size: 1.2rem;
   }
-  
+
   .register-section h2 {
     font-size: 1rem;
   }
-  
+
   .form-group-apply label {
     font-size: 0.8rem;
   }
-  
+
   .form-group-apply input[type="text"],
   .form-group-apply input[type="email"],
   .form-group-apply input[type="tel"] {
     padding: 7px 8px;
     font-size: 0.8rem;
   }
-  
+
   .radio-option {
     font-size: 0.8rem;
   }
-  
+
   .file-button {
     padding: 3px 6px;
     font-size: 0.75rem;

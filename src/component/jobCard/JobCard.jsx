@@ -102,7 +102,7 @@ const JobCard = ({ job }) => {
           onClick={hasUserApplied() ? undefined : handleApplyNow}
           disabled={hasUserApplied()}
         >
-          {hasUserApplied() ? 'APPLIED' : 'APPLY NOW'}
+          {hasUserApplied() ? 'APPLIED' : 'APPLY NOW'} 
         </button>
         {/* <button className="btn-read-more" onClick={handleReadMore}>
           READ MORE

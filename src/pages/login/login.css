@@ -7,7 +7,7 @@
 .login-hero {
   height: 300px;
   background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-              url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
+    url('https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-210661-2880w.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,12 +32,19 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -67,7 +74,8 @@
   margin-bottom: 40px;
 }
 
-.linkedin-btn, .google-btn {
+.linkedin-btn,
+.google-btn {
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -194,40 +202,44 @@
   margin: 10px 0;
 }
 
-.forgot-password-link, .privacy-link {
+.forgot-password-link,
+.privacy-link {
   color: var(--primary);
   text-decoration: none;
   font-size: 14px;
 }
 
-.forgot-password-link:hover, .privacy-link:hover {
+.forgot-password-link:hover,
+.privacy-link:hover {
   text-decoration: underline;
 }
 
 .login-btn {
-  background-color: var(--primary);
+  background-color: var(--color_1) !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-radius: 16px !important;
+  -moz-border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+  border-color: var(--color_1) !important;
   color: var(--text-white);
   border: none;
-  padding: 15px 40px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 600;
+  width: 200px;
+  height: 45px !important;
+  font-weight: 600 !important;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: center;
-  min-width: 150px;
+  font-size: 16px !important;
 }
 
-.login-btn:hover:not(:disabled) {
-  background-color: var(--primary-darker);
+.login-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--primary);
+  background-color: var(--bg-white) !important;
+  color: var(--color_1);
+  background-image: none !important;
 }
 
-.login-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+
 
 @media (max-width: 768px) {
   .hero-title {
@@ -244,7 +256,8 @@
     gap: 15px;
   }
 
-  .linkedin-btn, .google-btn {
+  .linkedin-btn,
+  .google-btn {
     width: 100%;
     justify-content: center;
   }

@@ -178,13 +178,15 @@ const Login = () => {
               </Link>
             </div>
 
-            <button 
+            <div style={{ textAlign: 'center' }}>
+              <button 
               type="submit" 
               className="login-btn"
               disabled={isLoading}
             >
               {isLoading ? 'Submitting...' : 'Submit'}
             </button>
+            </div>
           </form>
         </div>
       </div>
