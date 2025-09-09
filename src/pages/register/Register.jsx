@@ -214,13 +214,15 @@ const Register = () => {
               </Link>
             </div>
 
-            <button 
+           <div style={{ textAlign: 'center'}}>
+               <button 
               type="submit" 
               className="register-btn"
               disabled={isLoading}
             >
               {isLoading ? 'Registering...' : 'Register'}
             </button>
+            </div>
           </form>
         </div>
       </div>

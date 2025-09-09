@@ -49,6 +49,11 @@ const NavbarHero = () => {
     setShowCountryDropdown(false);
   };
 
+  const handleMobileCountryChange = (country) => {
+    handleCountryChange(country);
+    setIsMenuOpen(false);
+  };
+
   const toggleUserDropdown = () => {
     setShowUserDropdown(!showUserDropdown);
   };
@@ -208,6 +213,39 @@ const NavbarHero = () => {
             <li className="nav-item">
               {/* <a href="#contact" className="nav-link">Contact</a> */}
             </li>
+
+            <div className="mobile-extra">
+              <h4 className="region-title">Select Region</h4>
+              <div className="region-options">
+                <div
+                  className={`region-option ${selectedCountry === 'UK' ? 'active' : ''}`}
+                  onClick={() => handleMobileCountryChange('UK')}
+                >
+                  <img src="https://flagcdn.com/w20/gb.png" alt="UK" />
+                  <span>UK</span>
+                </div>
+                <div
+                  className={`region-option ${selectedCountry === 'US' ? 'active' : ''}`}
+                  onClick={() => handleMobileCountryChange('US')}
+                >
+                  <img src="https://flagcdn.com/w20/us.png" alt="US" />
+                  <span>US</span>
+                </div>
+              </div>
+
+              {user ? (
+                <div className="mobile-user">
+                  <button onClick={handleDashboard} className="auth-btn">Dashboard</button>
+                  <button onClick={handleLogout} className="auth-btn">Logout</button>
+                </div>
+              ) : (
+                <div className="auth-buttons">
+                  <Link to="/login" className="auth-btn">LOGIN</Link>
+                  <span className="auth-divider">|</span>
+                  <Link to="/register" className="auth-btn">REGISTER</Link>
+                </div>
+              )}
+            </div>
           </ul>
 
           <div className="nav-actions">
@@ -273,9 +311,17 @@ const NavbarHero = () => {
             </div>
           </div>
 
-          <button className="mobile-menu-toggle" onClick={toggleMenu}>
+          {/* <button className="mobile-menu-toggle" onClick={toggleMenu}>
             {isMenuOpen ? <IoClose size={24} /> : <FiMenu size={24} />}
-          </button>
+          </button> */}
+          <div
+            className={`hamburger ${isMenuOpen ? "active" : ""}`}
+            onClick={toggleMenu}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
 

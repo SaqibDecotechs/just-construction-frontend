@@ -116,7 +116,8 @@
 .contact-form-uk textarea {
   border: none;
   background: #fff;
-  padding: 12px;
+  padding: 12px 0px;
+  /* margin: 0px 0px 0px 0px; */
   margin-bottom: 16px;
   font-size: 1rem;
   /* border-radius: 4px; */

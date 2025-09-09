@@ -25,12 +25,14 @@
   gap: 30px;
 }
 
-.footer-logo  {
+.footer-logo {
   margin-bottom: 10px;
 }
-.footer-logo img{
+
+.footer-logo img {
   width: 320px !important;
 }
+
 .logo-text {
   font-family: 'Eurostile', Arial, sans-serif;
   font-weight: 700;
@@ -225,41 +227,45 @@
   .footer {
     padding: 40px 0 0 0;
   }
-  
+
   .footer-container {
     padding: 0 20px;
   }
-  
+
   .footer-main {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
-    padding:20px 10px ;
+    padding: 20px 10px;
   }
-  
+
   .footer-left {
     align-items: center;
   }
-  
+
   .footer-contact {
     text-align: center;
   }
-  
+
   .quick-links,
   .job-links {
     align-items: center;
   }
-  
+
   .social-section {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 15px;
   }
-  
+
   .legal-links {
     justify-content: center;
     flex-wrap: wrap;
@@ -271,43 +277,44 @@
   .footer {
     padding: 30px 0 0 0;
   }
-  
+
   .footer-container {
     padding: 0 15px;
   }
-  
+
   .footer-main {
     gap: 30px;
   }
-  .footer-logo img{
+
+  .footer-logo img {
     width: 200px !important;
   }
-  
+
   .logo-text {
     font-size: 1.5rem;
   }
-  
+
   .footer-center h3,
   .footer-right h3 {
     font-size: 1rem;
   }
-  
+
   .contact-section h4,
   .social-section h4 {
     font-size: 0.9rem;
   }
-  
+
   .contact-section p,
   .quick-links li a,
   .job-links li a {
     font-size: 0.85rem;
   }
-  
+
   .legal-links {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .legal-links span {
     display: none;
   }
