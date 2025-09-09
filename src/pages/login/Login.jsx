@@ -95,9 +95,9 @@ const Login = () => {
       <NavBar />
       
       <div className="login-hero">
-        <div className="hero-overlay">
-          <h1 className="hero-title">Login</h1>
-          <div className="hero-arrow">
+        <div className="hero-overlay-login">
+          <h1 className="hero-title-login">Login</h1> 
+          <div className="hero-arrow-login">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
               <path d="M12 16l-6-6h12l-6 6z"/>
             </svg>

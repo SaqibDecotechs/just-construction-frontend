@@ -14,12 +14,12 @@
   position: relative;
 }
 
-.hero-overlay {
+.hero-overlay-register {
   text-align: center;
   color: var(--text-white);
 }
 
-.hero-title {
+.hero-title-register {
   font-size: 3rem;
   font-weight: 700;
   margin: 0;
@@ -27,7 +27,7 @@
   color: var(--text-white);
 }
 
-.hero-arrow {
+.hero-arrow-register {
   animation: bounce 2s infinite;
 }
 

@@ -106,9 +106,9 @@ const Register = () => {
       <NavBar />
       
       <div className="register-hero">
-        <div className="hero-overlay">
-          <h1 className="hero-title">Register</h1>
-          <div className="hero-arrow">
+        <div className="hero-overlay-register">
+          <h1 className="hero-title-register">Register</h1>
+          <div className="hero-arrow-register">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
               <path d="M12 16l-6-6h12l-6 6z"/>
             </svg>
