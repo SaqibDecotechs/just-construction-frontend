@@ -176,9 +176,11 @@ const SubmitCV = () => {
                 </label>
               </div>
 
-              <button type="submit" className="submit-cv-button">
-                Submit CV
-              </button>
+              <div style={{ textAlign: 'center' }}>
+                <button type="submit" className="submit-cv-button">
+                  Submit CV
+                </button>
+              </div>
             </form>
           </div>
         </div>

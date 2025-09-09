@@ -270,7 +270,7 @@
 
 /* Submit Button */
 .submit-cv-button {
-  width: 100%;
+  width: 200px;
   /* padding: 15px 30px; */
   height: 45px;
   background-color: var(--color_1) !important;
