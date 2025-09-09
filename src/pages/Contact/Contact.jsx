@@ -41,7 +41,7 @@ const ContactUs = () => {
                                     <input type="checkbox" required />
                                     I have read and agree to the{" "}
                                     <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{" "}
-                                    <a href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>.
+                                    <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>.
                                 </label>
 
                                 <div className="btn-s">
@@ -56,14 +56,14 @@ const ContactUs = () => {
                                 <textarea placeholder="Message" required />
 
                                 <p className="consent-text-uk">
-                                    View our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &{" "}
-                                    <a href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+                                    View our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer"> Privacy Policy</a> &{" "}
+                                    <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer"> Terms & Conditions</a>
                                 </p>
 
                                 <label className="checkbox-label-uk">
                                     <input className="checkbox-input-uk" type="checkbox" required /> I agree to the{" "}
                                     <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &{" "}
-                                    <a href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a> (Required)
+                                    <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a> (Required)
                                 </label>
 
                                 <div className="btn-s">
