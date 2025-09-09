@@ -36,7 +36,7 @@ const navigate = useNavigate();
 
   return (
     <div className="industry-section">
-      <h2 className="section-title">Industry news & insights</h2>
+      <h2 className="section-title-in">Industry news & insights</h2>
       <div className="news-grid">
         {blogData.map((blog) => (
           <div key={blog.id} className="news-card">
