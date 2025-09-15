@@ -3,7 +3,7 @@ import NavbarHero from '../../component/navbar/NavBar';
 import Footer from '../../component/footer/Footer';
 import CandidateCommitmentDetails from '../../component/candidateCommitmentDetails/CandidateCommitmentDetails';
 import CandidateNextStep from '../../component/candidateNextStep/CandidateNextStep';
-import CandidateLatestOpportunities from '../../component/candidateLatestOpportunities/CandidateLatestOpportunities';
+import LatestOpportunities from '../../component/latestOpportunities/LatestOpportunities';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import './candidateCommitment.css';
 
@@ -43,7 +43,8 @@ const CandidateCommitment = () => {
 
       <CandidateNextStep />
 
-      <CandidateLatestOpportunities />
+      <LatestOpportunities />
+
 
       {/* <div className="candidate-commitment-content">
         <div className="candidate-commitment-container">

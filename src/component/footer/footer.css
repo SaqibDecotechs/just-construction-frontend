@@ -33,7 +33,7 @@
   width: 320px !important;
 }
 
-.logo-text {
+.logo-footer-text {
   font-family: 'Eurostile', Arial, sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
@@ -290,7 +290,7 @@
     width: 200px !important;
   }
 
-  .logo-text {
+  .logo-footer-text {
     font-size: 1.5rem;
   }
 

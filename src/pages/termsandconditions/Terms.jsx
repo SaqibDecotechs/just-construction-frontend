@@ -29,10 +29,10 @@ const TermsAndConditions = () => {
 
                 <h2>About Us</h2>
                 <p>
-                    This website is operated by <strong>Just Construction Recruitment Ltd</strong>,
+                    This website is operated by <strong>Fazil Construction Recruitment Ltd</strong>,
                     registered in England and Wales (Company No. 08131040). Our registered
                     office is at 1 & 2 High St, Westerham TN16 1AH, with our trading address
-                    located at 29 London Road, Bromley, BR1 1DG. VAT No. 139805686.
+                    located at 29 London Road, , BR1 1DG. VAT No. 139805686.
                 </p>
                 <p>
                     As a proud member of The REC, we comply with the Codes of Professional

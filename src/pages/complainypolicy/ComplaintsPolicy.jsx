@@ -23,7 +23,7 @@ const ComplaintsPolicy = () => {
         <div className="complaints-container">
           <h2>Our Commitment</h2>
           <p>
-            At Just Construction, we strive to provide the highest quality of
+            At Fazil Construction, we strive to provide the highest quality of
             service to our clients and candidates. If you feel we have fallen
             short, we welcome your feedback. Every complaint is taken seriously
             and treated as an opportunity to improve our services.
@@ -35,7 +35,7 @@ const ComplaintsPolicy = () => {
             email or post:
           </p>
           <p>
-            <strong>Address:</strong> Just Construction Recruitment Ltd, Alliance
+            <strong>Address:</strong> Fazil Construction Recruitment Ltd, Alliance
             House, 29 London Road, BR1 1DG
             <br />
             <strong>Email:</strong> office@just-constructionrec.com
@@ -88,7 +88,7 @@ const ComplaintsPolicy = () => {
           </p>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </div>
   );
 };

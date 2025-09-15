@@ -2,41 +2,42 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { saveJob, applyForJob } from '../../store/services/jobs';
+import { selectSelectedCountry } from '../../store/slices/countrySlice'; // 🔹 Add this
 import './jobCard.css';
 
 const JobCard = ({ job }) => {
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
-  
+  const selectedCountry = useSelector(selectSelectedCountry); // 🔹 Current country
+
   // Check if user has already applied to this job
   const hasUserApplied = () => {
     if (!user?.jobApplications || !job) return false;
-    
+
     const jobId = job._id || job.id;
     return user.jobApplications.some(application => {
       const applicationJobId = application.jobId?._id || application.jobId;
       return applicationJobId === jobId;
     });
   };
-  
-  const formatSalary = (minSalary, maxSalary) => {
-    if (minSalary && maxSalary) {
-      return `£${minSalary.toLocaleString()} - £${maxSalary.toLocaleString()}`;
-    } else if (minSalary) {
-      return `£${minSalary.toLocaleString()}+`;
-    } else if (maxSalary) {
-      return `Up to £${maxSalary.toLocaleString()}`;
-    }
-    return 'Competitive Salary';
+
+  // 🔹 Salary formatting with dynamic currency
+  const formatSalaryWithCurrency = (salary) => {
+    if (!salary) return 'Competitive Salary';
+
+    const currencySymbol = selectedCountry === "US" ? "$" : "£";
+    // ab "k", "+", ",", "." bhi allow
+    const cleanSalary = salary.replace(/[^0-9kK\+\-–,. ]/g, '');
+    return `${currencySymbol}${cleanSalary}`;
   };
 
   const getTimeAgo = (postedDate) => {
     if (!postedDate) return 'Recently posted';
-    
+
     const now = new Date();
     const posted = new Date(postedDate || job.createdAt || job.datePosted);
     const diffInDays = Math.floor((now - posted) / (1000 * 60 * 60 * 24));
-    
+
     if (diffInDays === 0) return 'Posted today';
     if (diffInDays === 1) return 'Posted 1 day ago';
     return `Posted ${diffInDays} days ago`;
@@ -67,7 +68,6 @@ const JobCard = ({ job }) => {
   };
 
   const handleReadMore = () => {
-    // Navigate to job details page
     const jobId = job._id || job.id;
     window.open(`/job/${jobId}`, '_blank');
   };
@@ -91,18 +91,22 @@ const JobCard = ({ job }) => {
 
       <div className="job-details">
         <p className="job-location">{job.location || 'Location Not Specified'}</p>
-        <p className="job-salary">{job.salary}</p>
-        {/* <p className="job-salary">{formatSalary(job.minSalary || job.salary?.min, job.maxSalary || job.salary?.max)}</p> */}
+
+        {/* 🔹 Use dynamic salary formatter */}
+        <p className="job-salary">
+          {formatSalaryWithCurrency(job.salary || '')}
+        </p>
+
         <p className="job-category">{job.category || job.industry || job.jobType || 'General'}</p>
       </div>
 
       <div className="job-card-actions">
-        <button 
+        <button
           className={`btn-apply-now ${hasUserApplied() ? 'btn-applied' : ''}`}
           onClick={hasUserApplied() ? undefined : handleApplyNow}
           disabled={hasUserApplied()}
         >
-          {hasUserApplied() ? 'APPLIED' : 'APPLY NOW'} 
+          {hasUserApplied() ? 'APPLIED' : 'APPLY NOW'}
         </button>
         {/* <button className="btn-read-more" onClick={handleReadMore}>
           READ MORE

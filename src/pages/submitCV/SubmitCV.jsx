@@ -9,7 +9,7 @@ import { selectSelectedCountry } from '../../store/slices/countrySlice';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../component/button';
 import FileUploadModal from "../../component/fileuploadmodal/FileUploadModal"
-import CandidateLatestOpportunities from '../../component/candidateLatestOpportunities/CandidateLatestOpportunities';
+import LatestOpportunities from '../../component/latestOpportunities/LatestOpportunities';
 
 
 
@@ -240,7 +240,8 @@ const SubmitCV = () => {
         </div>
       </div> */}
 
-      <CandidateLatestOpportunities />
+              <LatestOpportunities />
+
 
 
       <Footer />

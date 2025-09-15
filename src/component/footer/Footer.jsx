@@ -32,23 +32,23 @@ const Footer = () => {
           {/* Left Section - Logo and Contact */}
           <div className="footer-left">
             <div className="footer-logo">
-              <h2 className="logo-text">
+              <h2 className="logo-footer-text">
                 Fazil Construction
               </h2>
             </div>
 
             <div className="footer-contact">
               <div className="contact-section">
-                <h4>Austin Office:</h4>
-                <p>324 E 7th Street, Suite 200, Austin TX, 78702</p>
+                <h4>Address:</h4>
+                <p>167-169 Great Portland Street, 5th Floor, London, United Kingdom, W1W 5PF</p>
               </div>
-              <div className="contact-section">
+              {/* <div className="contact-section">
                 <h4>Call Us:</h4>
                 <p>512 358 1435</p>
-              </div>
+              </div> */}
               <div className="contact-section">
                 <h4>Email Us:</h4>
-                <p>austin@just-constructionlnc.com</p>
+                <p>info@fazil-construction.com</p>
               </div>
             </div>
           </div>

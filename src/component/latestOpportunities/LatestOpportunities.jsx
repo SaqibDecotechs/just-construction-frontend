@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './latestOpportunities.css';
 import Button from '../button';
 import { privateAPI } from '../../config/constants';
+import { jobsData } from '../../data/jobsdata';
+
 
 const LatestOpportunities = () => {
   const navigate = useNavigate();
@@ -11,22 +13,35 @@ const LatestOpportunities = () => {
   const [loading, setLoading] = useState(true);
 
   // Fetch jobs from API
-  const fetchJobs = async () => {
+ const fetchJobs = async () => {
     try {
       setLoading(true);
       const response = await privateAPI.get('/job/all');
       if (response.data && response.data.data.jobs) {
-        // Get only first 6 jobs for the carousel
-        const jobs = response.data.data.jobs.slice(0, 6);
-        setOpportunities(jobs);
+        let jobs = response.data.data.jobs;
+
+        // 🔹 Oldest jobs first
+        jobs = jobs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+        // 🔹 sirf 6 dikhani hain
+        setOpportunities(jobs.slice(0, 6));
       }
     } catch (error) {
-      console.error('Error fetching jobs:', error);
-      setOpportunities([]);
+      console.error('Error fetching jobs, using dummy data:', error);
+
+      // 🔹 Fallback dummy data
+      let jobs = jobsData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      setOpportunities(jobs.slice(0, 6));
     } finally {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(opportunities.length / 3));
@@ -82,11 +97,11 @@ const LatestOpportunities = () => {
         <div className="opportunities__header">
           <h2 className="opportunities__title">LATEST OPPORTUNITIES</h2>
         </div>
-        
+
         {opportunities.length > 0 ? (
           <>
             <div className="opportunities__carousel">
-              <div 
+              <div
                 className="opportunities__track"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
@@ -99,15 +114,15 @@ const LatestOpportunities = () => {
                             {opportunity.location || 'Location Not Available'}
                             <div className="opportunity__country">United States</div>
                           </div>
-                          
+
                           <h3 className="opportunity__title">{opportunity.jobTitle || 'Job Title Not Available'}</h3>
                           <p className="opportunity__category">{opportunity.industry || opportunity.category || 'General'}</p>
-                          
+
                           <div className="opportunity__salary">
                             <span className="salary__min">{opportunity.salary || 'Competitive Salary'}</span>
                           </div>
-                          
-                          <button 
+
+                          <button
                             className="opportunity__btn"
                             onClick={handleLearnMore}
                           >
@@ -120,7 +135,7 @@ const LatestOpportunities = () => {
                 )}
               </div>
             </div>
-            
+
             <div className="carousel-indicators">
               {[...Array(Math.ceil(opportunities.length / 3))].map((_, index) => (
                 <button
@@ -136,7 +151,7 @@ const LatestOpportunities = () => {
             No opportunities available at the moment.
           </div>
         )}
-        
+
         <div className="see-all-container">
           <div onClick={handleSeeAllJobs} style={{ cursor: 'pointer' }}>
             <Button text={"See All Jobs"} />

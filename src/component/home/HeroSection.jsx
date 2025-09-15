@@ -5,12 +5,12 @@ import "../../style/components/heroSection.css"
 import SocialIcon from '../socialIcon'
 import Button from '../button'
 import { useNavigate } from 'react-router-dom'
-    
+
 
 const HeroSection = () => {
-     const navigate = useNavigate();
+    const navigate = useNavigate();
     const selectedCountry = useSelector(selectSelectedCountry);
-    
+
     const getBackgroundImage = () => {
         if (selectedCountry === 'UK') {
             return require('../../assest/uk.jpg');
@@ -21,7 +21,7 @@ const HeroSection = () => {
     };
 
     return (<>
-        <section className={`hero ${selectedCountry === 'UK' ? 'uk-background' : 'usa-background'}`} style={{backgroundImage: `url(${getBackgroundImage()})`}}>
+        <section className={`hero ${selectedCountry === 'UK' ? 'uk-background' : 'usa-background'}`} style={{ backgroundImage: `url(${getBackgroundImage()})` }}>
             <div className={`hero-overlay ${selectedCountry === 'UK' ? 'hero-overlay-dark' : ''}`}></div>
 
             <div className="hero-content">
@@ -32,11 +32,14 @@ const HeroSection = () => {
                     for the Construction Industry
                 </h2>
                 <p className="hero-description">
-                    Specialized hiring solutions for the UK construction sector. Partner with skilled professionals to build your success.
+                    {selectedCountry === "UK"
+                        ? "Specialised hiring solutions for the UK construction sector. Partner with skilled professionals to build your success."
+                        : "Specialized hiring solutions for the US construction sector. Partner with skilled professionals to build your success."}
                 </p>
+
                 <div className="hero-actions">
 
-                    <Button text="Our Services" onClick={() => navigate("/our-services")}  />
+                    <Button text="Our Services" onClick={() => navigate("/our-services")} />
                     <Button text="Search Job" onClick={() => navigate("/all-jobs")} />
 
                 </div>

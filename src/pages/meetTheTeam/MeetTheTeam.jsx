@@ -88,19 +88,19 @@ const MeetTheTeam = () => {
   return (
     <div className="meet-team-page">
       <NavBar />
-      
+
       <div className="meet-team-hero">
         <div className="hero-overlay hero-overlay-meet">
           <h1 className="hero-title">Meet the Team</h1>
           <p className="hero-subtitle">
-            Get to know the engine that makes Just Construction one of the leading providers of recruitment in the construction industry.
+            Get to know the engine that makes Fazil Construction one of the leading providers of recruitment in the construction industry.
           </p>
           <p className="hero-tagline">
             WE ARE HIGHLY SKILLED AND READILY AVAILABLE TO HELP YOU BEGIN YOUR JOURNEY.
           </p>
           <div className="hero-arrow">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M12 16l-6-6h12l-6 6z"/>
+              <path d="M12 16l-6-6h12l-6 6z" />
             </svg>
           </div>
         </div>
@@ -110,7 +110,7 @@ const MeetTheTeam = () => {
         <div className="team-container">
           <div className="team-section">
             <h2 className="team-section-title">MEET THE TEAM</h2>
-            
+
             <div className="team-grid">
               {teamMembers.map((member) => (
                 <div key={member.id} className="team-member">

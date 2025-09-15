@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
                 <div className="privacy-container">
                     <h2>Purpose of Processing and Legal Basis</h2>
                     <p>
-                        Just Construction Recruitment collects and processes personal data
+                        Fazil Construction Recruitment collects and processes personal data
                         (which may include sensitive data) for the purpose of providing
                         work-finding services. The legal grounds for processing are based on
                         legitimate interests, contractual requirements, and compliance with

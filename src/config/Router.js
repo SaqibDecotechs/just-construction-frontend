@@ -22,39 +22,41 @@ import TermsAndConditions from '../pages/termsandconditions/Terms'
 import ComplaintsPolicy from '../pages/complainypolicy/ComplaintsPolicy'
 import AccessibilityCookies from '../pages/accessibilityandcookie/Accessibility'
 import About from '../pages/about/About'
+import ScrollToTop from '../component/ScrollToTop'
 
 function Router() {
   return (
-  <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/join-us" element={<JoinUs />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/meet-the-team" element={<MeetTheTeam />} />
-            <Route path="/forgot-password" element={<ForgetPassword />} />
-            <Route path="/all-jobs" element={<AllJobs />} />
-            <Route path="/job/:jobId/apply" element={<JobApplication />} />
-            <Route path="/diversity-csr" element={<CSR />} />
-            <Route path="/candidate-commitment" element={<CandidateCommitment />} />
-            <Route path="/submit-cv" element={<SubmitCV />} />
-            <Route path="/job-alerts" element={<JobAlerts />} />
-            <Route path="/our-services" element={<OurServices />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/gdpr-compliance" element={<GdprCompliance />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-            <Route path="/complaints-policy" element={<ComplaintsPolicy />} />
-            <Route path="/accessibility-and-cookies" element={<AccessibilityCookies />} />
-            <Route path="/about" element={<About />} />
-          {/* <Route element={<PublicWrapper />}>
+    <BrowserRouter>
+     <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/join-us" element={<JoinUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/meet-the-team" element={<MeetTheTeam />} />
+        <Route path="/forgot-password" element={<ForgetPassword />} />
+        <Route path="/all-jobs" element={<AllJobs />} />
+        <Route path="/job/:jobId/apply" element={<JobApplication />} />
+        <Route path="/diversity-csr" element={<CSR />} />
+        <Route path="/candidate-commitment" element={<CandidateCommitment />} />
+        <Route path="/submit-cv" element={<SubmitCV />} />
+        <Route path="/job-alerts" element={<JobAlerts />} />
+        <Route path="/our-services" element={<OurServices />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/gdpr-compliance" element={<GdprCompliance />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/complaints-policy" element={<ComplaintsPolicy />} />
+        <Route path="/accessibility-and-cookies" element={<AccessibilityCookies />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route element={<PublicWrapper />}>
             <Route path="*" element={<Login />} />
           </Route> */}
 
-        </Routes>
-      </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

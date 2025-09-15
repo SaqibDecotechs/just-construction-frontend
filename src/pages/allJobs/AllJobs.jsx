@@ -7,83 +7,159 @@ import { getAllJobs } from '../../store/services/jobs';
 import './allJobs.css';
 
 const AllJobs = () => {
-   const jobsData = [
-    {
-      "_id": "68a70ee485e9ef3a0461a767",
-      "jobTitle": "Manager",
-      "location": "Canada",
-      "industry": "Civil Engineering",
-      "contactName": "admin",
-      "contactEmail": "saqibraheem@decotechs.xyz",
-      "contactPhone": "0932312341",
-      "salary": "$500 - $700",
-      "aboutClient": "about client",
-      "aboutRole": "about role",
-      "aboutCandidate": "about candidate",
-      "lastDateToApply": "2025-08-29T00:00:00.000Z",
-      "postedBy": {
-        "_id": "68a58622021627888b67e8eb",
-        "firstName": "saqib",
-        "lastName": "raheem",
-        "email": "saqibraheem@decotechs.xyz"
-      },
-      "isActive": true,
-      "postedDate": "2025-08-21T12:19:48.289Z",
-      "createdAt": "2025-08-21T12:19:48.289Z",
-      "updatedAt": "2025-08-21T12:19:48.289Z",
-      "__v": 0
+  const jobsData = [
+  {
+    "_id": "68a70ee485e9ef3a0461a767",
+    "jobTitle": "Maintenance Engineer (Electrically Biased)",
+    "location": "Canada",
+    "industry": "Civil Engineering",
+    "contactName": "admin",
+    "contactEmail": "saqibraheem@decotechs.xyz",
+    "contactPhone": "0932312341",
+    "salary": "$40k - $45k",
+    "aboutClient": "about client",
+    "aboutRole": "about role",
+    "aboutCandidate": "about candidate",
+    "lastDateToApply": "2025-08-29T00:00:00.000Z",
+    "postedBy": {
+      "_id": "68a58622021627888b67e8eb",
+      "firstName": "saqib",
+      "lastName": "raheem",
+      "email": "saqibraheem@decotechs.xyz"
     },
-    {
-      "_id": "68a5c48484f4c91278bc01ef",
-      "jobTitle": "Senior Manager",
-      "location": "UAE",
-      "industry": "Construction",
-      "contactName": "Admin",
-      "contactEmail": "admin@gmail.com",
-      "contactPhone": "+9293202323",
-      "salary": "$300 - $800",
-      "aboutClient": "Add Job Details",
-      "aboutRole": "Role Discriptions",
-      "aboutCandidate": "Cnsdidtae....",
-      "lastDateToApply": "2025-08-28T00:00:00.000Z",
-      "postedBy": {
-        "_id": "68a58622021627888b67e8eb",
-        "firstName": "saqib",
-        "lastName": "raheem",
-        "email": "saqibraheem@decotechs.xyz"
-      },
-      "isActive": true,
-      "postedDate": "2025-08-20T12:50:12.152Z",
-      "createdAt": "2025-08-20T12:50:12.152Z",
-      "updatedAt": "2025-08-21T11:17:03.073Z",
-      "__v": 0
+    "isActive": true,
+    "postedDate": "2025-08-21T12:19:48.289Z",
+    "createdAt": "2025-08-21T12:19:48.289Z",
+    "updatedAt": "2025-08-21T12:19:48.289Z",
+    "__v": 0
+  },
+  {
+    "_id": "68a5c48484f4c91278bc01ef",
+    "jobTitle": "Mechanical Engineer",
+    "location": "UAE",
+    "industry": "Construction",
+    "contactName": "Admin",
+    "contactEmail": "admin@gmail.com",
+    "contactPhone": "+9293202323",
+    "salary": "$50k",
+    "aboutClient": "Add Job Details",
+    "aboutRole": "Role Discriptions",
+    "aboutCandidate": "Cnsdidtae....",
+    "lastDateToApply": "2025-08-28T00:00:00.000Z",
+    "postedBy": {
+      "_id": "68a58622021627888b67e8eb",
+      "firstName": "saqib",
+      "lastName": "raheem",
+      "email": "saqibraheem@decotechs.xyz"
     },
-    {
-      "_id": "68a599e909ef7fe44d8711d3",
-      "jobTitle": "Frontend Developer",
-      "location": "london",
-      "industry": "Construction",
-      "contactName": "saqib",
-      "contactEmail": "saqib@gmail.com",
-      "contactPhone": "+9293202323",
-      "salary": "$200 - $400",
-      "aboutClient": "My client is seeking a detail-oriented and experienced Quantity Surveyor to support the financial and contractual management of drylining housing projects. Based in the office with regular site visits, the successful candidate will be responsible for cost management, procurement, and contract administration to ensure project profitability and efficiency.",
-      "aboutRole": "**Key Responsibilities**:\n\n- Prepare and manage project budgets, cost estimates, and financial forecasts.\n- \n- Conduct site visits to assess progress and verify completed work for valuations.\n- \n- Manage procurement and tendering processes for subcontractors and suppliers.\n- \n- Assess and process variations, claims, and change orders.\n- \n- Negotiate contracts and agreements with subcontractors and suppliers.\n- \n- Ensure compliance with contractual and legal requirements.\n- \n- Prepare and submit monthly valuations and final accounts.\n- Work closely with site teams, project managers, and clients to ensure smooth project delivery.\n- Identify and mitigate financial risks.\n- Maintain accurate records and documentation for auditing and reporting.\n**What We Offer:**\n\n- Competitive salary and benefits package.\n- \n- Office-based role with opportunities for site visits.\n- \n- If you are a motivated Quantity Surveyor looking for an exciting opportunity in the drylining sector, we would love to hear from you.\n- \n- Career development and training opportunities.\n- \n- Supportive and professional working environmen\n\nt.",
-      "aboutCandidate": "**Required Skills & Experience**:\n\n- Proven experience as a Quantity Surveyor , preferably in the drylining or construction industry.\n- \n- Strong knowledge of cost management, contract administration, and procurement .\n- \n- Ability to read and interpret drawings, specifications, and contracts .\n- \n- Excellent analytical and numerical skills.\n- \n- Strong negotiation and communication skills.\n- \n- Proficiency in Microsoft Excel, cost estimating software, and financial reporting tools .\n- \n- Knowledge of JCT and NEC contracts (preferred).\n- \n- Full UK driving licence (for site visits).",
-      "lastDateToApply": "2025-08-28T00:00:00.000Z",
-      "postedBy": {
-        "_id": "68a58622021627888b67e8eb",
-        "firstName": "saqib",
-        "lastName": "raheem",
-        "email": "saqibraheem@decotechs.xyz"
-      },
-      "isActive": true,
-      "postedDate": "2025-08-20T09:48:25.021Z",
-      "createdAt": "2025-08-20T09:48:25.021Z",
-      "updatedAt": "2025-08-20T09:48:25.021Z",
-      "__v": 0
-    }
-  ]
+    "isActive": true,
+    "postedDate": "2025-08-20T12:50:12.152Z",
+    "createdAt": "2025-08-20T12:50:12.152Z",
+    "updatedAt": "2025-08-21T11:17:03.073Z",
+    "__v": 0
+  },
+  {
+    "_id": "68a599e909ef7fe44d8711d3",
+    "jobTitle": "Senior Contract Manager",
+    "location": "london",
+    "industry": "Construction",
+    "contactName": "saqib",
+    "contactEmail": "saqib@gmail.com",
+    "contactPhone": "+9293202323",
+    "salary": "$65K+",
+    "aboutClient": "My client is seeking a detail-oriented and experienced Quantity Surveyor to support the financial and contractual management of drylining housing projects. Based in the office with regular site visits, the successful candidate will be responsible for cost management, procurement, and contract administration to ensure project profitability and efficiency.",
+    "aboutRole": "**Key Responsibilities**:\n\n- Prepare and manage project budgets, cost estimates, and financial forecasts.\n- \n- Conduct site visits to assess progress and verify completed work for valuations.\n- \n- Manage procurement and tendering processes for subcontractors and suppliers.\n- \n- Assess and process variations, claims, and change orders.\n- \n- Negotiate contracts and agreements with subcontractors and suppliers.\n- \n- Ensure compliance with contractual and legal requirements.\n- \n- Prepare and submit monthly valuations and final accounts.\n- Work closely with site teams, project managers, and clients to ensure smooth project delivery.\n- Identify and mitigate financial risks.\n- Maintain accurate records and documentation for auditing and reporting.\n**What We Offer:**\n\n- Competitive salary and benefits package.\n- \n- Office-based role with opportunities for site visits.\n- \n- If you are a motivated Quantity Surveyor looking for an exciting opportunity in the drylining sector, we would love to hear from you.\n- \n- Career development and training opportunities.\n- \n- Supportive and professional working environmen\n\nt.",
+    "aboutCandidate": "**Required Skills & Experience**:\n\n- Proven experience as a Quantity Surveyor , preferably in the drylining or construction industry.\n- \n- Strong knowledge of cost management, contract administration, and procurement .\n- \n- Ability to read and interpret drawings, specifications, and contracts .\n- \n- Excellent analytical and numerical skills.\n- \n- Strong negotiation and communication skills.\n- \n- Proficiency in Microsoft Excel, cost estimating software, and financial reporting tools .\n- \n- Knowledge of JCT and NEC contracts (preferred).\n- \n- Full UK driving licence (for site visits).",
+    "lastDateToApply": "2025-08-28T00:00:00.000Z",
+    "postedBy": {
+      "_id": "68a58622021627888b67e8eb",
+      "firstName": "saqib",
+      "lastName": "raheem",
+      "email": "saqibraheem@decotechs.xyz"
+    },
+    "isActive": true,
+    "postedDate": "2025-08-20T09:48:25.021Z",
+    "createdAt": "2025-08-20T09:48:25.021Z",
+    "updatedAt": "2025-08-20T09:48:25.021Z",
+    "__v": 0
+  },
+  {
+    "_id": "job-4",
+    "jobTitle": "Maintenance Engineer (Mechanically Biased)",
+    "location": "UK",
+    "industry": "Engineering",
+    "contactName": "Admin",
+    "contactEmail": "admin@example.com",
+    "contactPhone": "+44123456789",
+    "salary": "$55k+",
+    "aboutClient": "About client...",
+    "aboutRole": "Role details...",
+    "aboutCandidate": "Candidate requirements...",
+    "lastDateToApply": "2025-08-30T00:00:00.000Z",
+    "postedBy": {
+      "_id": "user-1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com"
+    },
+    "isActive": true,
+    "postedDate": "2025-08-22T09:00:00.000Z",
+    "createdAt": "2025-08-22T09:00:00.000Z",
+    "updatedAt": "2025-08-22T09:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "job-5",
+    "jobTitle": "HVAC Engineer",
+    "location": "Dubai",
+    "industry": "Mechanical Services",
+    "contactName": "Ali",
+    "contactEmail": "ali@example.com",
+    "contactPhone": "+97112345678",
+    "salary": "$50k+",
+    "aboutClient": "Client info...",
+    "aboutRole": "Role info...",
+    "aboutCandidate": "Candidate info...",
+    "lastDateToApply": "2025-08-31T00:00:00.000Z",
+    "postedBy": {
+      "_id": "user-2",
+      "firstName": "Ali",
+      "lastName": "Khan",
+      "email": "ali@example.com"
+    },
+    "isActive": true,
+    "postedDate": "2025-08-23T10:00:00.000Z",
+    "createdAt": "2025-08-23T10:00:00.000Z",
+    "updatedAt": "2025-08-23T10:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "job-6",
+    "jobTitle": "Air Conditioning Engineer",
+    "location": "Qatar",
+    "industry": "HVAC",
+    "contactName": "Sara",
+    "contactEmail": "sara@example.com",
+    "contactPhone": "+9749876543",
+    "salary": "$52k+",
+    "aboutClient": "Client details...",
+    "aboutRole": "Role details...",
+    "aboutCandidate": "Candidate details...",
+    "lastDateToApply": "2025-09-01T00:00:00.000Z",
+    "postedBy": {
+      "_id": "user-3",
+      "firstName": "Sara",
+      "lastName": "Smith",
+      "email": "sara@example.com"
+    },
+    "isActive": true,
+    "postedDate": "2025-08-24T11:00:00.000Z",
+    "createdAt": "2025-08-24T11:00:00.000Z",
+    "updatedAt": "2025-08-24T11:00:00.000Z",
+    "__v": 0
+  }
+];
+
   const [searchKeyword, setSearchKeyword] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('ANY');
   const [jobs, setJobs] = useState([]);

@@ -103,16 +103,19 @@ const JoinUs = () => {
         <div className="why-container">
           <h2>WHY JOIN US?</h2>
           <p>
-            At Just Construction, we are a driven and ambitious recruitment consultancy dedicated to building a world-class workplace. We provide ongoing training and development to support your career and help you become the best version of yourself.
+            From the very beginning, our mission has been to challenge the negative perceptions of recruiters by building a business grounded in our core values: Honesty, Integrity, and Transparency.
           </p>
           <p>
-            Passionate about delivering exceptional service to both clients and candidates, we foster a fun, ambitious, and supportive environment where you can thrive. So, what are you waiting for? Join us today!
+            Since our inception, Fazil Construction Recruitment has grown into a trusted consultancy with deep expertise across Construction, Mechanical & Electrical, Building Envelopes, and Interiors. What started in London has now expanded to deliver recruitment solutions across the UK, Europe, and the United States.
+          </p>
+          <p>
+            Our continued success comes from keeping employee development at the centre of everything we do. To be true market specialists, we must understand the industries we serve. That’s why every member of our team undergoes continuous training and development — ensuring they perform at their very best.
           </p>
 
           <div style={{ textAlign: "center" }}>
             <Button text="Join Us" onClick={() => navigate("/join-us")} />
-            </div>  
           </div>
+        </div>
       </section>
 
       {/* Latest Opportunities Section */}
@@ -124,7 +127,7 @@ const JoinUs = () => {
               <span className="job-dept">Building Services</span>
               <a href="#">Managing Consultant – Building Services</a>
             </div>
-            <span className="job-location">Bromley, Greater London</span>
+            <span className="job-location">Greater London</span>
           </div>
 
           <div className="job-item">
@@ -140,14 +143,14 @@ const JoinUs = () => {
               <span className="job-dept">US Recruitment Team</span>
               <a href="#">Recruitment Consultant</a>
             </div>
-            <span className="job-location">Bromley, Greater London (Hybrid)</span>
+            <span className="job-location">Greater London (Hybrid)</span>
           </div>
         </div>
       </section>
 
 
       {/* Testimonials Section */}
-      <section className="testimonials">
+      {/* <section className="testimonials">
         <div className="tabs">
           <button
             className={activeTab === "shaun" ? "tab active" : "tab"}
@@ -169,13 +172,13 @@ const JoinUs = () => {
               <h4>Managing Consultant | Interior Contracting - UK</h4>
               <p>I can’t put into words just how much I enjoy working here.</p>
               <p>
-                Over the past 3.5 years at Just Construction Recruitment, I’ve loved every moment. In that time, I’ve progressed from Resourcer to Managing Consultant, and I’m now aiming for a divisional management role in the near future.
+                Over the past 3.5 years at Fazil Construction Recruitment, I’ve loved every moment. In that time, I’ve progressed from Resourcer to Managing Consultant, and I’m now aiming for a divisional management role in the near future.
               </p>
               <p>
                 There are countless reasons why I value this company—the systems and processes are far superior to most recruitment firms, the people are truly exceptional, and the senior management team are not only supportive but also approachable, funny, and genuine friends.
               </p>
               <p>
-                I’d happily recommend Just Construction to my family and friends, which speaks volumes about the quality of this company.
+                I’d happily recommend Fazil Construction to my family and friends, which speaks volumes about the quality of this company.
               </p>
               <p>
                 From fantastic team outings to great pay and an unmatched lifestyle, working here has been an incredible experience.
@@ -190,7 +193,7 @@ const JoinUs = () => {
                 The support given to every member of the team is truly unmatched.
               </p>
               <p>
-                Having worked at Just Construction for nearly 8 years, I can honestly say I’ve enjoyed every moment.
+                Having worked at Fazil Construction for nearly 8 years, I can honestly say I’ve enjoyed every moment.
               </p>
               <p>
                 Unlike the typical cut-throat culture often seen in recruitment, the support here is genuine and consistent.
@@ -201,7 +204,7 @@ const JoinUs = () => {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Carousel Section */}
       <section className="carousel-section">

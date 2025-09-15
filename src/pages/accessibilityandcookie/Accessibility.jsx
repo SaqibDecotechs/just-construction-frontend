@@ -25,7 +25,7 @@ const AccessibilityCookies = () => {
           {/* Accessibility Statement */}
           <h2>Accessibility Statement</h2>
           <p>
-            At Just Construction Recruitment, we are committed to making our
+            At Fazil Construction Recruitment, we are committed to making our
             website accessible to all users, including people with disabilities.
             We regularly review and update our design and content to meet
             accessibility standards and ensure a smooth user experience.

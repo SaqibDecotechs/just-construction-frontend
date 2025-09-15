@@ -1,6 +1,6 @@
 .service-card {
   border-radius: 0px 0px 15px 15px;
-  box-shadow: 0 2px 12px rgba(21, 101, 192, 0.08);
+  box-shadow: 0 2px 12px rgba(21, 101, 192, 0.5);
   text-align: center;
   width: 32%;
   margin: 16px auto;
@@ -9,9 +9,10 @@
   position: relative;
   overflow: hidden;
   transition: 0.3s;
+  /* border: 2px solid white; */
 }
 
-.service-card:hover {
+.service-card-content:hover {
   border: 2px solid #1565c0;
   transition: 0.3s;
 }
@@ -32,7 +33,11 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex: 1;  /* 👈 content stretch karega */
+  flex: 1;
+  transition: 0.3s;
+  border: 2px solid white;
+  border-radius: 0px 0px 15px 15px;
+
 }
 
 .service-card-title {
@@ -45,7 +50,8 @@
 .service-card-text {
   margin-bottom: 24px;
   font-size: 1rem;
-  flex-grow: 1;  /* 👈 jitna space bache use lelega */
+  flex-grow: 1;
+  /* 👈 jitna space bache use lelega */
 }
 
 .service-card-btn {
@@ -59,7 +65,8 @@
   width: 100%;
   cursor: pointer;
   transition: 0.2s ease;
-  margin-top: auto; /* 👈 hamesha neeche chipak jayega */
+  margin-top: auto;
+  /* 👈 hamesha neeche chipak jayega */
 }
 
 .service-card-btn:hover {
@@ -87,4 +94,3 @@
     padding: 20px 8px 16px 8px;
   }
 }
-  

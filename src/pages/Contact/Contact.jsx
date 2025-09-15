@@ -32,7 +32,7 @@ const ContactUs = () => {
                                 </label>
 
                                 <p className="consent-text">
-                                    By submitting this form, you agree to receive text messages from Just Construction Recruitment regarding job opportunities and updates.
+                                    By submitting this form, you agree to receive text messages from Fazil Construction Recruitment regarding job opportunities and updates.
                                     Message frequency may vary. Standard message and data rates may apply. Reply with STOP, END, CANCEL, UNSUBSCRIBE, or QUIT to opt out,
                                     or HELP for assistance.
                                 </p>
@@ -82,7 +82,7 @@ const ContactUs = () => {
                                         Looking for career guidance or recruitment support in the US? Get in touch with our team today.
                                     </p>
                                     <h3>US Office</h3>
-                                    <p>Call us at: 332-236-9435</p>
+                                    {/* <p>Call us at: 332-236-9435</p> */}
                                     <p>
                                         <a
                                             href="https://calendly.com/"
@@ -100,7 +100,7 @@ const ContactUs = () => {
                                         Need recruitment assistance in the UK? Our team is ready to support your business and career needs.
                                     </p>
                                     <h3>UK Office</h3>
-                                    <p>0203 405 31 86</p>
+                                    {/* <p>0203 405 31 86</p> */}
                                     <p>
                                         <a
                                             href="https://calendly.com/"
@@ -137,7 +137,7 @@ const ContactUs = () => {
                 <div className="map-container">
                     {/* UK Map */}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9936.682244431417!2d0.0096018!3d51.4069721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a9d924f6d4df%3A0x65da3b271e96aaf4!2sAlliance%20House%2C%2029%20London%20Rd%2C%20Bromley%20BR1%201DG%2C%20United%20Kingdom!5e0!3m2!1sen!2suk!4v1693705123456!5m2!1sen!2suk"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9936.682244431417!2d0.0096018!3d51.4069721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a9d924f6d4df%3A0x65da3b271e96aaf4!2sAlliance%20House%2C%2029%20London%20Rd%2C%20%20BR1%201DG%2C%20United%20Kingdom!5e0!3m2!1sen!2suk!4v1693705123456!5m2!1sen!2suk"
                         width="100%"
                         height="300"
                         style={{ border: 0, borderRadius: "16px" }}

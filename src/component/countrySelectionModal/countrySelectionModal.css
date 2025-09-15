@@ -61,9 +61,15 @@
   min-height: 400px;
 }
 
+.country-option:hover {
+    background: rgb(0, 162, 255) !important;
+    color: white !important;
+}
+
+
 .country-divider {
   width: 2px;
-  background: linear-gradient(to bottom, transparent, #e91e63, transparent);
+  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
   margin: 20px 0;
   min-height: 400px;
 }
@@ -73,7 +79,7 @@
 }
 
 .logo-text {
-  color: white;
+  color: white !important;
   margin: 0;
   font-size: 24px;
   font-weight: 600;
@@ -82,6 +88,12 @@
 
 .modal-country-flag {
   margin-bottom: 25px;
+}
+
+.country-option img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 
 .modal-flag-image {
@@ -103,7 +115,7 @@
 }
 
 .country-btn {
-  background: linear-gradient(135deg, #e91e63, #ad1457);
+  background: var(--primary);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -114,13 +126,15 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+  transition: 0.3s;
 }
 
 .country-btn:hover {
-  background: linear-gradient(135deg, #ad1457, #880e4f);
+  background: white !important;
+  color: var(--primary) !important;
+  box-shadow: 0 2px 12px rgba(21, 101, 192, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.6);
+  transition: 0.3s;
 }
 
 .country-btn:active {
@@ -134,34 +148,34 @@
     margin: 20px;
     width: calc(100% - 40px);
   }
-  
+
   .country-options {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .country-divider {
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, transparent, #e91e63, transparent);
+    background: linear-gradient(to right, transparent, var(--primary), transparent);
     min-height: 2px;
   }
-  
+
   .country-option {
     min-height: auto;
     padding: 20px;
   }
-  
+
   .modal-flag-image {
     width: 80px;
     height: auto;
   }
-  
+
   .country-description {
     font-size: 14px;
     margin-bottom: 25px;
   }
-  
+
   .country-btn {
     padding: 12px 25px;
     font-size: 14px;
@@ -172,7 +186,7 @@
   .country-modal {
     padding: 20px 15px;
   }
-  
+
   .modal-close-btn {
     width: 30px;
     height: 30px;

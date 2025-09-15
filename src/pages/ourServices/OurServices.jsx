@@ -31,19 +31,21 @@ const OurServicesPage = () => {
         <h1 className="service-cards-heading">Our Services</h1>
         <div className="service-cards-row">
           <OurServiceCard
-            title="JUST RECRUIT+"
-            text="By choosing a monthly subscription, you streamline your recruitment spending and benefit from improved search precision, stronger resources, and better cost efficiency."
-            onLearnMore={() => alert('Executive Search')}
+            title="RECRUIT+"
+            text="Recruit+ offers a subscription-based recruitment model tailored for construction firms. With a fixed monthly fee, you gain predictable costs, end-to-end hiring support, dedicated account management, and retention strategies — making recruitment streamlined, cost-effective, and scalable."
+            showButton={false}
           />
+
           <OurServiceCard
             title="RETAINED"
-            text="With two tiered options, you decide how much extra resource is committed to your search, determined by a percentage of the initial cost"
-            onLearnMore={() => alert('Contract Staffing')}
+            text="Our Retained Search gives you two tiered options to choose the level of resource dedicated to your hiring. It’s a tailored, service-led solution ideal for senior or specialist roles, offering high commitment, discounts on multiple vacancies, and peace of mind with guarantee periods — ensuring we find you the right person to make an impact from day one."
+            showButton={false}
           />
+
           <OurServiceCard
             title="CONTINGENT"
-            text="With a contingent model, you’re only charged when we deliver — the fee applies only if we successfully fill your vacancy."
-            onLearnMore={() => alert('Permanent Staffing')}
+            text="Our Contingent model means you only pay when we successfully fill your role. It’s ideal for frequent or less specialist positions, offering flexibility, discounted rates for multiple placements, and peace of mind with guarantee periods — giving you a cost-effective way to scale your team."
+            showButton={false}
           />
         </div>
       </div>

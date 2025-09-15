@@ -20,7 +20,7 @@ const GdprCompliance = () => {
                 <div className="gdpr-container">
                     <h2>Introduction</h2>
                     <p>
-                        At Just Construction Recruitment, we are fully committed to protecting the
+                        At Fazil Construction Recruitment, we are fully committed to protecting the
                         privacy and personal data of all individuals we work with. In line with
                         the Data Protection Act and the EU General Data Protection Regulation
                         (GDPR), we ensure that your information is collected, stored, and managed
