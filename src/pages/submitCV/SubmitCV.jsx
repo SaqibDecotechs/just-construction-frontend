@@ -240,7 +240,8 @@ const SubmitCV = () => {
         </div>
       </div> */}
 
-              <LatestOpportunities />
+      <LatestOpportunities withBorder={false} />
+
 
 
 

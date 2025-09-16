@@ -11,7 +11,7 @@ const CandidateCommitment = () => {
   return (
     <>
       <NavbarHero />
-      
+
       <div className="candidate-commitment-hero">
         <div className="candidate-commitment-hero-container">
           <div className="candidate-hero-content">
@@ -22,7 +22,7 @@ const CandidateCommitment = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="candidate-hero-arrow">
           <MdKeyboardArrowDown />
         </div>
@@ -43,7 +43,8 @@ const CandidateCommitment = () => {
 
       <CandidateNextStep />
 
-      <LatestOpportunities />
+      <LatestOpportunities withBorder={false} />
+
 
 
       {/* <div className="candidate-commitment-content">
@@ -97,7 +98,7 @@ const CandidateCommitment = () => {
           </div>
         </div>
       </div> */}
-      
+
       <Footer />
     </>
   );

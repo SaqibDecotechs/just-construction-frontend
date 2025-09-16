@@ -3,13 +3,17 @@
   padding: 0px !important ;
 }
 
+
 .opportunities-container {
-  max-width: 1100px !important  ;
+  max-width: 1100px !important;
   margin: 0 auto;
   padding: 42px 52px;
+}
+
+
+.opportunities-container.with-border {
   border-right: 1px solid var(--text-primary);
-  border-top: 0 !important ;
-  /* border-bottom: 1px solid black; */
+  border-top: 0 !important;
   border-radius: 0px 37px 0px 0px;
 }
 

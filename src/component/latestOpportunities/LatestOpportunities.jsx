@@ -6,7 +6,7 @@ import { privateAPI } from '../../config/constants';
 import { jobsData } from '../../data/jobsdata';
 
 
-const LatestOpportunities = () => {
+const LatestOpportunities = ({ withBorder = true }) => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [opportunities, setOpportunities] = useState([]);
@@ -93,7 +93,7 @@ const LatestOpportunities = () => {
 
   return (
     <section className="latest-opportunities">
-      <div className="opportunities-container">
+      <div className={`opportunities-container ${withBorder ? "with-border" : ""}`}>
         <div className="opportunities__header">
           <h2 className="opportunities__title">LATEST OPPORTUNITIES</h2>
         </div>

@@ -14,17 +14,17 @@ import Footer from '../../component/footer/Footer'
 const Home = () => {
   return (
     <div>
-        <NavbarHero />
-        <HeroSection />
-        <MarketSectors />
-        <LatestOpportunities />
-        <WhyWorkWithUs />
-        <CoreValues />
-        <Testimonials />
-        {/* <MeetTheTeam /> */}
-        {/* <SalaryGuide /> */}
-        {/* <IndustryNews /> */}
-        <Footer />
+      <NavbarHero />
+      <HeroSection />
+      <MarketSectors />
+      <LatestOpportunities withBorder={true} />
+      <WhyWorkWithUs />
+      <CoreValues />
+      <Testimonials />
+      {/* <MeetTheTeam /> */}
+      {/* <SalaryGuide /> */}
+      {/* <IndustryNews /> */}
+      <Footer />
     </div>
   )
 }
