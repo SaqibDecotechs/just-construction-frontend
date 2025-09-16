@@ -728,7 +728,7 @@
 /* About Us Dropdown Menu */
 .about-dropdown-menu {
     position: absolute;
-    top: 35px;
+    top: 25px;
     left: 0;
     background: var(--primary);
     border-radius: 8px;
@@ -843,7 +843,7 @@
 /* Jobs Dropdown Menu */
 .jobs-dropdown-menu {
     position: absolute;
-    top: 35px;
+    top: 25px;
     left: 0;
     background: var(--primary);
     border-radius: 8px;
@@ -997,7 +997,7 @@
 /* Employer Dropdown Menu */
 .employer-dropdown-menu {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 0;
     background: var(--primary);
     border-radius: 8px;

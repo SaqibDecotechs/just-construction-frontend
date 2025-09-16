@@ -13,25 +13,16 @@ const LatestOpportunities = ({ withBorder = true }) => {
   const [loading, setLoading] = useState(true);
 
   // Fetch jobs from API
- const fetchJobs = async () => {
+  const fetchJobs = async () => {
+
+    // const response = await privateAPI.get('/job/all');
     try {
       setLoading(true);
-      const response = await privateAPI.get('/job/all');
-      if (response.data && response.data.data.jobs) {
-        let jobs = response.data.data.jobs;
-
-        // 🔹 Oldest jobs first
-        jobs = jobs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-
-        // 🔹 sirf 6 dikhani hain
-        setOpportunities(jobs.slice(0, 6));
-      }
-    } catch (error) {
-      console.error('Error fetching jobs, using dummy data:', error);
-
-      // 🔹 Fallback dummy data
       let jobs = jobsData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
       setOpportunities(jobs.slice(0, 6));
+
+    } catch (error) {
+      console.error("Error loading jobs:", error);
     } finally {
       setLoading(false);
     }
@@ -40,8 +31,6 @@ const LatestOpportunities = ({ withBorder = true }) => {
   useEffect(() => {
     fetchJobs();
   }, []);
-
-
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(opportunities.length / 3));
@@ -58,10 +47,6 @@ const LatestOpportunities = ({ withBorder = true }) => {
   const handleSeeAllJobs = () => {
     navigate('/all-jobs');
   };
-
-  useEffect(() => {
-    fetchJobs();
-  }, []);
 
   useEffect(() => {
     if (opportunities.length > 0) {
