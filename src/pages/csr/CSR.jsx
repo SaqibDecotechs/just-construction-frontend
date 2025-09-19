@@ -34,7 +34,7 @@ const CSR = () => {
       <div className="csr-diversity-commitment">
         <div className="csr-diversity-commitment-container">
           <div className="placement-card">
-            <h2 className="placement-title">Breakdown of our 2021 placements at The Just Group</h2>
+            <h2 className="placement-title">Breakdown of our 2024 placements at The Fazil Group</h2>
             <div className="placement-stats">
               <div className="stats-section">
                 <div className="gender-stats">

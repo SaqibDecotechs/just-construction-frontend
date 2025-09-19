@@ -4,6 +4,8 @@ import './latestOpportunities.css';
 import Button from '../button';
 import { privateAPI } from '../../config/constants';
 import { jobsData } from '../../data/jobsdata';
+import { selectSelectedCountry } from '../../store/slices/countrySlice';
+import { useSelector } from 'react-redux';
 
 
 const LatestOpportunities = ({ withBorder = true }) => {
@@ -11,6 +13,8 @@ const LatestOpportunities = ({ withBorder = true }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [opportunities, setOpportunities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const selectedCountry = useSelector(selectSelectedCountry);
+
 
   // Fetch jobs from API
   const fetchJobs = async () => {
@@ -103,8 +107,13 @@ const LatestOpportunities = ({ withBorder = true }) => {
                           <h3 className="opportunity__title">{opportunity.jobTitle || 'Job Title Not Available'}</h3>
                           <p className="opportunity__category">{opportunity.industry || opportunity.category || 'General'}</p>
 
+
                           <div className="opportunity__salary">
-                            <span className="salary__min">{opportunity.salary || 'Competitive Salary'}</span>
+                            <span className="salary__min"> {opportunity.salary
+                              ? selectedCountry === "UK"
+                                ? opportunity.salary.replace(/\$/g, "£") 
+                                : opportunity.salary
+                              : "Competitive Salary"}</span>
                           </div>
 
                           <button

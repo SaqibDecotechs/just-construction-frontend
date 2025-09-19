@@ -15,7 +15,7 @@ const HeroSection = () => {
         if (selectedCountry === 'UK') {
             return require('../../assest/uk.jpg');
         } else if (selectedCountry === 'US') {
-            return require('../../assest/usa.webp');
+            return require('../../assest/usa.jpg');
         }
         return require('../../assest/uk.jpg'); // Default to UK
     };
