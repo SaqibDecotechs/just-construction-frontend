@@ -16,14 +16,18 @@ const LatestOpportunities = ({ withBorder = true }) => {
   const selectedCountry = useSelector(selectSelectedCountry);
 
 
+
   // Fetch jobs from API
   const fetchJobs = async () => {
 
     // const response = await privateAPI.get('/job/all');
     try {
       setLoading(true);
-      let jobs = jobsData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-      setOpportunities(jobs.slice(0, 6));
+      // let jobs = filteredJobs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+       let jobs = jobsData
+        .filter((job) => job.country === selectedCountry)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); 
+      setOpportunities(jobs);
 
     } catch (error) {
       console.error("Error loading jobs:", error);
@@ -34,7 +38,7 @@ const LatestOpportunities = ({ withBorder = true }) => {
 
   useEffect(() => {
     fetchJobs();
-  }, []);
+  }, [selectedCountry]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(opportunities.length / 3));
@@ -101,7 +105,7 @@ const LatestOpportunities = ({ withBorder = true }) => {
                         <div key={opportunity._id} className="opportunity__card">
                           <div className="opportunity__location-tag">
                             {opportunity.location || 'Location Not Available'}
-                            <div className="opportunity__country">United States</div>
+                            <div className="opportunity__country">{opportunity.country}</div>
                           </div>
 
                           <h3 className="opportunity__title">{opportunity.jobTitle || 'Job Title Not Available'}</h3>
